@@ -51,7 +51,7 @@ textarea:focus { outline:none; border-color:#0b2341; }
 
 <script>
 // Fetch the dashboards.json from the same GitHub repo
-fetch("dashboards.json")
+fetch("https://vbang09.github.io/supply-chain-dashboard/dashboards.json")
 .then(res => res.json())
 .then(data => {
     const container = document.getElementById("dashboardSection");
@@ -92,4 +92,5 @@ fetch("dashboards.json")
 
 </body>
 </html>
+
 
