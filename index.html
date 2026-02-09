@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Supply Chain Project Hub</title>
+
+<style>
+body { font-family: Arial, sans-serif; margin:0; background-color: #eef2f7; }
+header { background: #0b2341; color:white; padding:24px 40px; border-bottom:4px solid #e31837; }
+header h1 { margin:0; }
+header p { margin:6px 0 0; opacity:0.9; }
+.container { padding:40px; max-width:1100px; margin:auto; }
+.card { background:white; border-radius:10px; padding:22px 25px; margin-bottom:22px; box-shadow:0 6px 16px rgba(11,35,65,0.08); border-top:5px solid #0b2341; }
+.card h2 { margin-top:0; color:#0b2341; }
+a.button { display:inline-block; margin-top:10px; padding:10px 18px; background-color:#e31837; color:white; text-decoration:none; border-radius:6px; font-weight:bold; transition:0.25s; }
+a.button:hover { background-color:#b1122a; transform:translateY(-1px); }
+.dashboard-header { display:flex; align-items:center; justify-content:space-between; }
+.status { display:flex; align-items:center; font-size:14px; margin-top:8px; font-weight:bold; }
+.dot { height:10px; width:10px; border-radius:50%; margin-right:6px; }
+.green { background-color:#22c55e; }
+.yellow { background-color:#f59e0b; }
+.red { background-color:#ef4444; }
+.meta { font-size:13px; color:#475569; margin-top:6px; }
+textarea { width:100%; margin-top:10px; padding:10px; border-radius:6px; border:1px solid #cbd5e1; resize:vertical; }
+textarea:focus { outline:none; border-color:#0b2341; }
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>Supply Chain Project Hub</h1>
+<p>Centralized access to project requests, dashboards, and operational tools.</p>
+</header>
+
+<div class="container">
+
+<div class="card">
+<h2>📌 Submit a Project Request</h2>
+<p>Use the Jira intake form to submit new initiatives or enhancements.</p>
+<a class="button" href="https://toppsdigital.atlassian.net/jira/core/projects/SCT2/form/309" target="_blank">Open Jira Intake</a>
+</div>
+
+<div class="card" id="dashboardSection">
+<h2>📊 Active Project Dashboards</h2>
+<p>Loading…</p>
+</div>
+
+</div>
+
+<!-- SheetJS library to read XLSX -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+<script>
+
+const excelUrl = "https://fanatics.box.com/shared/static/5wb1qompkfunay0zcuv8rldfp8h7hvup.xlsx?dl=1"; // direct download
+
+// Fetch the XLSX as ArrayBuffer
+fetch(excelUrl)
+  .then(res => res.arrayBuffer())
+  .then(data => {
+    const workbook = XLSX.read(data, { type: "array" });
+    const firstSheet = workbook.Sheets[workbook.SheetNames[0]];
+    const rows = XLSX.utils.sheet_to_json(firstSheet);
+
+    const container = document.getElementById("dashboardSection");
+    container.innerHTML = '<h2>📊 Active Project Dashboards</h2>';
+
+    if (!rows.length) {
+      container.innerHTML += "<p>No dashboards found.</p>";
+      return;
+    }
+
+    const today = new Date();
+
+    rows.forEach(row => {
+      if (!row["Dashboard"]) return; // skip empty rows
+
+      let diffDays = 0;
+      let statusLabel = "Unknown";
+      let colorClass = "gray";
+
+      try {
+        const lastDate = new Date(row["Last Date Updated"]);
+        diffDays = Math.floor((today - lastDate) / (1000*60*60*24));
+        if (diffDays === 0) { statusLabel="Active"; colorClass="green"; }
+        else if (diffDays <= 3) { statusLabel="Needs Refresh"; colorClass="yellow"; }
+        else { statusLabel="Inactive"; colorClass="red"; }
+      } catch {}
+
+      const dashDiv = document.createElement("div");
+      dashDiv.style.marginBottom = "25px";
+      dashDiv.innerHTML = `
+        <div class="dashboard-header">
+          <strong>${row["Dashboard"]}</strong>
+          <a class="button" href="${row["Dashboard Link"] || '#'}" target="_blank">View Power BI</a>
+        </div>
+        <div class="status">
+          <span class="dot ${colorClass}"></span> ${statusLabel} (${diffDays} days ago)
+        </div>
+        <div class="meta">Last Updated: ${row["Last Date Updated"]}</div>
+        <textarea rows="3" placeholder="Comments / progress / issues...">${row["Ongoing Issues/Updates"] || ""}</textarea>
+      `;
+      container.appendChild(dashDiv);
+    });
+  })
+  .catch(err => {
+    const container = document.getElementById("dashboardSection");
+    container.innerHTML = "<p>Failed to load dashboards.</p>";
+    console.error(err);
+  });
+
+</script>
+
+</body>
+</html>
