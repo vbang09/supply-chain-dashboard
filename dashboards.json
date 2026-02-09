@@ -1,0 +1,65 @@
+[
+  {
+    "Dashboard": "Carrier Dashboard",
+    "DashboardLink": "https://app.powerbi.com/groups/67de8170-7e07-4d87-9828-fb43aba9e1c5/reports/842cb5fc-e1fd-4222-9043-5ce69dc2e224/772d53f378cc0049d96b?experience=power-bi&clientSideAuth=0",
+    "LastDateUpdated": "2026-02-09 00:00:00",
+    "OngoingIssues": "nan",
+    "StatusLabel": "Active",
+    "StatusColor": "green",
+    "DiffDays": 0
+  },
+  {
+    "Dashboard": "B2B Dashboard",
+    "DashboardLink": "https://app.powerbi.com/groups/67de8170-7e07-4d87-9828-fb43aba9e1c5/reports/f20f875f-6676-46bf-ac88-23858e016c20/7dfab0fc48ead7db07c5?experience=power-bi&clientSideAuth=0",
+    "LastDateUpdated": "2026-02-09 00:00:00",
+    "OngoingIssues": "nan",
+    "StatusLabel": "Active",
+    "StatusColor": "green",
+    "DiffDays": 0
+  },
+  {
+    "Dashboard": "B2B Functional Dashboard",
+    "DashboardLink": "https://app.powerbi.com/groups/67de8170-7e07-4d87-9828-fb43aba9e1c5/reports/cf9bba1c-7532-480f-a17d-ce4896ac8f55/294e8944626253634e5a?experience=power-bi&clientSideAuth=0",
+    "LastDateUpdated": "2026-02-09 00:00:00",
+    "OngoingIssues": "nan",
+    "StatusLabel": "Active",
+    "StatusColor": "green",
+    "DiffDays": 0
+  },
+  {
+    "Dashboard": "Ecomm Dashboard",
+    "DashboardLink": "https://app.powerbi.com/groups/67de8170-7e07-4d87-9828-fb43aba9e1c5/reports/0afb1e00-1908-4b85-b434-d525f9741637/1ea7ccc73db16e034708?experience=power-bi&clientSideAuth=0",
+    "LastDateUpdated": "2026-02-09 00:00:00",
+    "OngoingIssues": "nan",
+    "StatusLabel": "Active",
+    "StatusColor": "green",
+    "DiffDays": 0
+  },
+  {
+    "Dashboard": "Raw Material Inventory Dashboard",
+    "DashboardLink": "https://app.powerbi.com/groups/67de8170-7e07-4d87-9828-fb43aba9e1c5/reports/62e6669a-0098-4710-a584-c7947cfaf631/d5010f233ae78c8f5603?experience=power-bi&clientSideAuth=0",
+    "LastDateUpdated": "2026-02-09 00:00:00",
+    "OngoingIssues": "nan",
+    "StatusLabel": "Active",
+    "StatusColor": "green",
+    "DiffDays": 0
+  },
+  {
+    "Dashboard": "Labor Productivity Dashboard",
+    "DashboardLink": "https://app.powerbi.com/groups/67de8170-7e07-4d87-9828-fb43aba9e1c5/reports/9e543b17-6856-4ffa-8ebf-234c8bb0c900/cff4da2f4c0544644c42?experience=power-bi&clientSideAuth=0",
+    "LastDateUpdated": "2026-02-09 00:00:00",
+    "OngoingIssues": "nan",
+    "StatusLabel": "Active",
+    "StatusColor": "green",
+    "DiffDays": 0
+  },
+  {
+    "Dashboard": "UK Dashboard",
+    "DashboardLink": "https://app.powerbi.com/groups/67de8170-7e07-4d87-9828-fb43aba9e1c5/reports/dc0f60cb-e2e8-4133-a278-b0313e199488/c48efdada43fdebc5f6e?experience=power-bi&clientSideAuth=0",
+    "LastDateUpdated": "2026-02-09 00:00:00",
+    "OngoingIssues": "nan",
+    "StatusLabel": "Active",
+    "StatusColor": "green",
+    "DiffDays": 0
+  }
+]
