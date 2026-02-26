@@ -1,48 +1,11 @@
-import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { StatusCard } from '../components/dashboard/StatusCard';
 import { RefreshCw, AlertCircle, Activity, CheckCircle, XCircle, Wrench } from 'lucide-react';
 import { Button } from '../components/ui/button';
-import axios from 'axios';
-
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
-const API = `${BACKEND_URL}/api`;
+import { useGitHubData } from '../hooks/useGitHubData';
 
 export const DashboardPage = () => {
-  const [dashboards, setDashboards] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-  const [lastRefresh, setLastRefresh] = useState(null);
-
-  const fetchDashboards = async () => {
-    try {
-      setLoading(true);
-      setError(null);
-      const response = await axios.get(`${API}/dashboards`);
-      setDashboards(response.data);
-      setLastRefresh(new Date());
-    } catch (err) {
-      console.error('Error fetching dashboards:', err);
-      setError('Failed to fetch dashboards. Please try again.');
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  const seedData = async () => {
-    try {
-      setLoading(true);
-      await axios.post(`${API}/seed`);
-      await fetchDashboards();
-    } catch (err) {
-      console.error('Error seeding data:', err);
-      setError('Failed to seed data.');
-    }
-  };
-
-  useEffect(() => {
-    fetchDashboards();
-  }, []);
+  const { data: dashboards, loading, error, lastRefresh, refresh } = useGitHubData('dashboards');
 
   // Calculate stats
   const stats = {
@@ -85,25 +48,13 @@ export const DashboardPage = () => {
               <Button
                 variant="outline"
                 size="sm"
-                onClick={fetchDashboards}
+                onClick={refresh}
                 disabled={loading}
                 data-testid="refresh-dashboards"
               >
                 <RefreshCw className={`w-4 h-4 mr-2 ${loading ? 'animate-spin' : ''}`} />
                 Refresh
               </Button>
-              {dashboards.length === 0 && (
-                <Button
-                  variant="default"
-                  size="sm"
-                  onClick={seedData}
-                  disabled={loading}
-                  data-testid="seed-data"
-                  className="bg-accent text-white hover:bg-accent/90"
-                >
-                  Load Sample Data
-                </Button>
-              )}
             </div>
           </div>
 
@@ -161,7 +112,7 @@ export const DashboardPage = () => {
 
         {loading && dashboards.length === 0 ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {[...Array(8)].map((_, i) => (
+            {[...Array(7)].map((_, i) => (
               <div key={i} className="glass-card rounded-lg p-5 h-64 animate-pulse">
                 <div className="h-4 bg-muted rounded w-1/3 mb-4" />
                 <div className="h-6 bg-muted rounded w-2/3 mb-2" />
@@ -182,7 +133,7 @@ export const DashboardPage = () => {
               No Dashboards Found
             </h2>
             <p className="text-muted-foreground mb-6">
-              Click "Load Sample Data" to populate with sample dashboards
+              Check your GitHub data source or try refreshing
             </p>
           </motion.div>
         ) : (

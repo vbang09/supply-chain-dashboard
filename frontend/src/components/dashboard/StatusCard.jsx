@@ -1,14 +1,13 @@
 import { motion } from 'framer-motion';
 import { 
   CheckCircle, 
-  AlertTriangle, 
   XCircle, 
   Clock, 
   Wrench,
   ExternalLink,
   AlertCircle
 } from 'lucide-react';
-import { formatDistanceToNow } from 'date-fns';
+import { format, parseISO, isValid } from 'date-fns';
 
 const statusConfig = {
   active: {
@@ -38,14 +37,29 @@ const impactConfig = {
   critical: { color: 'bg-red-500', label: 'CRITICAL' },
 };
 
+const formatLastUpdated = (dateStr) => {
+  if (!dateStr) return 'Unknown';
+  try {
+    // Handle different date formats
+    let date;
+    if (dateStr.includes('T')) {
+      date = parseISO(dateStr);
+    } else {
+      // Handle "YYYY-MM-DD HH:mm:ss" format
+      date = new Date(dateStr);
+    }
+    if (!isValid(date)) return dateStr;
+    return format(date, 'MMM dd, yyyy');
+  } catch {
+    return dateStr;
+  }
+};
+
 export const StatusCard = ({ dashboard, index }) => {
   const status = statusConfig[dashboard.status] || statusConfig.inactive;
   const impact = impactConfig[dashboard.impact] || impactConfig.low;
-  const StatusIcon = status.icon;
   
-  const lastUpdated = dashboard.last_updated 
-    ? formatDistanceToNow(new Date(dashboard.last_updated), { addSuffix: true })
-    : 'Unknown';
+  const lastUpdated = formatLastUpdated(dashboard.last_updated);
 
   return (
     <motion.div
@@ -127,6 +141,16 @@ export const StatusCard = ({ dashboard, index }) => {
             </span>
             <span className="text-foreground">{lastUpdated}</span>
           </div>
+
+          {/* Days indicator */}
+          {dashboard.diff_days !== undefined && dashboard.diff_days !== null && (
+            <div className="flex items-center justify-between text-xs">
+              <span className="text-muted-foreground font-mono uppercase tracking-wider">Days Since Update</span>
+              <span className={`font-bold ${dashboard.diff_days === 0 ? 'text-emerald-500' : dashboard.diff_days <= 3 ? 'text-blue-500' : 'text-amber-500'}`}>
+                {dashboard.diff_days} days
+              </span>
+            </div>
+          )}
         </div>
 
         {/* URL Link */}

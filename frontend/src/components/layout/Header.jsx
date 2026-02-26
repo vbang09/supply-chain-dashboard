@@ -3,8 +3,7 @@ import { useTheme } from '../../context/ThemeContext';
 import { Moon, Sun, Activity, FolderKanban, ExternalLink } from 'lucide-react';
 import { Button } from '../ui/button';
 import { motion } from 'framer-motion';
-
-const JIRA_FORM_URL = 'https://toppsdigital.atlassian.net/jira/core/projects/SCT2/form/309';
+import { DATA_CONFIG } from '../../config/dataConfig';
 
 const navItems = [
   { path: '/', label: 'DASHBOARDS', icon: Activity },
@@ -69,7 +68,7 @@ export const Header = () => {
           
           {/* Submit Request - External Link */}
           <a
-            href={JIRA_FORM_URL}
+            href={DATA_CONFIG.JIRA_FORM_URL}
             target="_blank"
             rel="noopener noreferrer"
             data-testid="nav-submit-request"

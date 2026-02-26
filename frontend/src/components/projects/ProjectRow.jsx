@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion';
 import { 
-  User, 
   Calendar, 
   ChevronRight,
   CheckCircle2,
@@ -9,7 +8,7 @@ import {
   PlayCircle,
   Loader2
 } from 'lucide-react';
-import { formatDistanceToNow, format } from 'date-fns';
+import { format, parseISO, isValid } from 'date-fns';
 import { Progress } from '../ui/progress';
 
 const statusConfig = {
@@ -50,13 +49,27 @@ const getMilestoneIndex = (status) => {
   return idx >= 0 ? idx : 0;
 };
 
+const formatDate = (dateStr) => {
+  if (!dateStr) return 'Unknown';
+  try {
+    let date;
+    if (dateStr.includes('T')) {
+      date = parseISO(dateStr);
+    } else {
+      date = new Date(dateStr);
+    }
+    if (!isValid(date)) return dateStr;
+    return format(date, 'MMM dd, yyyy');
+  } catch {
+    return dateStr;
+  }
+};
+
 export const ProjectRow = ({ project, index }) => {
   const status = statusConfig[project.status] || statusConfig.assigned;
   const currentMilestoneIndex = getMilestoneIndex(project.status);
   
-  const createdAt = project.created_at 
-    ? format(new Date(project.created_at), 'MMM dd, yyyy')
-    : 'Unknown';
+  const createdAt = formatDate(project.created_at);
 
   const getInitials = (name) => {
     if (!name) return '??';
@@ -106,7 +119,7 @@ export const ProjectRow = ({ project, index }) => {
                 {getInitials(project.created_by)}
               </div>
               <div className="hidden sm:block">
-                <p className="text-[10px] font-mono text-muted-foreground uppercase tracking-wider">Created by</p>
+                <p className="text-[10px] font-mono text-muted-foreground uppercase tracking-wider">Reporter</p>
                 <p className="text-sm text-foreground">{project.created_by}</p>
               </div>
             </div>
@@ -119,7 +132,7 @@ export const ProjectRow = ({ project, index }) => {
                 {getInitials(project.assigned_to)}
               </div>
               <div className="hidden sm:block">
-                <p className="text-[10px] font-mono text-muted-foreground uppercase tracking-wider">Assigned to</p>
+                <p className="text-[10px] font-mono text-muted-foreground uppercase tracking-wider">Assignee</p>
                 <p className="text-sm text-foreground">{project.assigned_to}</p>
               </div>
             </div>

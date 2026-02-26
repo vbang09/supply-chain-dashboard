@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { ProjectRow } from '../components/projects/ProjectRow';
 import { 
@@ -12,49 +12,13 @@ import {
   ExternalLink
 } from 'lucide-react';
 import { Button } from '../components/ui/button';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '../components/ui/tabs';
-import axios from 'axios';
-
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
-const API = `${BACKEND_URL}/api`;
-const JIRA_FORM_URL = 'https://toppsdigital.atlassian.net/jira/core/projects/SCT2/form/309';
+import { Tabs, TabsList, TabsTrigger } from '../components/ui/tabs';
+import { useGitHubData } from '../hooks/useGitHubData';
+import { DATA_CONFIG } from '../config/dataConfig';
 
 export const ProjectsPage = () => {
-  const [projects, setProjects] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-  const [lastRefresh, setLastRefresh] = useState(null);
+  const { data: projects, loading, error, lastRefresh, refresh } = useGitHubData('projects');
   const [activeTab, setActiveTab] = useState('all');
-
-  const fetchProjects = async () => {
-    try {
-      setLoading(true);
-      setError(null);
-      const response = await axios.get(`${API}/projects`);
-      setProjects(response.data);
-      setLastRefresh(new Date());
-    } catch (err) {
-      console.error('Error fetching projects:', err);
-      setError('Failed to fetch projects. Please try again.');
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  const seedData = async () => {
-    try {
-      setLoading(true);
-      await axios.post(`${API}/seed`);
-      await fetchProjects();
-    } catch (err) {
-      console.error('Error seeding data:', err);
-      setError('Failed to seed data.');
-    }
-  };
-
-  useEffect(() => {
-    fetchProjects();
-  }, []);
 
   // Calculate stats
   const stats = {
@@ -103,7 +67,7 @@ export const ProjectsPage = () => {
               <Button
                 variant="outline"
                 size="sm"
-                onClick={fetchProjects}
+                onClick={refresh}
                 disabled={loading}
                 data-testid="refresh-projects"
               >
@@ -111,7 +75,7 @@ export const ProjectsPage = () => {
                 Refresh
               </Button>
               <a
-                href={JIRA_FORM_URL}
+                href={DATA_CONFIG.JIRA_FORM_URL}
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -200,7 +164,7 @@ export const ProjectsPage = () => {
 
         {loading && projects.length === 0 ? (
           <div className="space-y-4">
-            {[...Array(5)].map((_, i) => (
+            {[...Array(3)].map((_, i) => (
               <div key={i} className="glass-card rounded-lg p-5 h-48 animate-pulse">
                 <div className="flex justify-between mb-4">
                   <div className="h-6 bg-muted rounded w-1/3" />
@@ -223,20 +187,9 @@ export const ProjectsPage = () => {
             </h2>
             <p className="text-muted-foreground mb-6">
               {projects.length === 0 
-                ? 'Click "Load Sample Data" on the Dashboard page to populate sample data'
+                ? 'Check your GitHub data source or try refreshing'
                 : 'Try selecting a different filter tab'}
             </p>
-            {projects.length === 0 && (
-              <Button
-                variant="default"
-                onClick={seedData}
-                disabled={loading}
-                data-testid="seed-data-projects"
-                className="bg-accent text-white hover:bg-accent/90"
-              >
-                Load Sample Data
-              </Button>
-            )}
           </motion.div>
         ) : (
           <div className="space-y-4">
