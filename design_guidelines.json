@@ -1,0 +1,146 @@
+{
+  "identity": {
+    "name": "Fanatics Supply Chain",
+    "persona": "E1: The Anti-AI Designer",
+    "archetype": "The Performance Pro",
+    "mission": "Build a high-performance, athletic, and precise supply chain dashboard that feels like a mission control center.",
+    "principles": [
+      "Fusion over Imitation: Mix 'Bloomberg Terminal' data density with 'ESPN' energy.",
+      "Emotion First: The dashboard should feel 'Live' and 'Urgent'.",
+      "Content is King: Data legibility is paramount. No fluff.",
+      "Negative Space: Use gap-6 or gap-8 to let data breathe.",
+      "Contrast: High contrast for readability in warehouse/office environments."
+    ]
+  },
+  "typography": {
+    "font_family": {
+      "headings": "\"Barlow Condensed\", \"Oswald\", sans-serif",
+      "body": "\"Inter\", \"Roboto\", sans-serif",
+      "mono": "\"JetBrains Mono\", monospace"
+    },
+    "scale": {
+      "h1": "text-4xl md:text-5xl font-bold tracking-tight uppercase",
+      "h2": "text-3xl font-semibold tracking-tight uppercase",
+      "h3": "text-xl font-medium tracking-wide text-muted-foreground",
+      "body": "text-sm md:text-base leading-relaxed",
+      "caption": "text-xs font-mono text-muted-foreground uppercase tracking-widest"
+    },
+    "instructions": "Import 'Barlow Condensed' from Google Fonts. Use it for all headers and status labels. Use 'Inter' for data tables and body text."
+  },
+  "colors": {
+    "palette": {
+      "brand": {
+        "primary": "#09203F",
+        "secondary": "#E53C2E",
+        "accent": "#000000"
+      },
+      "semantic": {
+        "success": "#10B981",
+        "warning": "#F59E0B",
+        "error": "#EF4444",
+        "info": "#3B82F6",
+        "inactive": "#64748B"
+      },
+      "theme": {
+        "light": {
+          "background": "#F8FAFC",
+          "card": "#FFFFFF",
+          "text": "#0F172A",
+          "border": "#E2E8F0"
+        },
+        "dark": {
+          "background": "#020617",
+          "card": "#0F172A",
+          "text": "#F8FAFC",
+          "border": "#1E293B"
+        }
+      }
+    },
+    "gradients": {
+      "active_border": "linear-gradient(90deg, transparent, #E53C2E, transparent)",
+      "glass": "linear-gradient(180deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.01) 100%)"
+    }
+  },
+  "layout": {
+    "spacing": {
+      "container": "p-6 md:p-8 lg:p-12",
+      "card": "p-6",
+      "gap": "gap-6 md:gap-8"
+    },
+    "grid": {
+      "dashboard": "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6",
+      "project_tracker": "flex flex-col gap-4"
+    },
+    "radius": {
+      "default": "rounded-none",
+      "card": "rounded-lg",
+      "button": "rounded-md"
+    }
+  },
+  "components": {
+    "dashboard_card": {
+      "name": "StatusCard",
+      "style": "glass_panel",
+      "features": [
+        "Status Indicator: Pulsing dot (Green for Active, Red for Issues)",
+        "Hover Effect: 'Tracing Beam' border gradient using Framer Motion",
+        "Typography: Header in Barlow Condensed, Details in Mono",
+        "Layout: Flex column, spread content"
+      ]
+    },
+    "project_tracker": {
+      "name": "ProjectRow",
+      "style": "list_item",
+      "features": [
+        "Layout: Grid row with columns for Creator, Assignee, Progress, Status",
+        "Progress Bar: Thin (h-1.5), animated, color-coded by status",
+        "Avatar: Circle with initials or image",
+        "Hover: Slight background lift (bg-accent/50)"
+      ]
+    },
+    "button": {
+      "style": "athletic",
+      "features": [
+        "Shape: Sharp or slightly rounded (rounded-sm)",
+        "Typography: Uppercase, tracking-wider, font-bold",
+        "Hover: Scale 105%, shadow-glow"
+      ]
+    },
+    "theme_toggle": {
+      "location": "header_right",
+      "style": "icon_switch",
+      "animation": "rotate_scale"
+    }
+  },
+  "assets": {
+    "images": {
+      "logo_placeholder": "https://placehold.co/200x50/09203F/FFF?text=FANATICS+SC&font=oswald",
+      "logo_placeholder_dark": "https://placehold.co/200x50/FFF/09203F?text=FANATICS+SC&font=oswald",
+      "avatars": [
+        "https://images.pexels.com/photos/14589344/pexels-photo-14589344.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=100&w=100",
+        "https://images.pexels.com/photos/33871730/pexels-photo-33871730.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=100&w=100"
+      ]
+    },
+    "icons": {
+      "library": "lucide-react",
+      "preferred": ["Activity", "AlertTriangle", "CheckCircle", "Clock", "Truck", "Package", "Users", "Moon", "Sun"]
+    }
+  },
+  "universal_guidelines": [
+    "Do NOT use default Shadcn cards. Create a custom 'GlassCard' component.",
+    "Use 'Barlow Condensed' for all headings. If not available, use a strong sans-serif with 'tracking-tight'.",
+    "Animations: Use Framer Motion for entrance animations (staggerChildren).",
+    "Theme: Implement a 'mode-aware' background. Dark mode should feel like a 'Control Room' (Deep Blue/Black), Light mode like a 'Logistics Manifest' (Clean White/Slate).",
+    "Data-Test-ID: Every interactive element must have a data-testid attribute.",
+    "Accessibility: Ensure contrast ratios are met. Use standard ARIA roles."
+  ],
+  "instructions_to_main_agent": [
+    "1. Setup: Install 'framer-motion', 'lucide-react', 'clsx', 'tailwind-merge'.",
+    "2. Fonts: Add Google Font link for 'Barlow Condensed' and 'Inter' in index.html.",
+    "3. Theme: Create a ThemeProvider context.",
+    "4. Components: Build 'StatusCard' and 'ProjectRow' first.",
+    "5. Pages: Create 'Dashboard' (home) and 'ProjectTracker'.",
+    "6. Routing: Use React Router for navigation.",
+    "7. Data: Create mock JSON files for dashboards and projects if not provided."
+  ]
+}
