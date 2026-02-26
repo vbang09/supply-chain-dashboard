@@ -114,28 +114,28 @@ export const DashboardPage = () => {
             transition={{ delay: 0.2 }}
             className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8"
           >
-            <div className="flex items-center gap-3 p-4 rounded-lg bg-muted/50 border border-border/50">
+            <div className="flex items-center gap-3 p-4 rounded-lg bg-card border border-border">
               <Activity className="w-5 h-5 text-accent" />
               <div>
                 <p className="text-2xl font-bold text-foreground">{stats.total}</p>
                 <p className="text-xs text-muted-foreground font-mono uppercase tracking-wider">Total</p>
               </div>
             </div>
-            <div className="flex items-center gap-3 p-4 rounded-lg bg-emerald-500/10 border border-emerald-500/20">
+            <div className="flex items-center gap-3 p-4 rounded-lg bg-card border border-emerald-500/30">
               <CheckCircle className="w-5 h-5 text-emerald-500" />
               <div>
                 <p className="text-2xl font-bold text-foreground">{stats.active}</p>
                 <p className="text-xs text-muted-foreground font-mono uppercase tracking-wider">Active</p>
               </div>
             </div>
-            <div className="flex items-center gap-3 p-4 rounded-lg bg-slate-500/10 border border-slate-500/20">
+            <div className="flex items-center gap-3 p-4 rounded-lg bg-card border border-slate-400/30">
               <XCircle className="w-5 h-5 text-slate-500" />
               <div>
                 <p className="text-2xl font-bold text-foreground">{stats.inactive}</p>
                 <p className="text-xs text-muted-foreground font-mono uppercase tracking-wider">Inactive</p>
               </div>
             </div>
-            <div className="flex items-center gap-3 p-4 rounded-lg bg-amber-500/10 border border-amber-500/20">
+            <div className="flex items-center gap-3 p-4 rounded-lg bg-card border border-amber-500/30">
               <Wrench className="w-5 h-5 text-amber-500" />
               <div>
                 <p className="text-2xl font-bold text-foreground">{stats.maintenance}</p>
