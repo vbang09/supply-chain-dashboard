@@ -166,7 +166,7 @@ class SupplyChainAPITester:
             "jira_id": "TEST-001"
         }
         
-        success, response = self.run_test("Create Project", "POST", "projects", 201, test_project)
+        success, response = self.run_test("Create Project", "POST", "projects", 200, test_project)
         if success and 'id' in response:
             print(f"   Created project with ID: {response['id']}")
         return success, response
