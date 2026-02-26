@@ -1,0 +1,47 @@
+{
+  "project": "Supply Chain Tech 2026",
+  "projectKey": "SCT2",
+  "generatedAt": "2026-02-16T12:12:46.293127",
+  "items": [
+    {
+      "key": "SCT2-11",
+      "name": "BOM Airtable Scraping",
+      "type": "Task",
+      "status": "Done",
+      "assignee": "Vidit Bang",
+      "reporter": "Vidit Bang",
+      "dates": {
+        "created": "2026-02-16T13:08:39.727-0500",
+        "in_progress": null,
+        "done": "2026-02-16T13:08:49.999000-05:00",
+        "updated": "2026-02-16T13:12:23.962-0500"
+      },
+      "displayDates": {
+        "created": "2026-02-16 13:08",
+        "in_progress": "",
+        "done": "2026-02-16 13:08",
+        "updated": "2026-02-16 13:12"
+      }
+    },
+    {
+      "key": "SCT2-10",
+      "name": "Carrier Dashboard",
+      "type": "Task",
+      "status": "In Progress",
+      "assignee": "Vidit Bang",
+      "reporter": "Vidit Bang",
+      "dates": {
+        "created": "2026-01-13T12:52:04.090-0500",
+        "in_progress": "2026-02-16T11:31:13.244000-05:00",
+        "done": null,
+        "updated": "2026-02-16T11:32:25.798-0500"
+      },
+      "displayDates": {
+        "created": "2026-01-13 12:52",
+        "in_progress": "2026-02-16 11:31",
+        "done": "",
+        "updated": "2026-02-16 11:32"
+      }
+    }
+  ]
+}
