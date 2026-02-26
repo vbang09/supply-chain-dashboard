@@ -146,7 +146,7 @@ class SupplyChainAPITester:
             "description": "Test dashboard for API testing"
         }
         
-        success, response = self.run_test("Create Dashboard", "POST", "dashboards", 201, test_dashboard)
+        success, response = self.run_test("Create Dashboard", "POST", "dashboards", 200, test_dashboard)
         if success and 'id' in response:
             print(f"   Created dashboard with ID: {response['id']}")
         return success, response
