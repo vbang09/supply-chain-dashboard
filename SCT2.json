@@ -1,0 +1,1056 @@
+{
+  "project": "Supply Chain Tech 2026",
+  "projectKey": "SCT2",
+  "generatedAt": "2026-03-10T15:02:58.844715",
+  "totalIssues": 25,
+  "topLevelIssueCount": 6,
+  "items": [
+    {
+      "key": "SCT2-29",
+      "name": "Pipeline Automation- Alteryx",
+      "description": "",
+      "type": "Task",
+      "projectKey": "SCT2",
+      "projectName": "Supply Chain Tech 2026",
+      "status": "In Progress",
+      "priority": "High",
+      "assignee": "Vidit Bang",
+      "reporter": "Vidit Bang",
+      "creator": "Vidit Bang",
+      "labels": [],
+      "components": [],
+      "fixVersions": [],
+      "parentKey": null,
+      "subtaskKeys": [
+        "SCT2-30",
+        "SCT2-31",
+        "SCT2-32",
+        "SCT2-33",
+        "SCT2-34",
+        "SCT2-35"
+      ],
+      "dates": {
+        "created": "2026-03-04T14:22:22.312-0500",
+        "updated": "2026-03-04T14:28:59.146-0500",
+        "due_date": "2026-06-30",
+        "tracked_status_dates": {
+          "In Progress": "2026-03-04T14:22:27.649-0500"
+        }
+      },
+      "displayDates": {
+        "created": "2026-03-04 14:22",
+        "updated": "2026-03-04 14:28",
+        "due_date": "2026-06-30",
+        "tracked_status_dates": {
+          "In Progress": "2026-03-04 14:22"
+        }
+      },
+      "statusHistory": [
+        {
+          "from": "To Do",
+          "to": "In Progress",
+          "at": "2026-03-04T14:22:27.649-0500",
+          "at_display": "2026-03-04 14:22"
+        }
+      ],
+      "subtasks": [
+        {
+          "key": "SCT2-30",
+          "name": "Getting Access for Alteryx",
+          "description": "",
+          "type": "Sub-task",
+          "projectKey": "SCT2",
+          "projectName": "Supply Chain Tech 2026",
+          "status": "Done",
+          "priority": "Medium",
+          "assignee": "Vidit Bang",
+          "reporter": "Vidit Bang",
+          "creator": "Vidit Bang",
+          "labels": [],
+          "components": [],
+          "fixVersions": [],
+          "parentKey": "SCT2-29",
+          "subtaskKeys": [],
+          "dates": {
+            "created": "2026-03-04T14:24:13.024-0500",
+            "updated": "2026-03-04T14:27:16.666-0500",
+            "due_date": null,
+            "tracked_status_dates": {
+              "Done": "2026-03-04T14:27:16.666-0500"
+            }
+          },
+          "displayDates": {
+            "created": "2026-03-04 14:24",
+            "updated": "2026-03-04 14:27",
+            "due_date": null,
+            "tracked_status_dates": {
+              "Done": "2026-03-04 14:27"
+            }
+          },
+          "statusHistory": [
+            {
+              "from": "To Do",
+              "to": "Done",
+              "at": "2026-03-04T14:27:16.666-0500",
+              "at_display": "2026-03-04 14:27"
+            }
+          ],
+          "subtasks": []
+        },
+        {
+          "key": "SCT2-31",
+          "name": "Pipeline Testing it on Alteryx software",
+          "description": "",
+          "type": "Sub-task",
+          "projectKey": "SCT2",
+          "projectName": "Supply Chain Tech 2026",
+          "status": "Done",
+          "priority": "Medium",
+          "assignee": "Vidit Bang",
+          "reporter": "Vidit Bang",
+          "creator": "Vidit Bang",
+          "labels": [],
+          "components": [],
+          "fixVersions": [],
+          "parentKey": "SCT2-29",
+          "subtaskKeys": [],
+          "dates": {
+            "created": "2026-03-04T14:24:52.561-0500",
+            "updated": "2026-03-04T14:27:19.081-0500",
+            "due_date": null,
+            "tracked_status_dates": {
+              "Done": "2026-03-04T14:27:19.081-0500"
+            }
+          },
+          "displayDates": {
+            "created": "2026-03-04 14:24",
+            "updated": "2026-03-04 14:27",
+            "due_date": null,
+            "tracked_status_dates": {
+              "Done": "2026-03-04 14:27"
+            }
+          },
+          "statusHistory": [
+            {
+              "from": "To Do",
+              "to": "Done",
+              "at": "2026-03-04T14:27:19.081-0500",
+              "at_display": "2026-03-04 14:27"
+            }
+          ],
+          "subtasks": []
+        },
+        {
+          "key": "SCT2-32",
+          "name": "Alteryx Server curator access",
+          "description": "",
+          "type": "Sub-task",
+          "projectKey": "SCT2",
+          "projectName": "Supply Chain Tech 2026",
+          "status": "Done",
+          "priority": "Medium",
+          "assignee": "Vidit Bang",
+          "reporter": "Vidit Bang",
+          "creator": "Vidit Bang",
+          "labels": [],
+          "components": [],
+          "fixVersions": [],
+          "parentKey": "SCT2-29",
+          "subtaskKeys": [],
+          "dates": {
+            "created": "2026-03-04T14:25:20.483-0500",
+            "updated": "2026-03-04T14:27:22.248-0500",
+            "due_date": null,
+            "tracked_status_dates": {
+              "Done": "2026-03-04T14:27:22.248-0500"
+            }
+          },
+          "displayDates": {
+            "created": "2026-03-04 14:25",
+            "updated": "2026-03-04 14:27",
+            "due_date": null,
+            "tracked_status_dates": {
+              "Done": "2026-03-04 14:27"
+            }
+          },
+          "statusHistory": [
+            {
+              "from": "To Do",
+              "to": "Done",
+              "at": "2026-03-04T14:27:22.248-0500",
+              "at_display": "2026-03-04 14:27"
+            }
+          ],
+          "subtasks": []
+        },
+        {
+          "key": "SCT2-33",
+          "name": "Installing python packages to Alteryx Server",
+          "description": "",
+          "type": "Sub-task",
+          "projectKey": "SCT2",
+          "projectName": "Supply Chain Tech 2026",
+          "status": "In Progress",
+          "priority": "Medium",
+          "assignee": "Vidit Bang",
+          "reporter": "Vidit Bang",
+          "creator": "Vidit Bang",
+          "labels": [],
+          "components": [],
+          "fixVersions": [],
+          "parentKey": "SCT2-29",
+          "subtaskKeys": [],
+          "dates": {
+            "created": "2026-03-04T14:25:51.583-0500",
+            "updated": "2026-03-04T14:27:24.796-0500",
+            "due_date": null,
+            "tracked_status_dates": {
+              "In Progress": "2026-03-04T14:27:24.796-0500"
+            }
+          },
+          "displayDates": {
+            "created": "2026-03-04 14:25",
+            "updated": "2026-03-04 14:27",
+            "due_date": null,
+            "tracked_status_dates": {
+              "In Progress": "2026-03-04 14:27"
+            }
+          },
+          "statusHistory": [
+            {
+              "from": "To Do",
+              "to": "In Progress",
+              "at": "2026-03-04T14:27:24.796-0500",
+              "at_display": "2026-03-04 14:27"
+            }
+          ],
+          "subtasks": []
+        },
+        {
+          "key": "SCT2-34",
+          "name": "Pipeline testing on Alteryx Server",
+          "description": "",
+          "type": "Sub-task",
+          "projectKey": "SCT2",
+          "projectName": "Supply Chain Tech 2026",
+          "status": "To Do",
+          "priority": "Medium",
+          "assignee": "Vidit Bang",
+          "reporter": "Vidit Bang",
+          "creator": "Vidit Bang",
+          "labels": [],
+          "components": [],
+          "fixVersions": [],
+          "parentKey": "SCT2-29",
+          "subtaskKeys": [],
+          "dates": {
+            "created": "2026-03-04T14:26:11.974-0500",
+            "updated": "2026-03-04T14:27:11.400-0500",
+            "due_date": null,
+            "tracked_status_dates": {}
+          },
+          "displayDates": {
+            "created": "2026-03-04 14:26",
+            "updated": "2026-03-04 14:27",
+            "due_date": null,
+            "tracked_status_dates": {}
+          },
+          "statusHistory": [],
+          "subtasks": []
+        },
+        {
+          "key": "SCT2-35",
+          "name": "Assessing Project work and timeline ",
+          "description": "",
+          "type": "Sub-task",
+          "projectKey": "SCT2",
+          "projectName": "Supply Chain Tech 2026",
+          "status": "To Do",
+          "priority": "Medium",
+          "assignee": "Vidit Bang",
+          "reporter": "Vidit Bang",
+          "creator": "Vidit Bang",
+          "labels": [],
+          "components": [],
+          "fixVersions": [],
+          "parentKey": "SCT2-29",
+          "subtaskKeys": [],
+          "dates": {
+            "created": "2026-03-04T14:26:53.629-0500",
+            "updated": "2026-03-04T14:27:09.835-0500",
+            "due_date": null,
+            "tracked_status_dates": {}
+          },
+          "displayDates": {
+            "created": "2026-03-04 14:26",
+            "updated": "2026-03-04 14:27",
+            "due_date": null,
+            "tracked_status_dates": {}
+          },
+          "statusHistory": [],
+          "subtasks": []
+        }
+      ]
+    },
+    {
+      "key": "SCT2-22",
+      "name": "Website - Supply Chain Tech",
+      "description": "",
+      "type": "Task",
+      "projectKey": "SCT2",
+      "projectName": "Supply Chain Tech 2026",
+      "status": "In Progress",
+      "priority": "High",
+      "assignee": "Vidit Bang",
+      "reporter": "Vidit Bang",
+      "creator": "Vidit Bang",
+      "labels": [],
+      "components": [],
+      "fixVersions": [],
+      "parentKey": null,
+      "subtaskKeys": [
+        "SCT2-23",
+        "SCT2-24",
+        "SCT2-25",
+        "SCT2-26",
+        "SCT2-27",
+        "SCT2-28"
+      ],
+      "dates": {
+        "created": "2026-03-04T13:06:44.748-0500",
+        "updated": "2026-03-04T13:08:29.765-0500",
+        "due_date": "2026-03-31",
+        "tracked_status_dates": {
+          "In Progress": "2026-03-04T13:08:29.765-0500"
+        }
+      },
+      "displayDates": {
+        "created": "2026-03-04 13:06",
+        "updated": "2026-03-04 13:08",
+        "due_date": "2026-03-31",
+        "tracked_status_dates": {
+          "In Progress": "2026-03-04 13:08"
+        }
+      },
+      "statusHistory": [
+        {
+          "from": "To Do",
+          "to": "In Progress",
+          "at": "2026-03-04T13:08:29.765-0500",
+          "at_display": "2026-03-04 13:08"
+        }
+      ],
+      "subtasks": [
+        {
+          "key": "SCT2-23",
+          "name": "Building Jira Space for Project Creation and Automation",
+          "description": "",
+          "type": "Sub-task",
+          "projectKey": "SCT2",
+          "projectName": "Supply Chain Tech 2026",
+          "status": "Done",
+          "priority": "Medium",
+          "assignee": "Vidit Bang",
+          "reporter": "Vidit Bang",
+          "creator": "Vidit Bang",
+          "labels": [],
+          "components": [],
+          "fixVersions": [],
+          "parentKey": "SCT2-22",
+          "subtaskKeys": [],
+          "dates": {
+            "created": "2026-03-04T13:09:06.536-0500",
+            "updated": "2026-03-04T13:17:16.141-0500",
+            "due_date": null,
+            "tracked_status_dates": {
+              "Done": "2026-03-04T13:17:16.141-0500"
+            }
+          },
+          "displayDates": {
+            "created": "2026-03-04 13:09",
+            "updated": "2026-03-04 13:17",
+            "due_date": null,
+            "tracked_status_dates": {
+              "Done": "2026-03-04 13:17"
+            }
+          },
+          "statusHistory": [
+            {
+              "from": "To Do",
+              "to": "Done",
+              "at": "2026-03-04T13:17:16.141-0500",
+              "at_display": "2026-03-04 13:17"
+            }
+          ],
+          "subtasks": []
+        },
+        {
+          "key": "SCT2-24",
+          "name": "Building Space for showing dashboard to be live in website",
+          "description": "",
+          "type": "Sub-task",
+          "projectKey": "SCT2",
+          "projectName": "Supply Chain Tech 2026",
+          "status": "Done",
+          "priority": "Medium",
+          "assignee": "Vidit Bang",
+          "reporter": "Vidit Bang",
+          "creator": "Vidit Bang",
+          "labels": [],
+          "components": [],
+          "fixVersions": [],
+          "parentKey": "SCT2-22",
+          "subtaskKeys": [],
+          "dates": {
+            "created": "2026-03-04T13:09:43.419-0500",
+            "updated": "2026-03-04T13:17:20.012-0500",
+            "due_date": null,
+            "tracked_status_dates": {
+              "Done": "2026-03-04T13:17:20.012-0500"
+            }
+          },
+          "displayDates": {
+            "created": "2026-03-04 13:09",
+            "updated": "2026-03-04 13:17",
+            "due_date": null,
+            "tracked_status_dates": {
+              "Done": "2026-03-04 13:17"
+            }
+          },
+          "statusHistory": [
+            {
+              "from": "To Do",
+              "to": "Done",
+              "at": "2026-03-04T13:17:20.012-0500",
+              "at_display": "2026-03-04 13:17"
+            }
+          ],
+          "subtasks": []
+        },
+        {
+          "key": "SCT2-25",
+          "name": "Website Building and Testing",
+          "description": "",
+          "type": "Sub-task",
+          "projectKey": "SCT2",
+          "projectName": "Supply Chain Tech 2026",
+          "status": "In Progress",
+          "priority": "Medium",
+          "assignee": "Vidit Bang",
+          "reporter": "Vidit Bang",
+          "creator": "Vidit Bang",
+          "labels": [],
+          "components": [],
+          "fixVersions": [],
+          "parentKey": "SCT2-22",
+          "subtaskKeys": [],
+          "dates": {
+            "created": "2026-03-04T13:10:03.218-0500",
+            "updated": "2026-03-04T13:17:28.288-0500",
+            "due_date": null,
+            "tracked_status_dates": {
+              "In Progress": "2026-03-04T13:17:28.288-0500"
+            }
+          },
+          "displayDates": {
+            "created": "2026-03-04 13:10",
+            "updated": "2026-03-04 13:17",
+            "due_date": null,
+            "tracked_status_dates": {
+              "In Progress": "2026-03-04 13:17"
+            }
+          },
+          "statusHistory": [
+            {
+              "from": "To Do",
+              "to": "In Progress",
+              "at": "2026-03-04T13:17:28.288-0500",
+              "at_display": "2026-03-04 13:17"
+            }
+          ],
+          "subtasks": []
+        },
+        {
+          "key": "SCT2-26",
+          "name": "Project Creation -Jira (Completed, InProgress, To Do)  ",
+          "description": "",
+          "type": "Sub-task",
+          "projectKey": "SCT2",
+          "projectName": "Supply Chain Tech 2026",
+          "status": "In Progress",
+          "priority": "Medium",
+          "assignee": "Vidit Bang",
+          "reporter": "Vidit Bang",
+          "creator": "Vidit Bang",
+          "labels": [],
+          "components": [],
+          "fixVersions": [],
+          "parentKey": "SCT2-22",
+          "subtaskKeys": [],
+          "dates": {
+            "created": "2026-03-04T13:11:17.624-0500",
+            "updated": "2026-03-04T13:17:37.866-0500",
+            "due_date": null,
+            "tracked_status_dates": {
+              "In Progress": "2026-03-04T13:17:37.866-0500"
+            }
+          },
+          "displayDates": {
+            "created": "2026-03-04 13:11",
+            "updated": "2026-03-04 13:17",
+            "due_date": null,
+            "tracked_status_dates": {
+              "In Progress": "2026-03-04 13:17"
+            }
+          },
+          "statusHistory": [
+            {
+              "from": "To Do",
+              "to": "In Progress",
+              "at": "2026-03-04T13:17:37.866-0500",
+              "at_display": "2026-03-04 13:17"
+            }
+          ],
+          "subtasks": []
+        },
+        {
+          "key": "SCT2-27",
+          "name": "User Testing and Reviews",
+          "description": "",
+          "type": "Sub-task",
+          "projectKey": "SCT2",
+          "projectName": "Supply Chain Tech 2026",
+          "status": "To Do",
+          "priority": "Medium",
+          "assignee": "Vidit Bang",
+          "reporter": "Vidit Bang",
+          "creator": "Vidit Bang",
+          "labels": [],
+          "components": [],
+          "fixVersions": [],
+          "parentKey": "SCT2-22",
+          "subtaskKeys": [],
+          "dates": {
+            "created": "2026-03-04T13:11:34.465-0500",
+            "updated": "2026-03-04T13:17:08.133-0500",
+            "due_date": null,
+            "tracked_status_dates": {}
+          },
+          "displayDates": {
+            "created": "2026-03-04 13:11",
+            "updated": "2026-03-04 13:17",
+            "due_date": null,
+            "tracked_status_dates": {}
+          },
+          "statusHistory": [],
+          "subtasks": []
+        },
+        {
+          "key": "SCT2-28",
+          "name": "Live for all the users",
+          "description": "",
+          "type": "Sub-task",
+          "projectKey": "SCT2",
+          "projectName": "Supply Chain Tech 2026",
+          "status": "To Do",
+          "priority": "Medium",
+          "assignee": "Vidit Bang",
+          "reporter": "Vidit Bang",
+          "creator": "Vidit Bang",
+          "labels": [],
+          "components": [],
+          "fixVersions": [],
+          "parentKey": "SCT2-22",
+          "subtaskKeys": [],
+          "dates": {
+            "created": "2026-03-04T13:16:53.596-0500",
+            "updated": "2026-03-04T13:17:10.703-0500",
+            "due_date": null,
+            "tracked_status_dates": {}
+          },
+          "displayDates": {
+            "created": "2026-03-04 13:16",
+            "updated": "2026-03-04 13:17",
+            "due_date": null,
+            "tracked_status_dates": {}
+          },
+          "statusHistory": [],
+          "subtasks": []
+        }
+      ]
+    },
+    {
+      "key": "SCT2-16",
+      "name": "Warehouse Utilization Dashboard",
+      "description": "",
+      "type": "Task",
+      "projectKey": "SCT2",
+      "projectName": "Supply Chain Tech 2026",
+      "status": "To Do",
+      "priority": "Critical",
+      "assignee": "Vidit Bang",
+      "reporter": "Vidit Bang",
+      "creator": "Vidit Bang",
+      "labels": [],
+      "components": [],
+      "fixVersions": [],
+      "parentKey": null,
+      "subtaskKeys": [
+        "SCT2-17",
+        "SCT2-18",
+        "SCT2-19",
+        "SCT2-20",
+        "SCT2-21"
+      ],
+      "dates": {
+        "created": "2026-03-04T12:59:14.702-0500",
+        "updated": "2026-03-04T13:01:27.806-0500",
+        "due_date": "2026-03-20",
+        "tracked_status_dates": {}
+      },
+      "displayDates": {
+        "created": "2026-03-04 12:59",
+        "updated": "2026-03-04 13:01",
+        "due_date": "2026-03-20",
+        "tracked_status_dates": {}
+      },
+      "statusHistory": [],
+      "subtasks": [
+        {
+          "key": "SCT2-17",
+          "name": "Mapping Current Bins and Layout",
+          "description": "",
+          "type": "Sub-task",
+          "projectKey": "SCT2",
+          "projectName": "Supply Chain Tech 2026",
+          "status": "Done",
+          "priority": "Medium",
+          "assignee": "Vidit Bang",
+          "reporter": "Vidit Bang",
+          "creator": "Vidit Bang",
+          "labels": [],
+          "components": [],
+          "fixVersions": [],
+          "parentKey": "SCT2-16",
+          "subtaskKeys": [],
+          "dates": {
+            "created": "2026-03-04T13:01:59.111-0500",
+            "updated": "2026-03-04T13:04:13.113-0500",
+            "due_date": null,
+            "tracked_status_dates": {
+              "Done": "2026-03-04T13:04:13.113-0500"
+            }
+          },
+          "displayDates": {
+            "created": "2026-03-04 13:01",
+            "updated": "2026-03-04 13:04",
+            "due_date": null,
+            "tracked_status_dates": {
+              "Done": "2026-03-04 13:04"
+            }
+          },
+          "statusHistory": [
+            {
+              "from": "To Do",
+              "to": "Done",
+              "at": "2026-03-04T13:04:13.113-0500",
+              "at_display": "2026-03-04 13:04"
+            }
+          ],
+          "subtasks": []
+        },
+        {
+          "key": "SCT2-18",
+          "name": "Connecting with Extensiv and ETL process",
+          "description": "",
+          "type": "Sub-task",
+          "projectKey": "SCT2",
+          "projectName": "Supply Chain Tech 2026",
+          "status": "Done",
+          "priority": "Medium",
+          "assignee": "Vidit Bang",
+          "reporter": "Vidit Bang",
+          "creator": "Vidit Bang",
+          "labels": [],
+          "components": [],
+          "fixVersions": [],
+          "parentKey": "SCT2-16",
+          "subtaskKeys": [],
+          "dates": {
+            "created": "2026-03-04T13:02:30.055-0500",
+            "updated": "2026-03-04T13:04:19.242-0500",
+            "due_date": null,
+            "tracked_status_dates": {
+              "Done": "2026-03-04T13:04:19.242-0500"
+            }
+          },
+          "displayDates": {
+            "created": "2026-03-04 13:02",
+            "updated": "2026-03-04 13:04",
+            "due_date": null,
+            "tracked_status_dates": {
+              "Done": "2026-03-04 13:04"
+            }
+          },
+          "statusHistory": [
+            {
+              "from": "To Do",
+              "to": "Done",
+              "at": "2026-03-04T13:04:19.242-0500",
+              "at_display": "2026-03-04 13:04"
+            }
+          ],
+          "subtasks": []
+        },
+        {
+          "key": "SCT2-19",
+          "name": "Building Dashboard",
+          "description": "",
+          "type": "Sub-task",
+          "projectKey": "SCT2",
+          "projectName": "Supply Chain Tech 2026",
+          "status": "Done",
+          "priority": "Medium",
+          "assignee": "Vidit Bang",
+          "reporter": "Vidit Bang",
+          "creator": "Vidit Bang",
+          "labels": [],
+          "components": [],
+          "fixVersions": [],
+          "parentKey": "SCT2-16",
+          "subtaskKeys": [],
+          "dates": {
+            "created": "2026-03-04T13:03:02.896-0500",
+            "updated": "2026-03-04T13:04:21.609-0500",
+            "due_date": null,
+            "tracked_status_dates": {
+              "Done": "2026-03-04T13:04:21.609-0500"
+            }
+          },
+          "displayDates": {
+            "created": "2026-03-04 13:03",
+            "updated": "2026-03-04 13:04",
+            "due_date": null,
+            "tracked_status_dates": {
+              "Done": "2026-03-04 13:04"
+            }
+          },
+          "statusHistory": [
+            {
+              "from": "To Do",
+              "to": "Done",
+              "at": "2026-03-04T13:04:21.609-0500",
+              "at_display": "2026-03-04 13:04"
+            }
+          ],
+          "subtasks": []
+        },
+        {
+          "key": "SCT2-20",
+          "name": "Automation with Extensiv",
+          "description": "",
+          "type": "Sub-task",
+          "projectKey": "SCT2",
+          "projectName": "Supply Chain Tech 2026",
+          "status": "In Progress",
+          "priority": "Medium",
+          "assignee": "Vidit Bang",
+          "reporter": "Vidit Bang",
+          "creator": "Vidit Bang",
+          "labels": [],
+          "components": [],
+          "fixVersions": [],
+          "parentKey": "SCT2-16",
+          "subtaskKeys": [],
+          "dates": {
+            "created": "2026-03-04T13:03:20.263-0500",
+            "updated": "2026-03-04T13:04:54.416-0500",
+            "due_date": null,
+            "tracked_status_dates": {
+              "In Progress": "2026-03-04T13:04:54.416-0500"
+            }
+          },
+          "displayDates": {
+            "created": "2026-03-04 13:03",
+            "updated": "2026-03-04 13:04",
+            "due_date": null,
+            "tracked_status_dates": {
+              "In Progress": "2026-03-04 13:04"
+            }
+          },
+          "statusHistory": [
+            {
+              "from": "To Do",
+              "to": "In Progress",
+              "at": "2026-03-04T13:04:54.416-0500",
+              "at_display": "2026-03-04 13:04"
+            }
+          ],
+          "subtasks": []
+        },
+        {
+          "key": "SCT2-21",
+          "name": "Providing access to all stakeholders ",
+          "description": "",
+          "type": "Sub-task",
+          "projectKey": "SCT2",
+          "projectName": "Supply Chain Tech 2026",
+          "status": "Paused",
+          "priority": "Medium",
+          "assignee": "Vidit Bang",
+          "reporter": "Vidit Bang",
+          "creator": "Vidit Bang",
+          "labels": [],
+          "components": [],
+          "fixVersions": [],
+          "parentKey": "SCT2-16",
+          "subtaskKeys": [],
+          "dates": {
+            "created": "2026-03-04T13:03:50.228-0500",
+            "updated": "2026-03-04T13:05:08.344-0500",
+            "due_date": null,
+            "tracked_status_dates": {
+              "Paused": "2026-03-04T13:05:08.344-0500"
+            }
+          },
+          "displayDates": {
+            "created": "2026-03-04 13:03",
+            "updated": "2026-03-04 13:05",
+            "due_date": null,
+            "tracked_status_dates": {
+              "Paused": "2026-03-04 13:05"
+            }
+          },
+          "statusHistory": [
+            {
+              "from": "To Do",
+              "to": "Paused",
+              "at": "2026-03-04T13:05:08.344-0500",
+              "at_display": "2026-03-04 13:05"
+            }
+          ],
+          "subtasks": []
+        }
+      ]
+    },
+    {
+      "key": "SCT2-13",
+      "name": "Shipping Cost Analysis",
+      "description": "{'type': 'doc', 'version': 1, 'content': [{'type': 'paragraph', 'content': [{'type': 'text', 'text': 'Presale/Onsale order cost analysis by carrier'}], 'attrs': {'localId': '6860f68a5433'}}]}",
+      "type": "Task",
+      "projectKey": "SCT2",
+      "projectName": "Supply Chain Tech 2026",
+      "status": "Done",
+      "priority": "Medium",
+      "assignee": "Vidit Bang",
+      "reporter": "Vidit Bang",
+      "creator": "Vidit Bang",
+      "labels": [],
+      "components": [],
+      "fixVersions": [],
+      "parentKey": null,
+      "subtaskKeys": [],
+      "dates": {
+        "created": "2026-03-04T12:49:04.097-0500",
+        "updated": "2026-03-04T12:53:42.966-0500",
+        "due_date": "2026-02-21",
+        "tracked_status_dates": {
+          "Done": "2026-03-04T12:53:42.966-0500"
+        }
+      },
+      "displayDates": {
+        "created": "2026-03-04 12:49",
+        "updated": "2026-03-04 12:53",
+        "due_date": "2026-02-21",
+        "tracked_status_dates": {
+          "Done": "2026-03-04 12:53"
+        }
+      },
+      "statusHistory": [
+        {
+          "from": "To Do",
+          "to": "Done",
+          "at": "2026-03-04T12:53:42.966-0500",
+          "at_display": "2026-03-04 12:53"
+        }
+      ],
+      "subtasks": []
+    },
+    {
+      "key": "SCT2-11",
+      "name": "BOM Airtable Scraping",
+      "description": "",
+      "type": "Task",
+      "projectKey": "SCT2",
+      "projectName": "Supply Chain Tech 2026",
+      "status": "Done",
+      "priority": "Medium",
+      "assignee": "Vidit Bang",
+      "reporter": "Vidit Bang",
+      "creator": "Vidit Bang",
+      "labels": [],
+      "components": [],
+      "fixVersions": [],
+      "parentKey": null,
+      "subtaskKeys": [],
+      "dates": {
+        "created": "2026-02-16T13:08:39.727-0500",
+        "updated": "2026-02-16T13:12:23.962-0500",
+        "due_date": "2026-02-09",
+        "tracked_status_dates": {
+          "Done": "2026-02-16T13:08:49.999-0500"
+        }
+      },
+      "displayDates": {
+        "created": "2026-02-16 13:08",
+        "updated": "2026-02-16 13:12",
+        "due_date": "2026-02-09",
+        "tracked_status_dates": {
+          "Done": "2026-02-16 13:08"
+        }
+      },
+      "statusHistory": [
+        {
+          "from": "To Do",
+          "to": "Done",
+          "at": "2026-02-16T13:08:49.999-0500",
+          "at_display": "2026-02-16 13:08"
+        }
+      ],
+      "subtasks": []
+    },
+    {
+      "key": "SCT2-10",
+      "name": "Carrier Dashboard",
+      "description": "{'type': 'doc', 'version': 1, 'content': [{'type': 'paragraph', 'content': [{'type': 'text', 'text': 'Looking to develop a new carrier dashboard for both B2B and E-commerce, enabling in-depth analysis of transit times and carrier performance. ~ First Scan date from carrier is important for this dashboard. '}]}]}",
+      "type": "Task",
+      "projectKey": "SCT2",
+      "projectName": "Supply Chain Tech 2026",
+      "status": "Paused",
+      "priority": "High",
+      "assignee": "Vidit Bang",
+      "reporter": "Vidit Bang",
+      "creator": "Vidit Bang",
+      "labels": [
+        "business-form",
+        "business-form-309"
+      ],
+      "components": [],
+      "fixVersions": [],
+      "parentKey": null,
+      "subtaskKeys": [
+        "SCT2-12",
+        "SCT2-15"
+      ],
+      "dates": {
+        "created": "2026-01-13T12:52:04.090-0500",
+        "updated": "2026-03-04T11:26:39.319-0500",
+        "due_date": "2026-04-30",
+        "tracked_status_dates": {
+          "In Progress": "2026-02-16T11:31:13.244-0500",
+          "Paused": "2026-03-04T11:26:02.866-0500"
+        }
+      },
+      "displayDates": {
+        "created": "2026-01-13 12:52",
+        "updated": "2026-03-04 11:26",
+        "due_date": "2026-04-30",
+        "tracked_status_dates": {
+          "In Progress": "2026-02-16 11:31",
+          "Paused": "2026-03-04 11:26"
+        }
+      },
+      "statusHistory": [
+        {
+          "from": "To Do",
+          "to": "In Progress",
+          "at": "2026-02-16T11:31:13.244-0500",
+          "at_display": "2026-02-16 11:31"
+        },
+        {
+          "from": "In Progress",
+          "to": "Paused",
+          "at": "2026-03-04T11:26:02.866-0500",
+          "at_display": "2026-03-04 11:26"
+        }
+      ],
+      "subtasks": [
+        {
+          "key": "SCT2-12",
+          "name": "Working on GFL integration to replace Extensiv, as Extensiv is currently blocking the data refresh and scraping process.",
+          "description": "",
+          "type": "Sub-task",
+          "projectKey": "SCT2",
+          "projectName": "Supply Chain Tech 2026",
+          "status": "In Progress",
+          "priority": "Medium",
+          "assignee": "Vidit Bang",
+          "reporter": "Vidit Bang",
+          "creator": "Vidit Bang",
+          "labels": [],
+          "components": [],
+          "fixVersions": [],
+          "parentKey": "SCT2-10",
+          "subtaskKeys": [],
+          "dates": {
+            "created": "2026-03-04T11:22:20.684-0500",
+            "updated": "2026-03-04T11:25:07.809-0500",
+            "due_date": null,
+            "tracked_status_dates": {
+              "In Progress": "2026-03-04T11:25:07.809-0500"
+            }
+          },
+          "displayDates": {
+            "created": "2026-03-04 11:22",
+            "updated": "2026-03-04 11:25",
+            "due_date": null,
+            "tracked_status_dates": {
+              "In Progress": "2026-03-04 11:25"
+            }
+          },
+          "statusHistory": [
+            {
+              "from": "To Do",
+              "to": "In Progress",
+              "at": "2026-03-04T11:25:07.809-0500",
+              "at_display": "2026-03-04 11:25"
+            }
+          ],
+          "subtasks": []
+        },
+        {
+          "key": "SCT2-15",
+          "name": "Rebuilding Carrier Dashboard",
+          "description": "",
+          "type": "Sub-task",
+          "projectKey": "SCT2",
+          "projectName": "Supply Chain Tech 2026",
+          "status": "To Do",
+          "priority": "Medium",
+          "assignee": "Vidit Bang",
+          "reporter": "Vidit Bang",
+          "creator": "Vidit Bang",
+          "labels": [],
+          "components": [],
+          "fixVersions": [],
+          "parentKey": "SCT2-10",
+          "subtaskKeys": [],
+          "dates": {
+            "created": "2026-03-04T12:57:19.298-0500",
+            "updated": "2026-03-04T12:57:28.010-0500",
+            "due_date": null,
+            "tracked_status_dates": {}
+          },
+          "displayDates": {
+            "created": "2026-03-04 12:57",
+            "updated": "2026-03-04 12:57",
+            "due_date": null,
+            "tracked_status_dates": {}
+          },
+          "statusHistory": [],
+          "subtasks": []
+        }
+      ]
+    }
+  ]
+}
