@@ -250,7 +250,6 @@
   </header>
 
   <main class="container">
-    <!-- DASHBOARDS PAGE -->
     <section id="pageDashboards">
       <div class="pageHead">
         <div>
@@ -272,7 +271,6 @@
       <div class="grid" id="dashGrid">Loading dashboards…</div>
     </section>
 
-    <!-- PROJECTS PAGE -->
     <section id="pageProjects" class="hide">
       <div class="pageHead">
         <div>
@@ -311,7 +309,6 @@
   </main>
 
   <script>
-    // ========== CONFIG ==========
     const DASH_URL = 'https://raw.githubusercontent.com/vbang09/supply-chain-dashboard/main/dashboards.json';
     const SCT2_URL = 'https://raw.githubusercontent.com/vbang09/supply-chain-dashboard/main/SCT2.json';
     const JIRA_BASE = 'https://toppsdigital.atlassian.net/browse/';
@@ -320,7 +317,6 @@
     let projectsAll = [];
     let activeFilter = 'all';
 
-    // ========== HELPERS ==========
     const nowTimeLabel = () => new Date().toLocaleTimeString('en-US', {hour:'2-digit',minute:'2-digit',second:'2-digit'});
 
     function toLongDate(dateStr) {
@@ -331,15 +327,6 @@
         if (isNaN(d)) return dateStr;
         return d.toLocaleDateString('en-US', {month:'short', day:'numeric', year:'numeric'});
       } catch { return dateStr; }
-    }
-
-    function dashIsActive(lastUpdatedStr) {
-      if (!lastUpdatedStr) return false;
-      try {
-        const d = new Date(lastUpdatedStr.replace(' ', 'T'));
-        const diff = (Date.now() - d.getTime()) / (1000 * 60 * 60 * 24);
-        return diff <= 2;
-      } catch { return false; }
     }
 
     function severityFromDays(diffDays) {
@@ -392,14 +379,6 @@
       return stage;
     }
 
-    function trackedStatusDisplayDate(item, originalStatus) {
-      if (!item || !originalStatus) return '';
-      return item.displayDates?.tracked_status_dates?.[originalStatus]
-        || item.displayDates?.updated
-        || item.displayDates?.created
-        || '';
-    }
-
     function bestCurrentSubtask(project) {
       const subtasks = project.subtasks || [];
       if (!subtasks.length) return null;
@@ -430,29 +409,32 @@
 
       if (focusSubtask) {
         const subtaskStage = normalizeProjectStage(focusSubtask.status);
-        const subtaskDate = trackedStatusDisplayDate(focusSubtask, focusSubtask.status) || '--';
-        return `${stageLabel(subtaskStage)} — ${focusSubtask.name} (${focusSubtask.key}) since ${subtaskDate}`;
+        return `${stageLabel(subtaskStage)} — ${focusSubtask.name}`;
       }
 
-      const mainDate = trackedStatusDisplayDate(project, project.status) || '--';
-      return `${stageLabel(mainStage)} — ${project.name} (${project.key}) since ${mainDate}`;
+      return `${stageLabel(mainStage)} — ${project.name}`;
     }
 
     function renderSubtaskTags(project) {
       const subtasks = project.subtasks || [];
       if (!subtasks.length) return '';
 
+      const sortedSubtasks = [...subtasks].sort((a, b) => {
+        const aNum = parseInt((a.key || '').split('-')[1] || '999999', 10);
+        const bNum = parseInt((b.key || '').split('-')[1] || '999999', 10);
+        return aNum - bNum;
+      });
+
       return `
         <div class="milestones">
           <div class="msLabel">Subtasks</div>
-          <div class="tags">
-            ${subtasks.map(st => {
+          <div class="tags" style="display:flex;flex-direction:column;align-items:flex-start;gap:10px;">
+            ${sortedSubtasks.map((st, index) => {
               const stStage = normalizeProjectStage(st.status);
-              const when = trackedStatusDisplayDate(st, st.status) || '--';
               return `
-                <span class="tag" title="${st.name} | ${stageLabel(stStage)} | ${when}">
-                  ${st.key} · ${stageLabel(stStage)} · ${when}
-                </span>
+                <div class="tag" style="display:block;width:100%;background:transparent;color:var(--text);padding:0;border-radius:0;">
+                  ${index + 1}. ${st.name} (${stageLabel(stStage)})
+                </div>
               `;
             }).join('')}
           </div>
@@ -460,7 +442,6 @@
       `;
     }
 
-    // ========== THEME ==========
     const themeBtn = document.getElementById('themeBtn');
     const moonIcon = document.getElementById('moonIcon');
     const sunIcon = document.getElementById('sunIcon');
@@ -479,7 +460,6 @@
 
     setTheme(localStorage.getItem('fanatics-theme') || 'dark');
 
-    // ========== ROUTING ==========
     const navDash = document.getElementById('navDash');
     const navProj = document.getElementById('navProj');
     const pageDash = document.getElementById('pageDashboards');
@@ -497,7 +477,6 @@
     window.addEventListener('hashchange', applyRoute);
     applyRoute();
 
-    // ========== DASHBOARDS ==========
     async function loadDashboards() {
       try {
         const res = await fetch(DASH_URL + '?v=' + Date.now(), {cache:'no-store'});
@@ -521,7 +500,6 @@
     function renderDashboards() {
       let active = 0, inactive = 0, maintenance = 0;
       dashboardsAll.forEach(d => {
-        const hasIssue = d.OngoingIssues && d.OngoingIssues !== 'nan';
         if (isMaintenance(d.OngoingIssues)) maintenance++;
         else if (d.StatusLabel?.toLowerCase() === 'active') active++;
         else inactive++;
@@ -591,7 +569,6 @@
 
     document.getElementById('refreshDash').addEventListener('click', loadDashboards);
 
-    // ========== PROJECTS ==========
     async function loadProjects() {
       try {
         const res = await fetch(SCT2_URL + '?v=' + Date.now(), {cache:'no-store'});
@@ -607,15 +584,10 @@
     function renderProjStats(total, todo, inProgress, finalReview, paused, completed) {
       document.getElementById('projStats').innerHTML = `
         <div class="statCard"><div class="statIcon total"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h6l6 18h6"/><path d="M14 3h7"/></svg></div><div class="statText"><div class="statNum">${total}</div><div class="statLabel">Total Projects</div></div></div>
-
         <div class="statCard"><div class="statIcon started"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg></div><div class="statText"><div class="statNum">${todo}</div><div class="statLabel">To Do</div></div></div>
-
         <div class="statCard"><div class="statIcon inprogress"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="2" x2="12" y2="6"/><line x1="12" y1="18" x2="12" y2="22"/><line x1="4.93" y1="4.93" x2="7.76" y2="7.76"/><line x1="16.24" y1="16.24" x2="19.07" y2="19.07"/><line x1="2" y1="12" x2="6" y2="12"/><line x1="18" y1="12" x2="22" y2="12"/><line x1="4.93" y1="19.07" x2="7.76" y2="16.24"/><line x1="16.24" y1="7.76" x2="19.07" y2="4.93"/></svg></div><div class="statText"><div class="statNum">${inProgress}</div><div class="statLabel">In Progress</div></div></div>
-
         <div class="statCard"><div class="statIcon maintenance"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4"/><path d="M12 16h.01"/></svg></div><div class="statText"><div class="statNum">${finalReview}</div><div class="statLabel">Final Review</div></div></div>
-
         <div class="statCard"><div class="statIcon assigned"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="8" y1="12" x2="16" y2="12"/></svg></div><div class="statText"><div class="statNum">${paused}</div><div class="statLabel">Paused</div></div></div>
-
         <div class="statCard"><div class="statIcon done"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div><div class="statText"><div class="statNum">${completed}</div><div class="statLabel">Completed</div></div></div>
       `;
     }
@@ -733,7 +705,6 @@
       document.getElementById('projUpdated').textContent = nowTimeLabel();
     }
 
-    // Filter chips
     document.querySelectorAll('.chip').forEach(chip => {
       chip.addEventListener('click', () => {
         document.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
@@ -745,7 +716,6 @@
 
     document.getElementById('refreshProj').addEventListener('click', loadProjects);
 
-    // ========== INIT ==========
     loadDashboards();
     loadProjects();
   </script>
