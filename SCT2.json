@@ -1,7 +1,7 @@
 {
   "project": "Supply Chain Tech 2026",
   "projectKey": "SCT2",
-  "generatedAt": "2026-05-15T19:31:28.989725Z",
+  "generatedAt": "2026-05-15T19:42:42.947502Z",
   "totalIssues": 53,
   "topLevelIssueCount": 21,
   "items": [
@@ -399,7 +399,7 @@
       "type": "Task",
       "projectKey": "SCT2",
       "projectName": "Supply Chain Tech 2026",
-      "status": "In Progress",
+      "status": "Done",
       "priority": "High",
       "assignee": "Vidit Bang",
       "reporter": "Craig Matusinski",
@@ -414,18 +414,20 @@
       "subtaskKeys": [],
       "dates": {
         "created": "2026-03-16T17:11:40.124-0400",
-        "updated": "2026-05-15T15:08:39.263-0400",
+        "updated": "2026-05-15T15:38:39.756-0400",
         "due_date": null,
         "tracked_status_dates": {
-          "In Progress": "2026-05-15T15:08:39.263-0400"
+          "In Progress": "2026-05-15T15:08:39.263-0400",
+          "Done": "2026-05-15T15:38:39.756-0400"
         }
       },
       "displayDates": {
         "created": "2026-03-16 17:11",
-        "updated": "2026-05-15 15:08",
+        "updated": "2026-05-15 15:38",
         "due_date": "",
         "tracked_status_dates": {
-          "In Progress": "2026-05-15 15:08"
+          "In Progress": "2026-05-15 15:08",
+          "Done": "2026-05-15 15:38"
         }
       },
       "statusHistory": [
@@ -434,6 +436,12 @@
           "to": "In Progress",
           "at": "2026-05-15T15:08:39.263-0400",
           "at_display": "2026-05-15 15:08"
+        },
+        {
+          "from": "In Progress",
+          "to": "Done",
+          "at": "2026-05-15T15:38:39.756-0400",
+          "at_display": "2026-05-15 15:38"
         }
       ],
       "subtasks": []
