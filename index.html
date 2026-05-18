@@ -1,0 +1,1098 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fanatics Supply Chain | Tech Hub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    :root{
+      --brand:#09203F;
+      --red:#E53C2E;
+      --success:#10B981;
+      --warning:#F59E0B;
+      --error:#EF4444;
+      --info:#3B82F6;
+      --inactive:#64748B;
+      --radius:12px;
+      --radius2:8px;
+      --shadow:0 4px 24px rgba(0,0,0,.18);
+      --shadow2:0 2px 8px rgba(0,0,0,.10);
+      --hfont:'Barlow Condensed',sans-serif;
+      --bfont:'Inter',sans-serif;
+      --mfont:'JetBrains Mono',monospace;
+    }
+    html[data-theme="light"]{
+      --bg:#F8FAFC;--bg2:#F1F5F9;--card:#FFFFFF;--card2:#F8FAFC;
+      --text:#0F172A;--muted:#64748B;--border:#E2E8F0;
+      --nav:rgba(255,255,255,.92);--navBorder:rgba(0,0,0,.07);
+      --glass:rgba(255,255,255,.75);--hair:rgba(0,0,0,.04);
+      --chipBg:#F1F5F9;--chipBorder:#E2E8F0;
+      --pageGlow1:radial-gradient(ellipse 70% 40% at 50% 0%,rgba(229,60,46,.07),transparent);
+      --pageGlow2:radial-gradient(ellipse 50% 30% at 85% 10%,rgba(59,130,246,.05),transparent);
+    }
+    html[data-theme="dark"]{
+      --bg:#020617;--bg2:#0F172A;--card:#0F172A;--card2:#1E293B;
+      --text:#F8FAFC;--muted:#94A3B8;--border:#1E293B;
+      --nav:rgba(2,6,23,.90);--navBorder:rgba(255,255,255,.07);
+      --glass:rgba(15,23,42,.65);--hair:rgba(255,255,255,.04);
+      --chipBg:#1E293B;--chipBorder:#334155;
+      --pageGlow1:radial-gradient(ellipse 70% 40% at 50% 0%,rgba(229,60,46,.10),transparent);
+      --pageGlow2:radial-gradient(ellipse 50% 30% at 85% 10%,rgba(59,130,246,.07),transparent);
+    }
+
+    body{font-family:var(--bfont);background:var(--bg);background-image:var(--pageGlow1),var(--pageGlow2);color:var(--text);min-height:100vh}
+    .container{max-width:1440px;margin:0 auto;padding:0 28px 60px}
+
+    /* NAV */
+    header{position:sticky;top:0;z-index:200;background:var(--nav);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid var(--navBorder);box-shadow:var(--shadow2)}
+    .header-inner{max-width:1440px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:0 28px;height:72px;gap:16px}
+    .brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+    .brandLogo{height:42px;width:auto;display:block}
+    .nav{display:flex;align-items:center;gap:4px}
+    .nav a{font:600 12px/1 var(--hfont);letter-spacing:1.2px;text-transform:uppercase;color:var(--muted);text-decoration:none;padding:8px 14px;border-radius:var(--radius2);transition:all .2s;display:flex;align-items:center;gap:6px}
+    .nav a:hover{color:var(--text);background:var(--hair)}
+    .nav a.active{color:var(--text);background:color-mix(in srgb,var(--red) 12%,transparent);border:1px solid color-mix(in srgb,var(--red) 22%,transparent)}
+    .nav a svg{width:14px;height:14px}
+    .rightTools{display:flex;align-items:center;gap:8px}
+
+    /* AUTO-REFRESH BADGE */
+    .refreshBadge{display:flex;align-items:center;gap:6px;padding:6px 12px;border-radius:20px;background:color-mix(in srgb,var(--success) 10%,transparent);border:1px solid color-mix(in srgb,var(--success) 20%,transparent);font:500 11px/1 var(--mfont);color:var(--success);cursor:default}
+    .refreshBadge .rDot{width:7px;height:7px;border-radius:50%;background:var(--success);animation:pulse 2s infinite}
+    @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.6;transform:scale(1.3)}}
+    .refreshBadge .countdown{font:600 11px/1 var(--mfont);color:var(--success);min-width:32px;text-align:center}
+
+    .iconBtn{width:38px;height:38px;border-radius:var(--radius2);border:1px solid var(--border);background:var(--card);color:var(--muted);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .2s}
+    .iconBtn:hover{color:var(--text);border-color:var(--muted)}
+    .iconBtn svg{width:18px;height:18px}
+
+    /* PAGE HEAD */
+    .pageHead{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;padding:36px 0 28px;flex-wrap:wrap}
+    .pageTitle{font:800 44px/1 var(--hfont);letter-spacing:1.5px;text-transform:uppercase}
+    .pageSub{font:400 14px/1.6 var(--bfont);color:var(--muted);margin:8px 0 0}
+    .pageActions{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+    .updatedLabel{font:500 11px/1 var(--mfont);color:var(--muted);display:flex;align-items:center;gap:6px}
+    .updatedLabel svg{width:13px;height:13px}
+    .btn{font:700 12px/1 var(--hfont);letter-spacing:1.2px;text-transform:uppercase;padding:9px 16px;border-radius:var(--radius2);cursor:pointer;display:flex;align-items:center;gap:7px;transition:all .2s;text-decoration:none;border:1px solid var(--border);background:var(--card);color:var(--text)}
+    .btn:hover{border-color:var(--muted)}
+    .btn svg{width:14px;height:14px}
+    .btnRed{background:var(--red);color:#fff;border-color:transparent}
+    .btnRed:hover{background:color-mix(in srgb,var(--red) 85%,#000);border-color:transparent}
+
+    /* STATS */
+    .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin-bottom:28px}
+    .statCard{background:var(--glass);backdrop-filter:blur(8px);border:1px solid var(--border);border-radius:var(--radius);padding:18px;display:flex;align-items:center;gap:14px;transition:transform .2s}
+    .statCard:hover{transform:translateY(-2px)}
+    .statIcon{width:42px;height:42px;border-radius:var(--radius2);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+    .statIcon svg{width:20px;height:20px}
+    .statIcon.total{background:color-mix(in srgb,var(--red) 12%,transparent);color:var(--red)}
+    .statIcon.active{background:color-mix(in srgb,var(--success) 12%,transparent);color:var(--success)}
+    .statIcon.inactive{background:color-mix(in srgb,var(--inactive) 12%,transparent);color:var(--inactive)}
+    .statIcon.maintenance{background:color-mix(in srgb,var(--warning) 12%,transparent);color:var(--warning)}
+    .statIcon.inprogress{background:color-mix(in srgb,var(--warning) 12%,transparent);color:var(--warning)}
+    .statIcon.done{background:color-mix(in srgb,var(--success) 12%,transparent);color:var(--success)}
+    .statIcon.started{background:color-mix(in srgb,var(--info) 12%,transparent);color:var(--info)}
+    .statIcon.paused{background:color-mix(in srgb,var(--inactive) 12%,transparent);color:var(--inactive)}
+    .statNum{font:700 30px/1 var(--hfont)}
+    .statLabel{font:600 10px/1 var(--hfont);letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);margin-top:4px}
+
+    /* DASHBOARD GRID */
+    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:20px}
+    .glassCard{position:relative;background:var(--glass);backdrop-filter:blur(8px);border:1px solid var(--border);border-radius:var(--radius);padding:24px;cursor:pointer;transition:all .3s;overflow:hidden;display:flex;flex-direction:column}
+    .glassCard::before{content:'';position:absolute;inset:-1px;border-radius:var(--radius);background:linear-gradient(135deg,color-mix(in srgb,var(--red) 0%,transparent),color-mix(in srgb,var(--red) 0%,transparent));opacity:0;transition:opacity .35s;pointer-events:none}
+    .glassCard:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+    .glassCard:hover::before{opacity:1;background:linear-gradient(135deg,color-mix(in srgb,var(--red) 30%,transparent),transparent 60%)}
+    .rowTop{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}
+    .badgeRow{display:flex;align-items:center;gap:8px}
+    .statusDot{width:9px;height:9px;border-radius:50%;flex-shrink:0}
+    .statusDot.active{background:var(--success);box-shadow:0 0 0 0 var(--success);animation:pingDot 1.8s infinite}
+    @keyframes pingDot{0%{box-shadow:0 0 0 0 color-mix(in srgb,var(--success) 60%,transparent)}70%{box-shadow:0 0 0 8px transparent}100%{box-shadow:0 0 0 0 transparent}}
+    .statusDot.inactive{background:var(--inactive)}
+    .statusDot.maintenance{background:var(--warning)}
+    .statusLabel{font:500 10px/1 var(--mfont);letter-spacing:1px;text-transform:uppercase}
+    .statusLabel.active{color:var(--success)}
+    .statusLabel.inactive{color:var(--inactive)}
+    .statusLabel.maintenance{color:var(--warning)}
+    .sev{font:700 9px/1 var(--hfont);letter-spacing:1.2px;text-transform:uppercase;padding:4px 9px;border-radius:4px;color:#fff}
+    .sev.low{background:var(--inactive)}
+    .sev.medium{background:var(--info)}
+    .sev.high{background:var(--warning)}
+    .sev.critical{background:var(--error)}
+    .cardTitle{font:700 20px/1.2 var(--hfont);letter-spacing:.5px;text-transform:uppercase;color:var(--text);margin:0 0 10px;min-height:50px}
+    .issue{background:color-mix(in srgb,var(--error) 10%,transparent);border:1px solid color-mix(in srgb,var(--error) 18%,transparent);border-radius:var(--radius2);padding:11px;margin-bottom:14px}
+    .issue .issueHead{display:flex;align-items:center;gap:5px;color:var(--error);margin-bottom:5px}
+    .issue .issueHead svg{width:13px;height:13px}
+    .issue .issueHead span{font:700 9px/1 var(--hfont);letter-spacing:1px;text-transform:uppercase}
+    .issue p{font:400 12px/1.5 var(--bfont);color:color-mix(in srgb,var(--error) 80%,var(--text));margin:0}
+    .maintIssue{background:color-mix(in srgb,var(--warning) 10%,transparent);border-color:color-mix(in srgb,var(--warning) 18%,transparent)}
+    .maintIssue .issueHead{color:var(--warning)}
+    .maintIssue p{color:color-mix(in srgb,var(--warning) 80%,var(--text))}
+    .cardFoot{border-top:1px solid var(--hair);padding-top:14px;display:flex;flex-direction:column;gap:8px;margin-top:auto}
+    .kv{display:flex;align-items:center;justify-content:space-between}
+    .kv .k{color:var(--muted);display:flex;align-items:center;gap:5px;font:600 9px/1 var(--hfont);letter-spacing:1.2px;text-transform:uppercase}
+    .kv .k svg{width:11px;height:11px}
+    .kv .v{font:500 12px/1 var(--bfont);color:var(--text)}
+    .kv .v.green{color:var(--success);font-weight:600}
+    .kv .v.blue{color:var(--info);font-weight:600}
+    .kv .v.amber{color:var(--warning);font-weight:600}
+    .kv .v.red{color:var(--error);font-weight:600}
+    .openLink{display:flex;align-items:center;justify-content:center;gap:7px;margin-top:14px;padding:10px;border-radius:var(--radius2);background:color-mix(in srgb,var(--red) 10%,transparent);color:var(--red);font:700 12px/1 var(--hfont);letter-spacing:1px;text-transform:uppercase;text-decoration:none;transition:all .2s;border:1px solid color-mix(in srgb,var(--red) 18%,transparent)}
+    .openLink:hover{background:color-mix(in srgb,var(--red) 20%,transparent)}
+    .openLink svg{width:14px;height:14px}
+
+    /* FILTERS */
+    .filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+    .chip{font:700 11px/1 var(--hfont);letter-spacing:1.2px;text-transform:uppercase;padding:9px 16px;border-radius:20px;background:var(--chipBg);border:1px solid var(--chipBorder);color:var(--muted);cursor:pointer;transition:all .2s}
+    .chip:hover{color:var(--text);border-color:var(--muted)}
+    .chip.active{background:color-mix(in srgb,var(--red) 12%,transparent);border-color:color-mix(in srgb,var(--red) 30%,transparent);color:var(--red)}
+
+    /* PROJECT ROWS */
+    .projectList{display:flex;flex-direction:column;gap:16px}
+    .projectRow{background:var(--glass);backdrop-filter:blur(8px);border:1px solid var(--border);border-radius:var(--radius);padding:24px 28px;transition:border-color .2s}
+    .projectRow:hover{border-color:color-mix(in srgb,var(--red) 30%,var(--border))}
+    .projHead{display:flex;align-items:flex-start;justify-content:space-between;gap:24px;margin-bottom:22px;flex-wrap:wrap}
+    .projLeft{flex:1;min-width:200px}
+    .pname{font:700 22px/1.2 var(--hfont);letter-spacing:.5px;text-transform:uppercase;color:var(--text);margin:0 0 8px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+    .pkey{font:500 10px/1 var(--mfont);padding:4px 9px;border-radius:4px;background:color-mix(in srgb,var(--red) 10%,transparent);color:var(--red);border:1px solid color-mix(in srgb,var(--red) 20%,transparent)}
+    .priorityBadge{font:700 9px/1 var(--hfont);letter-spacing:1px;text-transform:uppercase;padding:4px 9px;border-radius:4px;color:#fff}
+    .priorityBadge.critical{background:var(--error)}
+    .priorityBadge.high{background:var(--warning)}
+    .priorityBadge.medium{background:var(--info)}
+    .priorityBadge.low{background:var(--inactive)}
+    .pdesc{font:400 13px/1.5 var(--bfont);color:var(--muted)}
+    .projMeta{display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+    .metaItem{display:flex;align-items:center;gap:8px}
+    .avatar{width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;font:700 11px/1 var(--hfont);color:#fff;flex-shrink:0}
+    .avatar.reporter{background:var(--brand)}
+    .avatar.assignee{background:var(--red)}
+    .metaText .mlabel{font:500 9px/1 var(--hfont);letter-spacing:1.5px;text-transform:uppercase;color:var(--muted)}
+    .metaText .mvalue{font:500 13px/1 var(--bfont);color:var(--text);margin-top:2px}
+    .metaArrow{color:var(--muted)}
+    .metaArrow svg{width:14px;height:14px}
+    .metaDate{display:flex;align-items:center;gap:6px;color:var(--muted);font:400 12px/1 var(--bfont)}
+    .metaDate svg{width:14px;height:14px;flex-shrink:0}
+    .dueBadge{padding:4px 10px;border-radius:4px;font:600 11px/1 var(--mfont)}
+    .dueBadge.overdue{background:color-mix(in srgb,var(--error) 12%,transparent);color:var(--error);border:1px solid color-mix(in srgb,var(--error) 20%,transparent)}
+    .dueBadge.soon{background:color-mix(in srgb,var(--warning) 12%,transparent);color:var(--warning);border:1px solid color-mix(in srgb,var(--warning) 20%,transparent)}
+    .dueBadge.ok{background:color-mix(in srgb,var(--success) 12%,transparent);color:var(--success);border:1px solid color-mix(in srgb,var(--success) 20%,transparent)}
+
+    /* PIPELINE STEPS */
+    .steps{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:18px;position:relative;padding:0 4px}
+    .steps::before{content:'';position:absolute;top:16px;left:20px;right:20px;height:2px;background:var(--border);z-index:0}
+    .step{display:flex;flex-direction:column;align-items:center;gap:6px;z-index:1;flex:1}
+    .dot{width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:var(--card2);border:2px solid var(--border);transition:all .3s;flex-shrink:0}
+    .dot svg{width:14px;height:14px;color:var(--muted)}
+    .dot.completed{background:var(--success);border-color:var(--success)}
+    .dot.completed svg{color:#fff}
+    .dot.current{border-color:var(--red);background:color-mix(in srgb,var(--red) 10%,var(--card2));box-shadow:0 0 0 4px color-mix(in srgb,var(--red) 15%,transparent)}
+    .dot.current svg{color:var(--red)}
+    .dot.paused-dot{border-color:var(--warning);background:color-mix(in srgb,var(--warning) 10%,var(--card2))}
+    .dot.paused-dot svg{color:var(--warning)}
+    .stepLabel{font:600 9px/1 var(--hfont);letter-spacing:1.2px;text-transform:uppercase;color:var(--muted);text-align:center;max-width:72px}
+    .stepLabel.completed{color:var(--success)}
+    .stepLabel.current{color:var(--red)}
+    .stepLabel.paused{color:var(--warning)}
+
+    /* PROGRESS BAR */
+    .barWrap{margin-bottom:18px}
+    .barHead{display:flex;align-items:center;justify-content:space-between;margin-bottom:7px}
+    .barHead span{font:600 10px/1 var(--hfont);letter-spacing:1.2px;text-transform:uppercase;color:var(--muted)}
+    .barPct{font:700 14px/1 var(--hfont);color:var(--text)}
+    .bar{height:7px;background:var(--card2);border-radius:4px;overflow:hidden}
+    .barFill{height:100%;border-radius:4px;transition:width .8s cubic-bezier(.4,0,.2,1)}
+    .barFill.todo{background:var(--inactive)}
+    .barFill.inprog{background:linear-gradient(90deg,var(--info),var(--warning))}
+    .barFill.paused{background:var(--warning)}
+    .barFill.done{background:var(--success)}
+
+    /* CURRENT STATUS */
+    .currentStatus{background:var(--card2);border:1px solid var(--border);border-radius:var(--radius2);padding:14px 16px;margin-bottom:16px}
+    .currentStatus .csLabel{font:600 9px/1 var(--hfont);letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+    .currentStatus p{font:400 13px/1.6 var(--bfont);color:var(--text)}
+
+    /* SUBTASKS */
+    .subtasksWrap{margin-bottom:4px}
+    .stLabel{font:600 9px/1 var(--hfont);letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+    .subtaskItem{display:flex;align-items:center;gap:8px;padding:7px 0;border-bottom:1px solid var(--hair)}
+    .subtaskItem:last-child{border-bottom:none}
+    .stNum{font:600 10px/1 var(--mfont);color:var(--muted);min-width:20px}
+    .stName{font:400 12px/1.4 var(--bfont);color:var(--text);flex:1}
+    .stStatus{font:600 9px/1 var(--hfont);letter-spacing:1px;text-transform:uppercase;padding:3px 8px;border-radius:3px;flex-shrink:0}
+    .stStatus.done{background:color-mix(in srgb,var(--success) 12%,transparent);color:var(--success)}
+    .stStatus.inprogress{background:color-mix(in srgb,var(--warning) 12%,transparent);color:var(--warning)}
+    .stStatus.todo{background:color-mix(in srgb,var(--inactive) 12%,transparent);color:var(--inactive)}
+    .stStatus.paused{background:color-mix(in srgb,var(--warning) 12%,transparent);color:var(--warning)}
+
+    /* TOAST */
+    .toast{position:fixed;bottom:24px;right:24px;background:var(--card2);border:1px solid var(--border);border-radius:var(--radius);padding:14px 20px;display:flex;align-items:center;gap:10px;font:500 13px/1 var(--bfont);color:var(--text);box-shadow:var(--shadow);z-index:999;transform:translateY(80px);opacity:0;transition:all .35s cubic-bezier(.4,0,.2,1)}
+    .toast.show{transform:translateY(0);opacity:1}
+    .toast svg{width:16px;height:16px;color:var(--success);flex-shrink:0}
+
+    /* LOADING SKELETON */
+    .skeleton{background:linear-gradient(90deg,var(--card2) 25%,color-mix(in srgb,var(--card2) 80%,var(--text)) 50%,var(--card2) 75%);background-size:200% 100%;animation:shimmer 1.5s infinite;border-radius:6px;height:200px}
+    @keyframes shimmer{0%{background-position:200% 0}100%{background-position:-200% 0}}
+
+    /* PIPELINE PAGE */
+    .plGrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px;margin-bottom:32px}
+    .plCard{background:var(--glass);backdrop-filter:blur(8px);border:1px solid var(--border);border-radius:var(--radius);padding:24px;cursor:pointer;transition:all .3s;position:relative;overflow:hidden;display:flex;flex-direction:column;}
+    .plCard:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:color-mix(in srgb,var(--red) 30%,var(--border))}
+    .plCard.all-pass{border-top:3px solid var(--success)}
+    .plCard.has-fail{border-top:3px solid var(--error)}
+    .plCard.has-critical{border-top:3px solid var(--inactive)}
+    .plCardHead{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:14px;gap:10px;min-height:52px}
+    .plCardName{font:700 18px/1.2 var(--hfont);letter-spacing:.5px;text-transform:uppercase;color:var(--text);flex:1}
+    .plBadge{font:700 10px/1 var(--hfont);letter-spacing:1.2px;text-transform:uppercase;padding:5px 10px;border-radius:20px;white-space:nowrap;flex-shrink:0}
+    .plBadge.pass{background:color-mix(in srgb,var(--success) 12%,transparent);color:var(--success);border:1px solid color-mix(in srgb,var(--success) 22%,transparent)}
+    .plBadge.fail{background:color-mix(in srgb,var(--error) 12%,transparent);color:var(--error);border:1px solid color-mix(in srgb,var(--error) 22%,transparent)}
+    .plBadge.critical{background:color-mix(in srgb,var(--inactive) 12%,transparent);color:var(--inactive);border:1px solid color-mix(in srgb,var(--inactive) 22%,transparent)}
+    .plCount{font:500 13px/1.5 var(--bfont);color:var(--muted);margin-bottom:16px}
+    .plCount strong{color:var(--text)}
+    .plBar{height:6px;background:var(--card2);border-radius:4px;overflow:hidden;margin-bottom:16px}
+    .plBarFill{height:100%;border-radius:4px;transition:width .8s cubic-bezier(.4,0,.2,1);background:var(--success)}
+    .plBarFill.partial{background:linear-gradient(90deg,var(--success),var(--error))}
+    .plBarFill.none{background:var(--error)}
+    .plMeta{display:flex;align-items:center;justify-content:space-between;margin-top:auto;padding-top:12px}
+    .plMetaItem{font:500 11px/1 var(--mfont);color:var(--muted);display:flex;align-items:center;gap:5px}
+    .plMetaItem svg{width:11px;height:11px}
+    .plViewBtn{font:700 10px/1 var(--hfont);letter-spacing:1px;text-transform:uppercase;color:#fff;background:var(--red);border:none;border-radius:6px;padding:7px 12px;cursor:pointer;display:flex;align-items:center;gap:5px;transition:background .2s}
+    .plViewBtn:hover{background:color-mix(in srgb,var(--red) 80%,#000)}
+    .plViewBtn svg{width:12px;height:12px}
+
+    /* MODAL OVERLAY */
+    .plModal{position:fixed;inset:0;z-index:500;display:flex;align-items:center;justify-content:center;padding:20px;opacity:0;pointer-events:none;transition:opacity .25s}
+    .plModal.show{opacity:1;pointer-events:all}
+    .plModalBg{position:absolute;inset:0;background:rgba(0,0,0,.65);backdrop-filter:blur(4px)}
+    .plModalBox{position:relative;z-index:1;background:var(--card);border:1px solid var(--border);border-radius:var(--radius);width:100%;max-width:680px;max-height:85vh;display:flex;flex-direction:column;box-shadow:0 8px 48px rgba(0,0,0,.4);transform:translateY(20px);transition:transform .25s}
+    .plModal.show .plModalBox{transform:translateY(0)}
+    .plModalHead{display:flex;align-items:center;justify-content:space-between;padding:20px 24px;border-bottom:1px solid var(--border);flex-shrink:0}
+    .plModalTitle{font:700 20px/1 var(--hfont);letter-spacing:.5px;text-transform:uppercase;color:var(--text)}
+    .plModalClose{width:32px;height:32px;border-radius:6px;border:1px solid var(--border);background:var(--card2);color:var(--muted);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .2s;flex-shrink:0}
+    .plModalClose:hover{color:var(--text);border-color:var(--muted)}
+    .plModalClose svg{width:16px;height:16px}
+    .plModalBody{overflow-y:auto;padding:20px 24px;flex:1}
+    .plModalRow{display:flex;align-items:flex-start;gap:12px;padding:12px 0;border-bottom:1px solid var(--hair)}
+    .plModalRow:last-child{border-bottom:none}
+    .plDot{width:9px;height:9px;border-radius:50%;flex-shrink:0;margin-top:4px}
+    .plDot.green{background:var(--success);box-shadow:0 0 0 3px color-mix(in srgb,var(--success) 20%,transparent)}
+    .plDot.red{background:var(--error);box-shadow:0 0 0 3px color-mix(in srgb,var(--error) 20%,transparent)}
+    .plDot.gray{background:var(--inactive)}
+    .plModalRowMain{flex:1;min-width:0}
+    .plModalRowName{font:600 13px/1.4 var(--bfont);color:var(--text);margin-bottom:3px}
+    .plModalRowComment{font:400 11px/1.5 var(--bfont);color:color-mix(in srgb,var(--error) 75%,var(--text));margin-top:6px;padding:7px 10px;background:color-mix(in srgb,var(--error) 8%,transparent);border:1px solid color-mix(in srgb,var(--error) 15%,transparent);border-radius:6px}
+    .plModalRowRight{display:flex;flex-direction:column;align-items:flex-end;gap:6px;flex-shrink:0}
+    .plRowType{font:500 9px/1 var(--mfont);color:var(--muted);padding:3px 7px;border-radius:3px;background:var(--card2);white-space:nowrap}
+    .plRowDays{font:600 10px/1 var(--mfont);color:var(--muted)}
+    .plRowStatus{font:700 9px/1 var(--hfont);letter-spacing:1px;text-transform:uppercase;padding:4px 9px;border-radius:4px}
+    .plRowStatus.pass{background:color-mix(in srgb,var(--success) 12%,transparent);color:var(--success)}
+    .plRowStatus.fail{background:color-mix(in srgb,var(--error) 12%,transparent);color:var(--error)}
+    .plRowStatus.critical{background:color-mix(in srgb,var(--inactive) 15%,transparent);color:var(--inactive)}
+    .plRowStatus.unknown{background:color-mix(in srgb,var(--inactive) 10%,transparent);color:var(--inactive)}
+
+    /* FAILURES SUMMARY CARD */
+    .failSummary{background:color-mix(in srgb,var(--error) 8%,transparent);border:1px solid color-mix(in srgb,var(--error) 22%,transparent);border-radius:var(--radius);padding:24px;margin-top:8px}
+    .failSummaryHead{display:flex;align-items:center;gap:10px;margin-bottom:18px}
+    .failSummaryHead svg{width:20px;height:20px;color:var(--error);flex-shrink:0}
+    .failSummaryTitle{font:700 16px/1 var(--hfont);letter-spacing:.5px;text-transform:uppercase;color:var(--error)}
+    .failSummaryCount{font:500 12px/1 var(--mfont);color:color-mix(in srgb,var(--error) 70%,var(--muted));margin-left:auto}
+    .failItem{display:flex;align-items:flex-start;gap:12px;padding:12px 0;border-bottom:1px solid color-mix(in srgb,var(--error) 12%,transparent)}
+    .failItem:last-child{border-bottom:none}
+    .failItemLeft{flex:1;min-width:0}
+    .failDash{font:700 11px/1 var(--hfont);letter-spacing:1.2px;text-transform:uppercase;color:var(--error);margin-bottom:4px}
+    .failPipe{font:500 12px/1 var(--bfont);color:var(--text);margin-bottom:4px}
+    .failComment{font:400 11px/1.5 var(--bfont);color:var(--muted)}
+    .failBadge{font:700 9px/1 var(--hfont);letter-spacing:1px;text-transform:uppercase;padding:4px 9px;border-radius:4px;flex-shrink:0;margin-top:2px}
+    .failBadge.fail{background:color-mix(in srgb,var(--error) 15%,transparent);color:var(--error)}
+    .failBadge.critical{background:color-mix(in srgb,var(--inactive) 15%,transparent);color:var(--inactive)}
+    .noFail{display:flex;align-items:center;gap:10px;padding:16px;background:color-mix(in srgb,var(--success) 8%,transparent);border:1px solid color-mix(in srgb,var(--success) 18%,transparent);border-radius:var(--radius);font:500 13px/1 var(--bfont);color:var(--success)}
+    .noFail svg{width:18px;height:18px;flex-shrink:0}
+
+    .hide{display:none!important}
+    .muted{color:var(--muted)}
+
+    @media(max-width:768px){
+      .pageHead{flex-direction:column;align-items:flex-start;gap:12px}
+      .pageTitle{font-size:32px}
+      .stats{grid-template-columns:repeat(2,1fr)}
+      .projMeta{gap:12px}
+      .brandLogo{height:32px}
+      .header-inner{padding:0 16px}
+      .container{padding:0 16px 40px}
+      .refreshBadge .countdown{display:none}
+      .refreshBadge span:not(.rDot):not(.countdown){display:none}
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <a href="#dashboards" class="brand">
+        <img id="brandLogo" src="FAN_Collect_LogoLock_Horizontal_RGB_WHT.svg" alt="Fanatics Collect" class="brandLogo"/>
+      </a>
+      <nav class="nav">
+        <a href="#dashboards" id="navDash" class="active">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+          Dashboards
+        </a>
+        <a href="#projects" id="navProj">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+          Projects
+        </a>
+        <a href="#pipelines" id="navPipe">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          Pipelines
+        </a>
+        <a href="https://toppsdigital.atlassian.net/jira/core/projects/SCT2/form/309" target="_blank" rel="noopener">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          Submit Request
+        </a>
+      </nav>
+      <div class="rightTools">
+        <div class="refreshBadge" title="Auto-refreshes every 30 minutes">
+          <div class="rDot"></div>
+          <span>Auto</span>
+          <span class="countdown" id="countdownDisplay">30:00</span>
+        </div>
+        <button class="iconBtn" id="themeBtn" aria-label="Toggle theme">
+          <svg id="moonIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg id="sunIcon" class="hide" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- DASHBOARDS PAGE -->
+    <section id="pageDashboards">
+      <div class="pageHead">
+        <div>
+          <h1 class="pageTitle">Dashboard Status</h1>
+          <p class="pageSub">Live status of all supply chain analytics dashboards</p>
+        </div>
+        <div class="pageActions">
+          <span class="updatedLabel">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            Updated: <span id="dashUpdated">--</span>
+          </span>
+          <button class="btn" id="refreshDash">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>
+            Refresh
+          </button>
+        </div>
+      </div>
+      <div class="stats" id="dashStats"></div>
+      <div class="grid" id="dashGrid">
+        <div class="skeleton"></div><div class="skeleton"></div><div class="skeleton"></div>
+        <div class="skeleton"></div><div class="skeleton"></div><div class="skeleton"></div>
+      </div>
+    </section>
+
+    <!-- PROJECTS PAGE -->
+    <section id="pageProjects" class="hide">
+      <div class="pageHead">
+        <div>
+          <h1 class="pageTitle">Project Tracker</h1>
+          <p class="pageSub">SCT2 · Supply Chain Tech 2026 — live from Jira</p>
+        </div>
+        <div class="pageActions">
+          <span class="updatedLabel">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            Updated: <span id="projUpdated">--</span>
+          </span>
+          <button class="btn" id="refreshProj">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>
+            Refresh
+          </button>
+          <a href="https://toppsdigital.atlassian.net/jira/core/projects/SCT2/form/309" target="_blank" rel="noopener" class="btn btnRed">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            Submit Request
+          </a>
+        </div>
+      </div>
+
+      <div class="stats" id="projStats"></div>
+
+      <div class="filters" id="projFilters">
+        <button class="chip active" data-filter="all">All</button>
+        <button class="chip" data-filter="to do">To Do</button>
+        <button class="chip" data-filter="in progress">In Progress</button>
+        <button class="chip" data-filter="paused">Paused</button>
+        <button class="chip" data-filter="completed">Completed</button>
+      </div>
+
+      <div class="projectList" id="projList">
+        <div class="skeleton"></div><div class="skeleton"></div><div class="skeleton"></div>
+      </div>
+    </section>
+
+    <!-- PIPELINES PAGE -->
+    <section id="pagePipelines" class="hide">
+      <div class="pageHead">
+        <div>
+          <h1 class="pageTitle">Pipeline Status</h1>
+          <p class="pageSub">Live status for all data pipelines — Snowflake, Airtable, Carriers and other sources</p>
+        </div>
+        <div class="pageActions">
+          <span class="updatedLabel">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            Updated: <span id="pipeUpdated">--</span>
+          </span>
+          <button class="btn" id="refreshPipe">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>
+            Refresh
+          </button>
+        </div>
+      </div>
+
+      <div class="stats" id="pipeStats"></div>
+
+      <!-- DASHBOARD PIPELINE CARDS -->
+      <div class="plGrid" id="pipeGrid">
+        <div class="skeleton"></div><div class="skeleton"></div>
+        <div class="skeleton"></div><div class="skeleton"></div>
+      </div>
+
+      <!-- FAILURES SUMMARY -->
+      <div id="pipeFail"></div>
+
+    </section>
+
+  </main>
+
+  <!-- PIPELINE MODAL -->
+  <div class="plModal" id="plModal">
+    <div class="plModalBg" onclick="closePipeModal()"></div>
+    <div class="plModalBox">
+      <div class="plModalHead">
+        <span class="plModalTitle" id="plModalTitle">Pipeline Details</span>
+        <button class="plModalClose" onclick="closePipeModal()">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+      <div class="plModalBody" id="plModalBody"></div>
+    </div>
+  </div>
+
+  <!-- TOAST -->
+  <div class="toast" id="toast">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+    <span id="toastMsg">Data refreshed</span>
+  </div>
+
+  <script>
+  (() => {
+    /* ─── CONFIG ─────────────────────────────────────── */
+    const REPO_BASE   = 'https://raw.githubusercontent.com/vbang09/supply-chain-dashboard/main';
+    const DASH_URL    = REPO_BASE + '/dashboards.json';
+    const SCT2_URL    = REPO_BASE + '/SCT2.json';
+    const PIPE_URL    = REPO_BASE + '/pipelines.json';
+    const REFRESH_INTERVAL_MS = 30 * 60 * 1000; // 30 minutes
+    const DARK_LOGO  = 'FAN_Collect_LogoLock_Horizontal_RGB_WHT.svg';
+    const LIGHT_LOGO = 'FAN_Collect_LogoLock_Horizontal_RGB_BLK.svg';
+
+    /* ─── STATE ──────────────────────────────────────── */
+    let dashboardsAll = [];
+    let projectsAll   = [];
+    let pipelinesAll  = [];
+    let activeFilter  = 'all';
+    let countdownSecs = REFRESH_INTERVAL_MS / 1000;
+    let countdownTimer = null;
+
+    /* ─── HELPERS ────────────────────────────────────── */
+    const timeLabel = () => new Date().toLocaleTimeString('en-US',{hour:'2-digit',minute:'2-digit',second:'2-digit'});
+
+    function toLongDate(s) {
+      if (!s) return '--';
+      try {
+        const d = new Date(s.replace(' ','T'));
+        if (isNaN(d)) return s;
+        return d.toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'});
+      } catch { return s; }
+    }
+
+    function daysUntil(dateStr) {
+      if (!dateStr) return null;
+      const d = new Date(dateStr);
+      if (isNaN(d)) return null;
+      return Math.ceil((d - new Date()) / 86400000);
+    }
+
+    function severityFromDays(n) {
+      if (n === 0) return 'low';
+      if (n <= 3)  return 'medium';
+      if (n <= 7)  return 'high';
+      return 'critical';
+    }
+
+    function isMaintenance(t) {
+      if (!t || t === 'nan') return false;
+      const l = t.toLowerCase();
+      return l.includes('maintenance') || l.includes('scheduled');
+    }
+
+    function initials(name) {
+      if (!name || name === 'Unassigned') return '?';
+      return name.split(' ').map(n=>n[0]).join('').toUpperCase().slice(0,2);
+    }
+
+    function normalizeStage(s) {
+      if (!s) return 'to do';
+      const l = s.toLowerCase().trim();
+      if (l === 'done' || l === 'completed') return 'completed';
+      if (l === 'in progress' || l === 'creating dashboard') return 'in progress';
+      if (l === 'final review') return 'final review';
+      if (l === 'paused') return 'paused';
+      return 'to do';
+    }
+
+    function progressPct(stage) {
+      return {completed:100,'final review':85,'in progress':55,paused:40,'to do':10}[stage] ?? 10;
+    }
+
+    function stageLabel(stage) {
+      return {'to do':'To Do','in progress':'In Progress','final review':'Final Review',paused:'Paused',completed:'Completed'}[stage] ?? stage;
+    }
+
+    function bestSubtask(project) {
+      const subs = project.subtasks || [];
+      if (!subs.length) return null;
+      const order = ['final review','in progress','paused','to do','completed'];
+      return [...subs].sort((a,b) => {
+        const ai = order.indexOf(normalizeStage(a.status));
+        const bi = order.indexOf(normalizeStage(b.status));
+        if (ai !== bi) return ai - bi;
+        return new Date(b.dates?.updated||0) - new Date(a.dates?.updated||0);
+      })[0];
+    }
+
+    function currentStatusText(p) {
+      const sub = bestSubtask(p);
+      if (sub) return `${stageLabel(normalizeStage(sub.status))} — ${sub.name}`;
+      return `${stageLabel(normalizeStage(p.status))} — ${p.name}`;
+    }
+
+    /* ─── TOAST ──────────────────────────────────────── */
+    function showToast(msg) {
+      const t = document.getElementById('toast');
+      document.getElementById('toastMsg').textContent = msg;
+      t.classList.add('show');
+      setTimeout(() => t.classList.remove('show'), 3000);
+    }
+
+    /* ─── COUNTDOWN TIMER ────────────────────────────── */
+    function formatCountdown(secs) {
+      const m = String(Math.floor(secs / 60)).padStart(2,'0');
+      const s = String(secs % 60).padStart(2,'0');
+      return `${m}:${s}`;
+    }
+
+    function startCountdown() {
+      if (countdownTimer) clearInterval(countdownTimer);
+      countdownSecs = REFRESH_INTERVAL_MS / 1000;
+      const el = document.getElementById('countdownDisplay');
+      if (el) el.textContent = formatCountdown(countdownSecs);
+
+      countdownTimer = setInterval(() => {
+        countdownSecs--;
+        if (el) el.textContent = formatCountdown(countdownSecs);
+        if (countdownSecs <= 0) {
+          clearInterval(countdownTimer);
+          refreshAll();
+        }
+      }, 1000);
+    }
+
+    async function refreshAll() {
+      await Promise.all([loadDashboards(true), loadProjects(true), loadPipelines(true)]);
+      showToast('Data auto-refreshed');
+      startCountdown();
+    }
+
+    /* ─── THEME ──────────────────────────────────────── */
+    function setTheme(t) {
+      document.documentElement.setAttribute('data-theme', t);
+      localStorage.setItem('fanatics-theme', t);
+      document.getElementById('moonIcon').classList.toggle('hide', t==='light');
+      document.getElementById('sunIcon').classList.toggle('hide', t==='dark');
+      document.getElementById('brandLogo').src = t === 'light' ? LIGHT_LOGO : DARK_LOGO;
+    }
+    document.getElementById('themeBtn').addEventListener('click', () => {
+      setTheme(document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
+    });
+    setTheme(localStorage.getItem('fanatics-theme') || 'dark');
+
+    /* ─── ROUTING ────────────────────────────────────── */
+    function applyRoute() {
+      const h = location.hash;
+      const isDash = !h || h === '#dashboards';
+      const isProj = h === '#projects';
+      const isPipe = h === '#pipelines';
+      document.getElementById('pageDashboards').classList.toggle('hide', !isDash);
+      document.getElementById('pageProjects').classList.toggle('hide', !isProj);
+      document.getElementById('pagePipelines').classList.toggle('hide', !isPipe);
+      document.getElementById('navDash').classList.toggle('active', isDash);
+      document.getElementById('navProj').classList.toggle('active', isProj);
+      document.getElementById('navPipe').classList.toggle('active', isPipe);
+    }
+    window.addEventListener('hashchange', applyRoute);
+    applyRoute();
+
+    /* ─── DASHBOARDS ─────────────────────────────────── */
+    async function loadDashboards(silent = false) {
+      try {
+        const res = await fetch(DASH_URL + '?v=' + Date.now(), {cache:'no-store'});
+        if (!res.ok) throw new Error(res.status);
+        dashboardsAll = await res.json();
+        renderDashboards();
+        if (!silent) showToast('Dashboards loaded');
+      } catch (e) {
+        console.error('Dashboard load failed', e);
+        document.getElementById('dashGrid').innerHTML = '<p class="muted" style="padding:20px">Failed to load dashboards. Check your network or repo URL.</p>';
+      }
+    }
+
+    function renderDashboards() {
+      let active=0, inactive=0, maintenance=0;
+      dashboardsAll.forEach(d => {
+        if (isMaintenance(d.OngoingIssues)) maintenance++;
+        else if (d.StatusLabel?.toLowerCase() === 'active') active++;
+        else inactive++;
+      });
+
+      document.getElementById('dashStats').innerHTML = `
+        <div class="statCard"><div class="statIcon total"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg></div><div><div class="statNum">${dashboardsAll.length}</div><div class="statLabel">Total</div></div></div>
+        <div class="statCard"><div class="statIcon active"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div><div><div class="statNum">${active}</div><div class="statLabel">Active</div></div></div>
+        <div class="statCard"><div class="statIcon inactive"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg></div><div><div class="statNum">${inactive}</div><div class="statLabel">Inactive</div></div></div>
+        <div class="statCard"><div class="statIcon maintenance"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div><div><div class="statNum">${maintenance}</div><div class="statLabel">Maintenance</div></div></div>
+      `;
+
+      document.getElementById('dashGrid').innerHTML = dashboardsAll.length
+        ? dashboardsAll.map(d => {
+            const hasIssue = d.OngoingIssues && d.OngoingIssues !== 'nan';
+            const isMaint  = isMaintenance(d.OngoingIssues);
+            let status = 'inactive';
+            if (isMaint) status = 'maintenance';
+            else if (d.StatusLabel?.toLowerCase() === 'active') status = 'active';
+            const sev   = severityFromDays(d.DiffDays || 0);
+            const dayClass = d.DiffDays === 0 ? 'green' : d.DiffDays <= 3 ? 'blue' : d.DiffDays <= 7 ? 'amber' : 'red';
+            return `
+              <div class="glassCard" onclick="window.open('${d.DashboardLink}','_blank')">
+                <div class="rowTop">
+                  <div class="badgeRow">
+                    <div class="statusDot ${status}"></div>
+                    <span class="statusLabel ${status}">${status.toUpperCase()}</span>
+                  </div>
+                  <span class="sev ${sev}">${sev.toUpperCase()}</span>
+                </div>
+                <h3 class="cardTitle">${d.Dashboard}</h3>
+                ${hasIssue && !isMaint ? `
+                  <div class="issue">
+                    <div class="issueHead"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg><span>Issue</span></div>
+                    <p>${d.OngoingIssues}</p>
+                  </div>` : ''}
+                ${isMaint ? `
+                  <div class="issue maintIssue">
+                    <div class="issueHead"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg><span>Maintenance</span></div>
+                    <p>${d.OngoingIssues}</p>
+                  </div>` : ''}
+                <div class="cardFoot">
+                  <div class="kv">
+                    <span class="k"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Last Updated</span>
+                    <span class="v">${toLongDate(d.LastDateUpdated)}</span>
+                  </div>
+                  <div class="kv">
+                    <span class="k">Days Since Update</span>
+                    <span class="v ${dayClass}">${d.DiffDays ?? 0}d</span>
+                  </div>
+                </div>
+                <a class="openLink" onclick="event.stopPropagation();window.open('${d.DashboardLink}','_blank')">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                  Open Dashboard
+                </a>
+              </div>`;
+          }).join('')
+        : '<p class="muted" style="padding:20px">No dashboards found.</p>';
+
+      document.getElementById('dashUpdated').textContent = timeLabel();
+    }
+
+    document.getElementById('refreshDash').addEventListener('click', async () => {
+      await loadDashboards();
+      showToast('Dashboards refreshed');
+    });
+
+    /* ─── PROJECTS ───────────────────────────────────── */
+    async function loadProjects(silent = false) {
+      try {
+        const res = await fetch(SCT2_URL + '?v=' + Date.now(), {cache:'no-store'});
+        if (!res.ok) throw new Error(res.status);
+        const data = await res.json();
+        projectsAll = data.items || [];
+        renderProjects();
+        if (!silent) showToast('Projects loaded');
+      } catch (e) {
+        console.error('Project load failed', e);
+        document.getElementById('projList').innerHTML = '<p class="muted" style="padding:20px">Failed to load projects.</p>';
+      }
+    }
+
+    function renderProjStats() {
+      const counts = {todo:0,inProgress:0,paused:0,completed:0};
+      projectsAll.forEach(p => {
+        const s = normalizeStage(p.status);
+        if (s==='completed') counts.completed++;
+        else if (s==='in progress'||s==='final review') counts.inProgress++;
+        else if (s==='paused') counts.paused++;
+        else counts.todo++;
+      });
+      document.getElementById('projStats').innerHTML = `
+        <div class="statCard"><div class="statIcon total"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div><div><div class="statNum">${projectsAll.length}</div><div class="statLabel">Total</div></div></div>
+        <div class="statCard"><div class="statIcon inactive"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12"/></svg></div><div><div class="statNum">${counts.todo}</div><div class="statLabel">To Do</div></div></div>
+        <div class="statCard"><div class="statIcon inprogress"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="2" x2="12" y2="6"/><line x1="12" y1="18" x2="12" y2="22"/><line x1="4.93" y1="4.93" x2="7.76" y2="7.76"/><line x1="16.24" y1="16.24" x2="19.07" y2="19.07"/><line x1="2" y1="12" x2="6" y2="12"/><line x1="18" y1="12" x2="22" y2="12"/><line x1="4.93" y1="19.07" x2="7.76" y2="16.24"/><line x1="16.24" y1="7.76" x2="19.07" y2="4.93"/></svg></div><div><div class="statNum">${counts.inProgress}</div><div class="statLabel">In Progress</div></div></div>
+        <div class="statCard"><div class="statIcon paused"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg></div><div><div class="statNum">${counts.paused}</div><div class="statLabel">Paused</div></div></div>
+        <div class="statCard"><div class="statIcon done"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div><div><div class="statNum">${counts.completed}</div><div class="statLabel">Completed</div></div></div>
+      `;
+    }
+
+    function renderProjects() {
+      renderProjStats();
+      const filtered = activeFilter === 'all'
+        ? projectsAll
+        : projectsAll.filter(p => normalizeStage(p.status) === activeFilter);
+
+      if (!filtered.length) {
+        document.getElementById('projList').innerHTML = '<p class="muted" style="padding:20px">No projects match this filter.</p>';
+        document.getElementById('projUpdated').textContent = timeLabel();
+        return;
+      }
+
+      const stageFlow = ['to do','in progress','final review','completed'];
+
+      document.getElementById('projList').innerHTML = filtered.map(p => {
+        const stage = normalizeStage(p.status);
+        const pct   = progressPct(stage);
+        const prio  = (p.priority||'medium').toLowerCase();
+
+        let fillClass = 'todo';
+        if (stage==='completed') fillClass='done';
+        else if (stage==='in progress'||stage==='final review') fillClass='inprog';
+        else if (stage==='paused') fillClass='paused';
+
+        let currentIdx = stageFlow.indexOf(stage);
+        if (stage==='paused') currentIdx = 1;
+
+        const stepsHTML = stageFlow.map((s,i) => {
+          const isDone    = stage!=='paused' && i < currentIdx;
+          const isCurrent = i === currentIdx && stage!=='paused';
+          const isPaused  = stage==='paused' && s==='in progress';
+          let svgPath = '<circle cx="12" cy="12" r="10"/>';
+          if (s==='in progress') svgPath='<line x1="12" y1="2" x2="12" y2="6"/><line x1="12" y1="18" x2="12" y2="22"/><line x1="4.93" y1="4.93" x2="7.76" y2="7.76"/><line x1="16.24" y1="16.24" x2="19.07" y2="19.07"/><line x1="2" y1="12" x2="6" y2="12"/><line x1="18" y1="12" x2="22" y2="12"/><line x1="4.93" y1="19.07" x2="7.76" y2="16.24"/><line x1="16.24" y1="7.76" x2="19.07" y2="4.93"/>';
+          if (s==='final review') svgPath='<circle cx="12" cy="12" r="10"/><path d="M12 8v4"/><path d="M12 16h.01"/>';
+          if (s==='completed') svgPath='<path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/>';
+          const labelClass = isDone?'completed': isCurrent?'current': isPaused?'paused':'';
+          return `<div class="step">
+            <div class="dot ${isDone?'completed':''} ${isCurrent?'current':''} ${isPaused?'paused-dot':''}">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${svgPath}</svg>
+            </div>
+            <span class="stepLabel ${labelClass}">${stageLabel(s)}</span>
+          </div>`;
+        }).join('');
+
+        // Due date badge
+        const daysLeft = daysUntil(p.dates?.due_date);
+        let dueBadge = '';
+        if (daysLeft !== null && stage !== 'completed') {
+          const dc = daysLeft < 0 ? 'overdue' : daysLeft <= 7 ? 'soon' : 'ok';
+          const dl = daysLeft < 0 ? `${Math.abs(daysLeft)}d overdue` : daysLeft === 0 ? 'Due today' : `${daysLeft}d left`;
+          dueBadge = `<span class="dueBadge ${dc}">${dl}</span>`;
+        }
+
+        // Subtasks
+        const subs = (p.subtasks||[]).sort((a,b) => parseInt(a.key.split('-')[1])-parseInt(b.key.split('-')[1]));
+        const subtasksHTML = subs.length ? `
+          <div class="subtasksWrap">
+            <div class="stLabel">Subtasks (${subs.length})</div>
+            ${subs.map((st,i) => {
+              const ss = normalizeStage(st.status);
+              const sc = ss==='completed'?'done': ss==='in progress'?'inprogress': ss==='paused'?'paused':'todo';
+              return `<div class="subtaskItem">
+                <span class="stNum">${i+1}</span>
+                <span class="stName">${st.name}</span>
+                <span class="stStatus ${sc}">${stageLabel(ss)}</span>
+              </div>`;
+            }).join('')}
+          </div>` : '';
+
+        return `
+          <div class="projectRow">
+            <div class="projHead">
+              <div class="projLeft">
+                <h3 class="pname">
+                  ${p.name}
+                  <span class="pkey">${p.key}</span>
+                  <span class="priorityBadge ${prio}">${p.priority||'Medium'}</span>
+                  ${dueBadge}
+                </h3>
+                <p class="pdesc">${p.type||'Task'}</p>
+              </div>
+              <div class="projMeta">
+                <div class="metaItem">
+                  <div class="avatar reporter">${initials(p.reporter)}</div>
+                  <div class="metaText"><div class="mlabel">Reporter</div><div class="mvalue">${p.reporter||'--'}</div></div>
+                </div>
+                <div class="metaArrow"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></div>
+                <div class="metaItem">
+                  <div class="avatar assignee">${initials(p.assignee)}</div>
+                  <div class="metaText"><div class="mlabel">Assignee</div><div class="mvalue">${p.assignee==='Unassigned'?'Unassigned':p.assignee||'--'}</div></div>
+                </div>
+                <div class="metaDate">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                  Created ${toLongDate(p.dates?.created)}
+                </div>
+              </div>
+            </div>
+
+            <div class="steps">${stepsHTML}</div>
+
+            <div class="barWrap">
+              <div class="barHead"><span>Progress</span><span class="barPct">${pct}%</span></div>
+              <div class="bar"><div class="barFill ${fillClass}" style="width:${pct}%"></div></div>
+            </div>
+
+            <div class="currentStatus">
+              <div class="csLabel">Current Status</div>
+              <p>${currentStatusText(p)}</p>
+            </div>
+
+            ${subtasksHTML}
+          </div>`;
+      }).join('');
+
+      document.getElementById('projUpdated').textContent = timeLabel();
+    }
+
+    document.querySelectorAll('.chip').forEach(chip => {
+      chip.addEventListener('click', () => {
+        document.querySelectorAll('.chip').forEach(c=>c.classList.remove('active'));
+        chip.classList.add('active');
+        activeFilter = chip.dataset.filter;
+        renderProjects();
+      });
+    });
+
+    document.getElementById('refreshProj').addEventListener('click', async () => {
+      await loadProjects();
+      showToast('Projects refreshed');
+    });
+
+    /* ─── PIPELINES ──────────────────────────────────── */
+    async function loadPipelines(silent = false) {
+      try {
+        const res = await fetch(PIPE_URL + '?v=' + Date.now(), {cache:'no-store'});
+        if (!res.ok) throw new Error(res.status);
+        pipelinesAll = await res.json();
+        renderPipelines();
+        if (!silent) showToast('Pipelines loaded');
+      } catch (e) {
+        console.error('Pipeline load failed', e);
+        document.getElementById('pipeGrid').innerHTML = '<p class="muted" style="padding:20px">Failed to load pipeline data. Check your network or repo URL.</p>';
+      }
+    }
+
+    function renderPipelines() {
+      // Group flat rows by DashboardName
+      const grouped = {};
+      pipelinesAll.forEach(row => {
+        if (!grouped[row.DashboardName]) grouped[row.DashboardName] = [];
+        grouped[row.DashboardName].push(row);
+      });
+      _pipeGrouped = grouped; // store for modal access
+
+      // Stats
+      const total   = pipelinesAll.length;
+      const passed  = pipelinesAll.filter(r => r.Result === 'Pass').length;
+      const failed  = pipelinesAll.filter(r => r.Result === 'Failed').length;
+      const critical= pipelinesAll.filter(r => r.Result === 'Critical').length;
+      const unknown = pipelinesAll.filter(r => r.Result === 'Unknown').length;
+
+      document.getElementById('pipeStats').innerHTML = `
+        <div class="statCard"><div class="statIcon total"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div><div><div class="statNum">${total}</div><div class="statLabel">Total Pipelines</div></div></div>
+        <div class="statCard"><div class="statIcon active"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div><div><div class="statNum">${passed}</div><div class="statLabel">Pass Today</div></div></div>
+        <div class="statCard"><div class="statIcon maintenance"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div><div><div class="statNum">${failed}</div><div class="statLabel">Failed</div></div></div>
+        <div class="statCard"><div class="statIcon inactive"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg></div><div><div class="statNum">${critical}</div><div class="statLabel">Critical</div></div></div>
+        <div class="statCard"><div class="statIcon paused"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12"/></svg></div><div><div class="statNum">${unknown}</div><div class="statLabel">Unknown</div></div></div>
+      `;
+
+      // Dashboard cards
+      const dashNames = Object.keys(grouped);
+      document.getElementById('pipeGrid').innerHTML = dashNames.map(dashName => {
+        const pipes    = grouped[dashName];
+        const total    = pipes.length;
+        const passCount= pipes.filter(p => p.Result === 'Pass').length;
+        const failCount= pipes.filter(p => p.Result === 'Failed' || p.Result === 'Critical').length;
+        const pct      = Math.round((passCount / total) * 100);
+        const allPass  = failCount === 0;
+        const hasCrit  = pipes.some(p => p.Result === 'Critical');
+
+        let cardClass = allPass ? 'all-pass' : hasCrit ? 'has-critical' : 'has-fail';
+        let badgeClass= allPass ? 'pass' : hasCrit ? 'critical' : 'fail';
+        let badgeText = allPass ? `✓ All ${total} Ran Today` : `${failCount} Failed`;
+        let barClass  = pct === 100 ? '' : pct === 0 ? 'none' : 'partial';
+
+        // Pipeline rows HTML
+        const rowsHTML = pipes.map(p => {
+          const rc  = p.Result === 'Pass' ? 'pass' : p.Result === 'Failed' ? 'fail' : p.Result === 'Critical' ? 'critical' : 'unknown';
+          const dot = p.StatusColor === 'green' ? 'green' : p.StatusColor === 'red' ? 'red' : 'gray';
+          const days= p.DiffDays === 'Unknown' ? '?' : p.DiffDays === 0 ? 'Today' : `${p.DiffDays}d ago`;
+          const typeShort = p.Type === 'DataflowGen2' ? 'Dataflow' : p.Type;
+          const commentHTML = p.Comments ? `<div class="plComment">${p.Comments}</div>` : '';
+          return `
+            <div class="plRow">
+              <div class="plDot ${dot}"></div>
+              <div style="flex:1;min-width:0">
+                <div class="plRowName">${p.PipelineName}</div>
+                ${commentHTML}
+              </div>
+              <span class="plRowType">${typeShort}</span>
+              <span class="plRowDays">${days}</span>
+              <span class="plRowStatus ${rc}">${p.Result}</span>
+            </div>`;
+        }).join('');
+
+        return `
+          <div class="plCard ${cardClass}">
+            <div class="plCardHead">
+              <div class="plCardName">${dashName}</div>
+              <span class="plBadge ${badgeClass}">${badgeText}</span>
+            </div>
+            <div class="plCount">
+              <strong>${passCount}/${total}</strong> pipelines ran successfully today
+            </div>
+            <div class="plBar"><div class="plBarFill ${barClass}" style="width:${pct}%"></div></div>
+            <div class="plMeta">
+              <span class="plMetaItem">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                ${pipes.find(p=>p.LastRefreshTime && p.LastRefreshTime!=='Unknown')?.LastRefreshTime?.slice(0,16) ?? 'Unknown'}
+              </span>
+              <button class="plViewBtn" data-dash="${dashName.replace(/"/g,'&quot;')}">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                View Details
+              </button>
+            </div>
+          </div>`;
+      }).join('');
+
+      // Failures summary card at bottom
+      const failedRows = pipelinesAll.filter(r => r.Result === 'Failed' || r.Result === 'Critical' || r.Result === 'Unknown');
+      let failHTML = '';
+      if (failedRows.length === 0) {
+        failHTML = `
+          <div class="noFail">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            All pipelines ran successfully today — no failures to report.
+          </div>`;
+      } else {
+        const itemsHTML = failedRows.map(r => `
+          <div class="failItem">
+            <div class="failItemLeft">
+              <div class="failDash">${r.DashboardName}</div>
+              <div class="failPipe">${r.PipelineName} <span style="font:500 10px/1 var(--mfont);color:var(--muted)">(${r.Type === 'DataflowGen2' ? 'Dataflow' : r.Type})</span></div>
+              ${r.Comments ? `<div class="failComment">${r.Comments}</div>` : ''}
+            </div>
+            <span class="failBadge ${r.Result === 'Critical' ? 'critical' : 'fail'}">${r.Result}</span>
+          </div>`).join('');
+
+        failHTML = `
+          <div class="failSummary">
+            <div class="failSummaryHead">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+              <span class="failSummaryTitle">Pipeline Failures Summary</span>
+              <span class="failSummaryCount">${failedRows.length} pipeline${failedRows.length>1?'s':''} need attention</span>
+            </div>
+            ${itemsHTML}
+          </div>`;
+      }
+      document.getElementById('pipeFail').innerHTML = failHTML;
+      document.getElementById('pipeUpdated').textContent = timeLabel();
+    }
+
+    // Store grouped data for modal access
+    let _pipeGrouped = {};
+
+    function openPipeModal(dashName) {
+      const pipes = _pipeGrouped[dashName];
+      if (!pipes || !pipes.length) {
+        console.warn('No pipes found for:', dashName, Object.keys(_pipeGrouped));
+        return;
+      }
+
+      document.getElementById('plModalTitle').textContent = dashName;
+
+      document.getElementById('plModalBody').innerHTML = pipes.map(p => {
+        const rc   = p.Result === 'Pass' ? 'pass' : p.Result === 'Failed' ? 'fail' : p.Result === 'Critical' ? 'critical' : 'unknown';
+        const dot  = p.StatusColor === 'green' ? 'green' : p.StatusColor === 'red' ? 'red' : 'gray';
+        const days = p.DiffDays === 'Unknown' ? 'Unknown' : p.DiffDays === 0 ? 'Today' : `${p.DiffDays}d ago`;
+        const typeShort = p.Type === 'DataflowGen2' ? 'Dataflow' : p.Type;
+        const commentHTML = p.Comments ? `<div class="plModalRowComment">${p.Comments}</div>` : '';
+        return `
+          <div class="plModalRow">
+            <div class="plDot ${dot}"></div>
+            <div class="plModalRowMain">
+              <div class="plModalRowName">${p.PipelineName}</div>
+              ${commentHTML}
+            </div>
+            <div class="plModalRowRight">
+              <span class="plRowType">${typeShort}</span>
+              <span class="plRowDays">${days}</span>
+              <span class="plRowStatus ${rc}">${p.Result}</span>
+            </div>
+          </div>`;
+      }).join('');
+
+      document.getElementById('plModal').classList.add('show');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closePipeModal() {
+      document.getElementById('plModal').classList.remove('show');
+      document.body.style.overflow = '';
+    }
+
+    // Event delegation — works even after dynamic render
+    document.addEventListener('click', function(e) {
+      const btn = e.target.closest('.plViewBtn');
+      if (btn) {
+        e.stopPropagation();
+        const dashName = btn.getAttribute('data-dash');
+        openPipeModal(dashName);
+      }
+    });
+
+    // Close on Escape key
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') closePipeModal();
+    });
+
+    document.getElementById('refreshPipe').addEventListener('click', async () => {
+      await loadPipelines();
+      showToast('Pipelines refreshed');
+    });
+
+    // Expose to global scope for inline HTML onclick
+    window.closePipeModal = closePipeModal;
+    window.openPipeModal  = openPipeModal;
+
+    /* ─── INIT ───────────────────────────────────────── */
+    loadDashboards(true);
+    loadProjects(true);
+    loadPipelines(true);
+    startCountdown();
+
+  })();
+  </script>
+</body>
+</html>
