@@ -94,9 +94,9 @@
     "LastRefreshTime": "2026-05-17 12:17:28",
     "DiffDays": 1,
     "RefreshStatus": "1-2 Days Ago",
-    "Result": "Pass",
-    "StatusColor": "yellow",
-    "Comments": ""
+    "Result": "Failed",
+    "StatusColor": "red",
+    "Comments": "Refresh failed. Our team is investigating and please check back or reach out to the data team for a status update."
   },
   {
     "DashboardName": "Raw Material Inventory Dashboard",
@@ -226,8 +226,8 @@
     "LastRefreshTime": "2026-04-24 19:33:44",
     "DiffDays": 24,
     "RefreshStatus": "24 Days Ago",
-    "Result": "Failed",
-    "StatusColor": "red",
+    "Result": "Critical",
+    "StatusColor": "gray",
     "Comments": "Refresh failed. Our team is investigating and please check back or reach out to the data team for a status update."
   },
   {
