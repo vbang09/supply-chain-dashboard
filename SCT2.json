@@ -1,7 +1,7 @@
 {
   "project": "Supply Chain Tech 2026",
   "projectKey": "SCT2",
-  "generatedAt": "2026-05-21T00:39:44.002608Z",
+  "generatedAt": "2026-05-21T01:39:52.042148Z",
   "totalIssues": 53,
   "topLevelIssueCount": 21,
   "items": [
@@ -453,7 +453,7 @@
       "type": "Task",
       "projectKey": "SCT2",
       "projectName": "Supply Chain Tech 2026",
-      "status": "In Progress",
+      "status": "Done",
       "priority": "High",
       "assignee": "Vidit Bang",
       "reporter": "Vidit Bang",
@@ -470,18 +470,20 @@
       ],
       "dates": {
         "created": "2026-03-16T16:19:15.373-0400",
-        "updated": "2026-03-16T16:27:20.760-0400",
+        "updated": "2026-05-20T21:37:42.036-0400",
         "due_date": "2026-04-03",
         "tracked_status_dates": {
-          "In Progress": "2026-03-16T16:27:20.760-0400"
+          "In Progress": "2026-03-16T16:27:20.760-0400",
+          "Done": "2026-05-20T21:37:42.036-0400"
         }
       },
       "displayDates": {
         "created": "2026-03-16 16:19",
-        "updated": "2026-03-16 16:27",
+        "updated": "2026-05-20 21:37",
         "due_date": "2026-04-03",
         "tracked_status_dates": {
-          "In Progress": "2026-03-16 16:27"
+          "In Progress": "2026-03-16 16:27",
+          "Done": "2026-05-20 21:37"
         }
       },
       "statusHistory": [
@@ -490,6 +492,12 @@
           "to": "In Progress",
           "at": "2026-03-16T16:27:20.760-0400",
           "at_display": "2026-03-16 16:27"
+        },
+        {
+          "from": "In Progress",
+          "to": "Done",
+          "at": "2026-05-20T21:37:42.036-0400",
+          "at_display": "2026-05-20 21:37"
         }
       ],
       "subtasks": [
@@ -543,7 +551,7 @@
           "type": "Sub-task",
           "projectKey": "SCT2",
           "projectName": "Supply Chain Tech 2026",
-          "status": "In Progress",
+          "status": "Done",
           "priority": "Medium",
           "assignee": "Vidit Bang",
           "reporter": "Vidit Bang",
@@ -555,18 +563,20 @@
           "subtaskKeys": [],
           "dates": {
             "created": "2026-03-16T16:25:14.364-0400",
-            "updated": "2026-03-16T16:25:28.555-0400",
+            "updated": "2026-05-20T21:37:20.251-0400",
             "due_date": null,
             "tracked_status_dates": {
-              "In Progress": "2026-03-16T16:25:28.555-0400"
+              "In Progress": "2026-03-16T16:25:28.555-0400",
+              "Done": "2026-05-20T21:37:20.251-0400"
             }
           },
           "displayDates": {
             "created": "2026-03-16 16:25",
-            "updated": "2026-03-16 16:25",
+            "updated": "2026-05-20 21:37",
             "due_date": "",
             "tracked_status_dates": {
-              "In Progress": "2026-03-16 16:25"
+              "In Progress": "2026-03-16 16:25",
+              "Done": "2026-05-20 21:37"
             }
           },
           "statusHistory": [
@@ -575,6 +585,12 @@
               "to": "In Progress",
               "at": "2026-03-16T16:25:28.555-0400",
               "at_display": "2026-03-16 16:25"
+            },
+            {
+              "from": "In Progress",
+              "to": "Done",
+              "at": "2026-05-20T21:37:20.251-0400",
+              "at_display": "2026-05-20 21:37"
             }
           ],
           "subtasks": []
@@ -586,7 +602,7 @@
           "type": "Sub-task",
           "projectKey": "SCT2",
           "projectName": "Supply Chain Tech 2026",
-          "status": "To Do",
+          "status": "Done",
           "priority": "Medium",
           "assignee": "Vidit Bang",
           "reporter": "Vidit Bang",
@@ -598,17 +614,28 @@
           "subtaskKeys": [],
           "dates": {
             "created": "2026-03-16T16:25:39.289-0400",
-            "updated": "2026-03-16T16:25:45.582-0400",
+            "updated": "2026-05-20T21:37:25.455-0400",
             "due_date": null,
-            "tracked_status_dates": {}
+            "tracked_status_dates": {
+              "Done": "2026-05-20T21:37:25.455-0400"
+            }
           },
           "displayDates": {
             "created": "2026-03-16 16:25",
-            "updated": "2026-03-16 16:25",
+            "updated": "2026-05-20 21:37",
             "due_date": "",
-            "tracked_status_dates": {}
+            "tracked_status_dates": {
+              "Done": "2026-05-20 21:37"
+            }
           },
-          "statusHistory": [],
+          "statusHistory": [
+            {
+              "from": "To Do",
+              "to": "Done",
+              "at": "2026-05-20T21:37:25.455-0400",
+              "at_display": "2026-05-20 21:37"
+            }
+          ],
           "subtasks": []
         },
         {
@@ -618,7 +645,7 @@
           "type": "Sub-task",
           "projectKey": "SCT2",
           "projectName": "Supply Chain Tech 2026",
-          "status": "To Do",
+          "status": "Final Review",
           "priority": "Medium",
           "assignee": "Vidit Bang",
           "reporter": "Vidit Bang",
@@ -630,17 +657,28 @@
           "subtaskKeys": [],
           "dates": {
             "created": "2026-03-16T16:26:02.047-0400",
-            "updated": "2026-03-16T16:26:08.270-0400",
+            "updated": "2026-05-20T21:37:32.463-0400",
             "due_date": null,
-            "tracked_status_dates": {}
+            "tracked_status_dates": {
+              "Final Review": "2026-05-20T21:37:32.463-0400"
+            }
           },
           "displayDates": {
             "created": "2026-03-16 16:26",
-            "updated": "2026-03-16 16:26",
+            "updated": "2026-05-20 21:37",
             "due_date": "",
-            "tracked_status_dates": {}
+            "tracked_status_dates": {
+              "Final Review": "2026-05-20 21:37"
+            }
           },
-          "statusHistory": [],
+          "statusHistory": [
+            {
+              "from": "To Do",
+              "to": "Final Review",
+              "at": "2026-05-20T21:37:32.463-0400",
+              "at_display": "2026-05-20 21:37"
+            }
+          ],
           "subtasks": []
         }
       ]
