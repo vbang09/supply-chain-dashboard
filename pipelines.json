@@ -284,5 +284,38 @@
     "Result": "Pass",
     "StatusColor": "green",
     "Comments": ""
+  },
+  {
+    "DashboardName": "Ecomm Dashboard UK",
+    "PipelineName": "SNOWFLAKE_UK",
+    "Type": "DataflowGen2",
+    "LastRefreshTime": "2026-05-27 13:03:57",
+    "DiffDays": 0,
+    "RefreshStatus": "Today",
+    "Result": "Pass",
+    "StatusColor": "green",
+    "Comments": ""
+  },
+  {
+    "DashboardName": "Ecomm Dashboard UK",
+    "PipelineName": "Allocation Airtable",
+    "Type": "DataflowGen2",
+    "LastRefreshTime": "2026-05-27 12:30:59",
+    "DiffDays": 0,
+    "RefreshStatus": "Today",
+    "Result": "Pass",
+    "StatusColor": "green",
+    "Comments": ""
+  },
+  {
+    "DashboardName": "Ecomm Dashboard UK",
+    "PipelineName": "PRODUCT_UK",
+    "Type": "DataflowGen2",
+    "LastRefreshTime": "2026-05-27 12:03:08",
+    "DiffDays": 0,
+    "RefreshStatus": "Today",
+    "Result": "Pass",
+    "StatusColor": "green",
+    "Comments": ""
   }
 ]
