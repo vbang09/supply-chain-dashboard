@@ -223,12 +223,12 @@
     "DashboardName": "Ecomm Dashboard US",
     "PipelineName": "USPS Tracking",
     "Type": "Notebook",
-    "LastRefreshTime": "Unknown",
-    "DiffDays": "Unknown",
-    "RefreshStatus": "Unknown",
-    "Result": "Unknown",
-    "StatusColor": "gray",
-    "Comments": "Refresh failed. Our team is investigating and please check back or reach out to the data team for a status update."
+    "LastRefreshTime": "2026-06-03 18:22:13",
+    "DiffDays": 0,
+    "RefreshStatus": "Today",
+    "Result": "Pass",
+    "StatusColor": "green",
+    "Comments": ""
   },
   {
     "DashboardName": "Ecomm Dashboard US",
@@ -278,7 +278,7 @@
     "DashboardName": "Warehouse Capacity Dashboard",
     "PipelineName": "Warehouse Capacity",
     "Type": "DataflowGen2",
-    "LastRefreshTime": "2026-06-03 17:34:07",
+    "LastRefreshTime": "2026-06-03 18:33:46",
     "DiffDays": 0,
     "RefreshStatus": "Today",
     "Result": "Pass",
