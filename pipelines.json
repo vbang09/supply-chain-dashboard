@@ -135,12 +135,12 @@
     "DashboardName": "B2B Dashboard",
     "PipelineName": "Fedex Track",
     "Type": "Notebook",
-    "LastRefreshTime": "2026-06-04 13:15:52",
-    "DiffDays": 4,
-    "RefreshStatus": "4 Days Ago",
-    "Result": "Critical",
-    "StatusColor": "gray",
-    "Comments": "Refresh failed. Our team is investigating and please check back or reach out to the data team for a status update."
+    "LastRefreshTime": "2026-06-08 14:41:42",
+    "DiffDays": 0,
+    "RefreshStatus": "Today",
+    "Result": "Pass",
+    "StatusColor": "green",
+    "Comments": ""
   },
   {
     "DashboardName": "B2B Dashboard",
@@ -256,12 +256,12 @@
     "DashboardName": "Ecomm Dashboard US",
     "PipelineName": "Fedex Tracking",
     "Type": "Notebook",
-    "LastRefreshTime": "2026-06-04 13:27:43",
-    "DiffDays": 4,
-    "RefreshStatus": "4 Days Ago",
-    "Result": "Critical",
-    "StatusColor": "gray",
-    "Comments": "Refresh failed. Our team is investigating and please check back or reach out to the data team for a status update."
+    "LastRefreshTime": "2026-06-08 15:25:36",
+    "DiffDays": 0,
+    "RefreshStatus": "Today",
+    "Result": "Pass",
+    "StatusColor": "green",
+    "Comments": ""
   },
   {
     "DashboardName": "Ecomm Dashboard US",
@@ -278,7 +278,7 @@
     "DashboardName": "Warehouse Capacity Dashboard",
     "PipelineName": "Warehouse Capacity",
     "Type": "DataflowGen2",
-    "LastRefreshTime": "2026-06-08 14:33:46",
+    "LastRefreshTime": "2026-06-08 15:33:40",
     "DiffDays": 0,
     "RefreshStatus": "Today",
     "Result": "Pass",
