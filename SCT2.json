@@ -1,8 +1,8 @@
 {
   "project": "Supply Chain Tech 2026",
   "projectKey": "SCT2",
-  "generatedAt": "2026-06-10T13:39:47.473400Z",
-  "totalIssues": 53,
+  "generatedAt": "2026-06-10T16:23:39.000097Z",
+  "totalIssues": 62,
   "topLevelIssueCount": 21,
   "items": [
     {
@@ -114,9 +114,9 @@
       "type": "Task",
       "projectKey": "SCT2",
       "projectName": "Supply Chain Tech 2026",
-      "status": "To Do",
+      "status": "In Progress",
       "priority": "Medium",
-      "assignee": "Unassigned",
+      "assignee": "Vidit Bang",
       "reporter": "Emily Mendelsohn",
       "creator": "Emily Mendelsohn",
       "labels": [
@@ -126,21 +126,243 @@
       "components": [],
       "fixVersions": [],
       "parentKey": null,
-      "subtaskKeys": [],
+      "subtaskKeys": [
+        "SCT2-65",
+        "SCT2-66",
+        "SCT2-67",
+        "SCT2-68",
+        "SCT2-69"
+      ],
       "dates": {
         "created": "2026-03-23T12:16:10.382-0400",
-        "updated": "2026-03-23T12:16:10.537-0400",
+        "updated": "2026-06-10T10:25:12.064-0400",
         "due_date": null,
-        "tracked_status_dates": {}
+        "tracked_status_dates": {
+          "In Progress": "2026-06-10T10:25:12.064-0400"
+        }
       },
       "displayDates": {
         "created": "2026-03-23 12:16",
-        "updated": "2026-03-23 12:16",
+        "updated": "2026-06-10 10:25",
         "due_date": "",
-        "tracked_status_dates": {}
+        "tracked_status_dates": {
+          "In Progress": "2026-06-10 10:25"
+        }
       },
-      "statusHistory": [],
-      "subtasks": []
+      "statusHistory": [
+        {
+          "from": "To Do",
+          "to": "In Progress",
+          "at": "2026-06-10T10:25:12.064-0400",
+          "at_display": "2026-06-10 10:25"
+        }
+      ],
+      "subtasks": [
+        {
+          "key": "SCT2-65",
+          "name": "Data Source Mapping and Access",
+          "description": "{'type': 'doc', 'version': 1, 'content': [{'type': 'paragraph', 'content': [{'type': 'text', 'text': 'Map out and secure access to the necessary data sources for both Oracle and Visual systems. Ensure data availability for all required metrics and filters.'}]}]}",
+          "type": "Sub-task",
+          "projectKey": "SCT2",
+          "projectName": "Supply Chain Tech 2026",
+          "status": "Done",
+          "priority": "Medium",
+          "assignee": "Vidit Bang",
+          "reporter": "Vidit Bang",
+          "creator": "Vidit Bang",
+          "labels": [],
+          "components": [],
+          "fixVersions": [],
+          "parentKey": "SCT2-61",
+          "subtaskKeys": [],
+          "dates": {
+            "created": "2026-06-10T10:27:30.364-0400",
+            "updated": "2026-06-10T10:28:20.292-0400",
+            "due_date": null,
+            "tracked_status_dates": {
+              "Done": "2026-06-10T10:28:20.292-0400"
+            }
+          },
+          "displayDates": {
+            "created": "2026-06-10 10:27",
+            "updated": "2026-06-10 10:28",
+            "due_date": "",
+            "tracked_status_dates": {
+              "Done": "2026-06-10 10:28"
+            }
+          },
+          "statusHistory": [
+            {
+              "from": "To Do",
+              "to": "Done",
+              "at": "2026-06-10T10:28:20.292-0400",
+              "at_display": "2026-06-10 10:28"
+            }
+          ],
+          "subtasks": []
+        },
+        {
+          "key": "SCT2-66",
+          "name": "Build Data Queries for PO Metrics",
+          "description": "{'type': 'doc', 'version': 1, 'content': [{'type': 'paragraph', 'content': [{'type': 'text', 'text': 'Develop and test queries to extract open PO count by age bucket, list of open POs with associated age, and average days past due from both Oracle and Visual data sources.'}]}]}",
+          "type": "Sub-task",
+          "projectKey": "SCT2",
+          "projectName": "Supply Chain Tech 2026",
+          "status": "Done",
+          "priority": "Medium",
+          "assignee": "Vidit Bang",
+          "reporter": "Vidit Bang",
+          "creator": "Vidit Bang",
+          "labels": [],
+          "components": [],
+          "fixVersions": [],
+          "parentKey": "SCT2-61",
+          "subtaskKeys": [],
+          "dates": {
+            "created": "2026-06-10T10:27:38.242-0400",
+            "updated": "2026-06-10T10:28:25.242-0400",
+            "due_date": null,
+            "tracked_status_dates": {
+              "Done": "2026-06-10T10:28:25.242-0400"
+            }
+          },
+          "displayDates": {
+            "created": "2026-06-10 10:27",
+            "updated": "2026-06-10 10:28",
+            "due_date": "",
+            "tracked_status_dates": {
+              "Done": "2026-06-10 10:28"
+            }
+          },
+          "statusHistory": [
+            {
+              "from": "To Do",
+              "to": "Done",
+              "at": "2026-06-10T10:28:25.242-0400",
+              "at_display": "2026-06-10 10:28"
+            }
+          ],
+          "subtasks": []
+        },
+        {
+          "key": "SCT2-67",
+          "name": "Design and Develop Working Team Dashboard",
+          "description": "{'type': 'doc', 'version': 1, 'content': [{'type': 'paragraph', 'content': [{'type': 'text', 'text': 'Design the dashboard layout and build the working team level dashboard, incorporating the required metrics and filter by person functionality.'}]}]}",
+          "type": "Sub-task",
+          "projectKey": "SCT2",
+          "projectName": "Supply Chain Tech 2026",
+          "status": "Done",
+          "priority": "Medium",
+          "assignee": "Vidit Bang",
+          "reporter": "Vidit Bang",
+          "creator": "Vidit Bang",
+          "labels": [],
+          "components": [],
+          "fixVersions": [],
+          "parentKey": "SCT2-61",
+          "subtaskKeys": [],
+          "dates": {
+            "created": "2026-06-10T10:27:43.328-0400",
+            "updated": "2026-06-10T10:28:31.430-0400",
+            "due_date": null,
+            "tracked_status_dates": {
+              "Done": "2026-06-10T10:28:31.430-0400"
+            }
+          },
+          "displayDates": {
+            "created": "2026-06-10 10:27",
+            "updated": "2026-06-10 10:28",
+            "due_date": "",
+            "tracked_status_dates": {
+              "Done": "2026-06-10 10:28"
+            }
+          },
+          "statusHistory": [
+            {
+              "from": "To Do",
+              "to": "Done",
+              "at": "2026-06-10T10:28:31.430-0400",
+              "at_display": "2026-06-10 10:28"
+            }
+          ],
+          "subtasks": []
+        },
+        {
+          "key": "SCT2-68",
+          "name": "User Testing and Feedback Collection",
+          "description": "{'type': 'doc', 'version': 1, 'content': [{'type': 'paragraph', 'content': [{'type': 'text', 'text': 'Conduct user testing sessions with working team members to validate dashboard functionality, usability, and accuracy of metrics. Gather feedback for improvements.'}]}]}",
+          "type": "Sub-task",
+          "projectKey": "SCT2",
+          "projectName": "Supply Chain Tech 2026",
+          "status": "In Progress",
+          "priority": "Medium",
+          "assignee": "Vidit Bang",
+          "reporter": "Vidit Bang",
+          "creator": "Vidit Bang",
+          "labels": [],
+          "components": [],
+          "fixVersions": [],
+          "parentKey": "SCT2-61",
+          "subtaskKeys": [],
+          "dates": {
+            "created": "2026-06-10T10:27:57.899-0400",
+            "updated": "2026-06-10T10:29:20.018-0400",
+            "due_date": null,
+            "tracked_status_dates": {
+              "In Progress": "2026-06-10T10:29:20.018-0400"
+            }
+          },
+          "displayDates": {
+            "created": "2026-06-10 10:27",
+            "updated": "2026-06-10 10:29",
+            "due_date": "",
+            "tracked_status_dates": {
+              "In Progress": "2026-06-10 10:29"
+            }
+          },
+          "statusHistory": [
+            {
+              "from": "To Do",
+              "to": "In Progress",
+              "at": "2026-06-10T10:29:20.018-0400",
+              "at_display": "2026-06-10 10:29"
+            }
+          ],
+          "subtasks": []
+        },
+        {
+          "key": "SCT2-69",
+          "name": "Dashboard Refinement and Finalization",
+          "description": "{'type': 'doc', 'version': 1, 'content': [{'type': 'paragraph', 'content': [{'type': 'text', 'text': 'Incorporate user feedback and make necessary adjustments to both Oracle and Visual dashboards to ensure they are fit for purpose and meet user needs.'}]}]}",
+          "type": "Sub-task",
+          "projectKey": "SCT2",
+          "projectName": "Supply Chain Tech 2026",
+          "status": "To Do",
+          "priority": "Medium",
+          "assignee": "Vidit Bang",
+          "reporter": "Vidit Bang",
+          "creator": "Vidit Bang",
+          "labels": [],
+          "components": [],
+          "fixVersions": [],
+          "parentKey": "SCT2-61",
+          "subtaskKeys": [],
+          "dates": {
+            "created": "2026-06-10T10:28:00.485-0400",
+            "updated": "2026-06-10T10:28:16.068-0400",
+            "due_date": null,
+            "tracked_status_dates": {}
+          },
+          "displayDates": {
+            "created": "2026-06-10 10:28",
+            "updated": "2026-06-10 10:28",
+            "due_date": "",
+            "tracked_status_dates": {}
+          },
+          "statusHistory": [],
+          "subtasks": []
+        }
+      ]
     },
     {
       "key": "SCT2-60",
@@ -645,7 +867,7 @@
           "type": "Sub-task",
           "projectKey": "SCT2",
           "projectName": "Supply Chain Tech 2026",
-          "status": "Final Review",
+          "status": "Done",
           "priority": "Medium",
           "assignee": "Vidit Bang",
           "reporter": "Vidit Bang",
@@ -657,18 +879,20 @@
           "subtaskKeys": [],
           "dates": {
             "created": "2026-03-16T16:26:02.047-0400",
-            "updated": "2026-05-20T21:37:32.463-0400",
+            "updated": "2026-06-10T10:24:00.739-0400",
             "due_date": null,
             "tracked_status_dates": {
-              "Final Review": "2026-05-20T21:37:32.463-0400"
+              "Final Review": "2026-05-20T21:37:32.463-0400",
+              "Done": "2026-06-10T10:24:00.739-0400"
             }
           },
           "displayDates": {
             "created": "2026-03-16 16:26",
-            "updated": "2026-05-20 21:37",
+            "updated": "2026-06-10 10:24",
             "due_date": "",
             "tracked_status_dates": {
-              "Final Review": "2026-05-20 21:37"
+              "Final Review": "2026-05-20 21:37",
+              "Done": "2026-06-10 10:24"
             }
           },
           "statusHistory": [
@@ -677,6 +901,12 @@
               "to": "Final Review",
               "at": "2026-05-20T21:37:32.463-0400",
               "at_display": "2026-05-20 21:37"
+            },
+            {
+              "from": "Final Review",
+              "to": "Done",
+              "at": "2026-06-10T10:24:00.739-0400",
+              "at_display": "2026-06-10 10:24"
             }
           ],
           "subtasks": []
@@ -747,18 +977,20 @@
       ],
       "dates": {
         "created": "2026-03-16T16:09:50.377-0400",
-        "updated": "2026-03-16T16:28:21.732-0400",
-        "due_date": "2026-04-30",
+        "updated": "2026-06-10T10:35:00.277-0400",
+        "due_date": "2026-06-30",
         "tracked_status_dates": {
-          "In Progress": "2026-03-16T16:28:21.732-0400"
+          "In Progress": "2026-03-16T16:28:21.732-0400",
+          "Final Review": "2026-06-10T10:34:57.510-0400"
         }
       },
       "displayDates": {
         "created": "2026-03-16 16:09",
-        "updated": "2026-03-16 16:28",
-        "due_date": "2026-04-30",
+        "updated": "2026-06-10 10:35",
+        "due_date": "2026-06-30",
         "tracked_status_dates": {
-          "In Progress": "2026-03-16 16:28"
+          "In Progress": "2026-03-16 16:28",
+          "Final Review": "2026-06-10 10:34"
         }
       },
       "statusHistory": [
@@ -767,6 +999,18 @@
           "to": "In Progress",
           "at": "2026-03-16T16:28:21.732-0400",
           "at_display": "2026-03-16 16:28"
+        },
+        {
+          "from": "In Progress",
+          "to": "Final Review",
+          "at": "2026-06-10T10:34:57.510-0400",
+          "at_display": "2026-06-10 10:34"
+        },
+        {
+          "from": "Final Review",
+          "to": "In Progress",
+          "at": "2026-06-10T10:35:00.277-0400",
+          "at_display": "2026-06-10 10:35"
         }
       ],
       "subtasks": [
@@ -2250,10 +2494,10 @@
       "type": "Task",
       "projectKey": "SCT2",
       "projectName": "Supply Chain Tech 2026",
-      "status": "Paused",
+      "status": "In Progress",
       "priority": "High",
       "assignee": "Vidit Bang",
-      "reporter": "Vidit Bang",
+      "reporter": "Kerry Brown",
       "creator": "Vidit Bang",
       "labels": [
         "business-form",
@@ -2264,12 +2508,16 @@
       "parentKey": null,
       "subtaskKeys": [
         "SCT2-12",
-        "SCT2-15"
+        "SCT2-73",
+        "SCT2-74",
+        "SCT2-75",
+        "SCT2-76",
+        "SCT2-77"
       ],
       "dates": {
         "created": "2026-01-13T12:52:04.090-0500",
-        "updated": "2026-03-04T11:26:39.319-0500",
-        "due_date": "2026-04-30",
+        "updated": "2026-06-10T10:33:55.474-0400",
+        "due_date": "2026-07-30",
         "tracked_status_dates": {
           "In Progress": "2026-02-16T11:31:13.244-0500",
           "Paused": "2026-03-04T11:26:02.866-0500"
@@ -2277,8 +2525,8 @@
       },
       "displayDates": {
         "created": "2026-01-13 12:52",
-        "updated": "2026-03-04 11:26",
-        "due_date": "2026-04-30",
+        "updated": "2026-06-10 10:33",
+        "due_date": "2026-07-30",
         "tracked_status_dates": {
           "In Progress": "2026-02-16 11:31",
           "Paused": "2026-03-04 11:26"
@@ -2296,6 +2544,12 @@
           "to": "Paused",
           "at": "2026-03-04T11:26:02.866-0500",
           "at_display": "2026-03-04 11:26"
+        },
+        {
+          "from": "Paused",
+          "to": "In Progress",
+          "at": "2026-06-10T10:33:55.474-0400",
+          "at_display": "2026-06-10 10:33"
         }
       ],
       "subtasks": [
@@ -2343,15 +2597,15 @@
           "subtasks": []
         },
         {
-          "key": "SCT2-15",
-          "name": "Rebuilding Carrier Dashboard",
-          "description": "",
+          "key": "SCT2-73",
+          "name": "Define dashboard requirements and KPIs for B2B and E-commerce",
+          "description": "{'type': 'doc', 'version': 1, 'content': [{'type': 'paragraph', 'content': [{'type': 'text', 'text': 'Gather and document the specific requirements and key performance indicators (KPIs) for the carrier dashboard, ensuring both B2B and E-commerce needs are addressed. Include metrics for transit times, carrier performance, and the importance of the First Scan date.'}]}]}",
           "type": "Sub-task",
           "projectKey": "SCT2",
           "projectName": "Supply Chain Tech 2026",
-          "status": "To Do",
+          "status": "In Progress",
           "priority": "Medium",
-          "assignee": "Vidit Bang",
+          "assignee": "Unassigned",
           "reporter": "Vidit Bang",
           "creator": "Vidit Bang",
           "labels": [],
@@ -2360,14 +2614,164 @@
           "parentKey": "SCT2-10",
           "subtaskKeys": [],
           "dates": {
-            "created": "2026-03-04T12:57:19.298-0500",
-            "updated": "2026-03-04T12:57:28.010-0500",
+            "created": "2026-06-10T10:32:48.608-0400",
+            "updated": "2026-06-10T10:34:02.501-0400",
+            "due_date": null,
+            "tracked_status_dates": {
+              "In Progress": "2026-06-10T10:34:02.501-0400"
+            }
+          },
+          "displayDates": {
+            "created": "2026-06-10 10:32",
+            "updated": "2026-06-10 10:34",
+            "due_date": "",
+            "tracked_status_dates": {
+              "In Progress": "2026-06-10 10:34"
+            }
+          },
+          "statusHistory": [
+            {
+              "from": "To Do",
+              "to": "In Progress",
+              "at": "2026-06-10T10:34:02.501-0400",
+              "at_display": "2026-06-10 10:34"
+            }
+          ],
+          "subtasks": []
+        },
+        {
+          "key": "SCT2-74",
+          "name": "Develop data pipeline for capturing First Scan date",
+          "description": "{'type': 'doc', 'version': 1, 'content': [{'type': 'paragraph', 'content': [{'type': 'text', 'text': 'Build or update the data pipeline to ensure accurate and timely capture of the First Scan date from all relevant carriers, supporting in-depth transit time analysis.'}]}]}",
+          "type": "Sub-task",
+          "projectKey": "SCT2",
+          "projectName": "Supply Chain Tech 2026",
+          "status": "In Progress",
+          "priority": "Medium",
+          "assignee": "Unassigned",
+          "reporter": "Vidit Bang",
+          "creator": "Vidit Bang",
+          "labels": [],
+          "components": [],
+          "fixVersions": [],
+          "parentKey": "SCT2-10",
+          "subtaskKeys": [],
+          "dates": {
+            "created": "2026-06-10T10:32:52.317-0400",
+            "updated": "2026-06-10T10:34:06.896-0400",
+            "due_date": null,
+            "tracked_status_dates": {
+              "In Progress": "2026-06-10T10:34:06.896-0400"
+            }
+          },
+          "displayDates": {
+            "created": "2026-06-10 10:32",
+            "updated": "2026-06-10 10:34",
+            "due_date": "",
+            "tracked_status_dates": {
+              "In Progress": "2026-06-10 10:34"
+            }
+          },
+          "statusHistory": [
+            {
+              "from": "To Do",
+              "to": "In Progress",
+              "at": "2026-06-10T10:34:06.896-0400",
+              "at_display": "2026-06-10 10:34"
+            }
+          ],
+          "subtasks": []
+        },
+        {
+          "key": "SCT2-75",
+          "name": "Implement analytics for transit time and carrier performance",
+          "description": "{'type': 'doc', 'version': 1, 'content': [{'type': 'paragraph', 'content': [{'type': 'text', 'text': 'Develop analytics modules within the dashboard to calculate and visualize transit times and carrier performance metrics, leveraging the captured First Scan date and other relevant data.'}]}]}",
+          "type": "Sub-task",
+          "projectKey": "SCT2",
+          "projectName": "Supply Chain Tech 2026",
+          "status": "To Do",
+          "priority": "Medium",
+          "assignee": "Unassigned",
+          "reporter": "Vidit Bang",
+          "creator": "Vidit Bang",
+          "labels": [],
+          "components": [],
+          "fixVersions": [],
+          "parentKey": "SCT2-10",
+          "subtaskKeys": [],
+          "dates": {
+            "created": "2026-06-10T10:32:56.802-0400",
+            "updated": "2026-06-10T10:32:56.997-0400",
             "due_date": null,
             "tracked_status_dates": {}
           },
           "displayDates": {
-            "created": "2026-03-04 12:57",
-            "updated": "2026-03-04 12:57",
+            "created": "2026-06-10 10:32",
+            "updated": "2026-06-10 10:32",
+            "due_date": "",
+            "tracked_status_dates": {}
+          },
+          "statusHistory": [],
+          "subtasks": []
+        },
+        {
+          "key": "SCT2-76",
+          "name": "QA and validate dashboard data accuracy",
+          "description": "{'type': 'doc', 'version': 1, 'content': [{'type': 'paragraph', 'content': [{'type': 'text', 'text': 'Perform quality assurance and validation checks to ensure the dashboard displays accurate and reliable data for both B2B and E-commerce use cases.'}]}]}",
+          "type": "Sub-task",
+          "projectKey": "SCT2",
+          "projectName": "Supply Chain Tech 2026",
+          "status": "To Do",
+          "priority": "Medium",
+          "assignee": "Unassigned",
+          "reporter": "Vidit Bang",
+          "creator": "Vidit Bang",
+          "labels": [],
+          "components": [],
+          "fixVersions": [],
+          "parentKey": "SCT2-10",
+          "subtaskKeys": [],
+          "dates": {
+            "created": "2026-06-10T10:33:01.821-0400",
+            "updated": "2026-06-10T10:33:02.006-0400",
+            "due_date": null,
+            "tracked_status_dates": {}
+          },
+          "displayDates": {
+            "created": "2026-06-10 10:33",
+            "updated": "2026-06-10 10:33",
+            "due_date": "",
+            "tracked_status_dates": {}
+          },
+          "statusHistory": [],
+          "subtasks": []
+        },
+        {
+          "key": "SCT2-77",
+          "name": "User acceptance testing and feedback collection",
+          "description": "{'type': 'doc', 'version': 1, 'content': [{'type': 'paragraph', 'content': [{'type': 'text', 'text': 'Coordinate user acceptance testing (UAT) with stakeholders from B2B and E-commerce teams, gather feedback, and document any required changes or enhancements.'}]}]}",
+          "type": "Sub-task",
+          "projectKey": "SCT2",
+          "projectName": "Supply Chain Tech 2026",
+          "status": "To Do",
+          "priority": "Medium",
+          "assignee": "Unassigned",
+          "reporter": "Vidit Bang",
+          "creator": "Vidit Bang",
+          "labels": [],
+          "components": [],
+          "fixVersions": [],
+          "parentKey": "SCT2-10",
+          "subtaskKeys": [],
+          "dates": {
+            "created": "2026-06-10T10:33:04.236-0400",
+            "updated": "2026-06-10T10:33:04.406-0400",
+            "due_date": null,
+            "tracked_status_dates": {}
+          },
+          "displayDates": {
+            "created": "2026-06-10 10:33",
+            "updated": "2026-06-10 10:33",
             "due_date": "",
             "tracked_status_dates": {}
           },
