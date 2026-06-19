@@ -278,7 +278,7 @@
     "DashboardName": "Warehouse Capacity Dashboard",
     "PipelineName": "Warehouse Capacity",
     "Type": "DataflowGen2",
-    "LastRefreshTime": "2026-06-19 02:33:38",
+    "LastRefreshTime": "2026-06-19 03:33:53",
     "DiffDays": 0,
     "RefreshStatus": "Today",
     "Result": "Pass",
