@@ -278,7 +278,7 @@
     "DashboardName": "Warehouse Capacity Dashboard",
     "PipelineName": "Warehouse Capacity",
     "Type": "DataflowGen2",
-    "LastRefreshTime": "2026-08-02 14:32:54",
+    "LastRefreshTime": "2026-08-02 15:33:45",
     "DiffDays": 0,
     "RefreshStatus": "Today",
     "Result": "Pass",
@@ -344,11 +344,11 @@
     "DashboardName": "Purchase Order Dashboard",
     "PipelineName": "PO_ORACLE",
     "Type": "Notebook",
-    "LastRefreshTime": "2026-08-01 15:04:37",
-    "DiffDays": 1,
-    "RefreshStatus": "1-2 Days Ago",
-    "Result": "Failed",
-    "StatusColor": "red",
-    "Comments": "Refresh failed. Our team is investigating and please check back or reach out to the data team for a status update."
+    "LastRefreshTime": "2026-08-02 15:04:52",
+    "DiffDays": 0,
+    "RefreshStatus": "Today",
+    "Result": "Pass",
+    "StatusColor": "green",
+    "Comments": ""
   }
 ]
