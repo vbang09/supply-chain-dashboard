@@ -2,34 +2,34 @@
   {
     "Dashboard": "B2B Dashboard",
     "DashboardLink": "https://app.powerbi.com/groups/67de8170-7e07-4d87-9828-fb43aba9e1c5/reports/f20f875f-6676-46bf-ac88-23858e016c20/7dfab0fc48ead7db07c5?experience=power-bi&clientSideAuth=0",
-    "LastDateUpdated": "2026-08-08 14:37:07",
+    "LastDateUpdated": "2026-08-09 14:31:36",
     "OngoingIssues": "nan",
-    "StatusLabel": "Warning",
-    "StatusColor": "yellow",
-    "DiffDays": 1
+    "StatusLabel": "Active",
+    "StatusColor": "green",
+    "DiffDays": 0
   },
   {
     "Dashboard": "Ecomm Dashboard US",
     "DashboardLink": "https://app.powerbi.com/groups/67de8170-7e07-4d87-9828-fb43aba9e1c5/reports/d9c27a69-e41a-40a8-ab7e-b4c293b650b5/655135f45ee04ea9d64e?experience=power-bi&clientSideAuth=0",
-    "LastDateUpdated": "2026-08-08 14:10:31",
+    "LastDateUpdated": "2026-08-09 14:10:46",
     "OngoingIssues": "nan",
-    "StatusLabel": "Warning",
-    "StatusColor": "yellow",
-    "DiffDays": 1
+    "StatusLabel": "Active",
+    "StatusColor": "green",
+    "DiffDays": 0
   },
   {
     "Dashboard": "Raw Material Inventory Dashboard",
     "DashboardLink": "https://app.powerbi.com/groups/67de8170-7e07-4d87-9828-fb43aba9e1c5/reports/62e6669a-0098-4710-a584-c7947cfaf631/d5010f233ae78c8f5603?experience=power-bi&clientSideAuth=0",
-    "LastDateUpdated": "2026-08-08 14:36:41",
+    "LastDateUpdated": "2026-08-09 14:35:54",
     "OngoingIssues": "nan",
-    "StatusLabel": "Warning",
-    "StatusColor": "yellow",
-    "DiffDays": 1
+    "StatusLabel": "Active",
+    "StatusColor": "green",
+    "DiffDays": 0
   },
   {
     "Dashboard": "Warehouse Capacity Dashboard",
     "DashboardLink": "https://app.powerbi.com/groups/67de8170-7e07-4d87-9828-fb43aba9e1c5/reports/49635578-3b5e-498f-85ca-8d1d927d8ebb/e1f7daeb7b497a60ef60?experience=power-bi&clientSideAuth=0",
-    "LastDateUpdated": "2026-08-09 13:37:38",
+    "LastDateUpdated": "2026-08-09 14:37:28",
     "OngoingIssues": "nan",
     "StatusLabel": "Active",
     "StatusColor": "green",
@@ -47,10 +47,10 @@
   {
     "Dashboard": "Purchase Order Dashboard",
     "DashboardLink": "https://app.powerbi.com/groups/67de8170-7e07-4d87-9828-fb43aba9e1c5/reports/420b3705-8154-4ec5-828f-759f0413fbbb/6b2295d363ddb4d49641?experience=power-bi&clientSideAuth=0",
-    "LastDateUpdated": "2026-08-08 14:09:52",
+    "LastDateUpdated": "2026-08-09 14:08:24",
     "OngoingIssues": "nan",
-    "StatusLabel": "Warning",
-    "StatusColor": "yellow",
-    "DiffDays": 1
+    "StatusLabel": "Active",
+    "StatusColor": "green",
+    "DiffDays": 0
   }
 ]
