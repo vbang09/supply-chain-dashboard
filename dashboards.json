@@ -4,32 +4,32 @@
     "DashboardLink": "https://app.powerbi.com/groups/67de8170-7e07-4d87-9828-fb43aba9e1c5/reports/f20f875f-6676-46bf-ac88-23858e016c20/7dfab0fc48ead7db07c5?experience=power-bi&clientSideAuth=0",
     "LastDateUpdated": "2026-08-10 14:31:28",
     "OngoingIssues": "nan",
-    "StatusLabel": "Active",
-    "StatusColor": "green",
-    "DiffDays": 0
+    "StatusLabel": "Warning",
+    "StatusColor": "yellow",
+    "DiffDays": 1
   },
   {
     "Dashboard": "Ecomm Dashboard US",
     "DashboardLink": "https://app.powerbi.com/groups/67de8170-7e07-4d87-9828-fb43aba9e1c5/reports/d9c27a69-e41a-40a8-ab7e-b4c293b650b5/655135f45ee04ea9d64e?experience=power-bi&clientSideAuth=0",
     "LastDateUpdated": "2026-08-10 14:10:34",
     "OngoingIssues": "nan",
-    "StatusLabel": "Active",
-    "StatusColor": "green",
-    "DiffDays": 0
+    "StatusLabel": "Warning",
+    "StatusColor": "yellow",
+    "DiffDays": 1
   },
   {
     "Dashboard": "Raw Material Inventory Dashboard",
     "DashboardLink": "https://app.powerbi.com/groups/67de8170-7e07-4d87-9828-fb43aba9e1c5/reports/62e6669a-0098-4710-a584-c7947cfaf631/d5010f233ae78c8f5603?experience=power-bi&clientSideAuth=0",
     "LastDateUpdated": "2026-08-10 14:37:21",
     "OngoingIssues": "nan",
-    "StatusLabel": "Active",
-    "StatusColor": "green",
-    "DiffDays": 0
+    "StatusLabel": "Warning",
+    "StatusColor": "yellow",
+    "DiffDays": 1
   },
   {
     "Dashboard": "Warehouse Capacity Dashboard",
     "DashboardLink": "https://app.powerbi.com/groups/67de8170-7e07-4d87-9828-fb43aba9e1c5/reports/49635578-3b5e-498f-85ca-8d1d927d8ebb/e1f7daeb7b497a60ef60?experience=power-bi&clientSideAuth=0",
-    "LastDateUpdated": "2026-08-10 23:36:01",
+    "LastDateUpdated": "2026-08-11 00:36:16",
     "OngoingIssues": "nan",
     "StatusLabel": "Active",
     "StatusColor": "green",
@@ -40,17 +40,17 @@
     "DashboardLink": "https://app.powerbi.com/groups/67de8170-7e07-4d87-9828-fb43aba9e1c5/reports/72fe6b0f-11f4-40df-bc04-45f56f5e2529/6754480122ec813bc4dd?experience=power-bi&clientSideAuth=0",
     "LastDateUpdated": "2026-08-10 13:10:30",
     "OngoingIssues": "nan",
-    "StatusLabel": "Active",
-    "StatusColor": "green",
-    "DiffDays": 0
+    "StatusLabel": "Warning",
+    "StatusColor": "yellow",
+    "DiffDays": 1
   },
   {
     "Dashboard": "Purchase Order Dashboard",
     "DashboardLink": "https://app.powerbi.com/groups/67de8170-7e07-4d87-9828-fb43aba9e1c5/reports/420b3705-8154-4ec5-828f-759f0413fbbb/6b2295d363ddb4d49641?experience=power-bi&clientSideAuth=0",
     "LastDateUpdated": "2026-08-10 14:09:46",
     "OngoingIssues": "nan",
-    "StatusLabel": "Active",
-    "StatusColor": "green",
-    "DiffDays": 0
+    "StatusLabel": "Warning",
+    "StatusColor": "yellow",
+    "DiffDays": 1
   }
 ]
