@@ -29,7 +29,7 @@
   {
     "Dashboard": "Warehouse Capacity Dashboard",
     "DashboardLink": "https://app.powerbi.com/groups/67de8170-7e07-4d87-9828-fb43aba9e1c5/reports/49635578-3b5e-498f-85ca-8d1d927d8ebb/e1f7daeb7b497a60ef60?experience=power-bi&clientSideAuth=0",
-    "LastDateUpdated": "2026-08-18 07:34:59",
+    "LastDateUpdated": "2026-08-18 08:31:18",
     "OngoingIssues": "nan",
     "StatusLabel": "Active",
     "StatusColor": "green",
@@ -38,11 +38,11 @@
   {
     "Dashboard": "Ecomm Dashboard UK",
     "DashboardLink": "https://app.powerbi.com/groups/67de8170-7e07-4d87-9828-fb43aba9e1c5/reports/72fe6b0f-11f4-40df-bc04-45f56f5e2529/6754480122ec813bc4dd?experience=power-bi&clientSideAuth=0",
-    "LastDateUpdated": "2026-08-17 13:10:32",
+    "LastDateUpdated": "2026-08-18 08:09:09",
     "OngoingIssues": "nan",
-    "StatusLabel": "Warning",
-    "StatusColor": "yellow",
-    "DiffDays": 1
+    "StatusLabel": "Active",
+    "StatusColor": "green",
+    "DiffDays": 0
   },
   {
     "Dashboard": "Purchase Order Dashboard",
