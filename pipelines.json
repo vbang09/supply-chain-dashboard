@@ -278,7 +278,7 @@
     "DashboardName": "Warehouse Capacity Dashboard",
     "PipelineName": "Warehouse Capacity",
     "Type": "DataflowGen2",
-    "LastRefreshTime": "2026-08-19 06:34:14",
+    "LastRefreshTime": "2026-08-19 07:34:11",
     "DiffDays": 0,
     "RefreshStatus": "Today",
     "Result": "Pass",
@@ -289,12 +289,12 @@
     "DashboardName": "Ecomm Dashboard UK",
     "PipelineName": "SNOWFLAKE_UK",
     "Type": "DataflowGen2",
-    "LastRefreshTime": "2026-08-18 12:33:59",
-    "DiffDays": 1,
-    "RefreshStatus": "1-2 Days Ago",
-    "Result": "Failed",
-    "StatusColor": "red",
-    "Comments": "Refresh failed. Our team is investigating and please check back or reach out to the data team for a status update."
+    "LastRefreshTime": "2026-08-19 07:03:34",
+    "DiffDays": 0,
+    "RefreshStatus": "Today",
+    "Result": "Pass",
+    "StatusColor": "green",
+    "Comments": ""
   },
   {
     "DashboardName": "Ecomm Dashboard UK",
