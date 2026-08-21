@@ -179,23 +179,23 @@
     "DashboardName": "B2B Dashboard",
     "PipelineName": "B2B ETL Merge",
     "Type": "Notebook",
-    "LastRefreshTime": "2026-08-20 13:43:34",
-    "DiffDays": 1,
-    "RefreshStatus": "1-2 Days Ago",
-    "Result": "Failed",
-    "StatusColor": "red",
-    "Comments": "Refresh failed. Our team is investigating and please check back or reach out to the data team for a status update."
+    "LastRefreshTime": "2026-08-21 13:43:56",
+    "DiffDays": 0,
+    "RefreshStatus": "Today",
+    "Result": "Pass",
+    "StatusColor": "green",
+    "Comments": ""
   },
   {
     "DashboardName": "B2B Dashboard",
     "PipelineName": "B2B Master",
     "Type": "Notebook",
-    "LastRefreshTime": "2026-08-20 13:53:28",
-    "DiffDays": 1,
-    "RefreshStatus": "1-2 Days Ago",
-    "Result": "Failed",
-    "StatusColor": "red",
-    "Comments": "Refresh failed. Our team is investigating and please check back or reach out to the data team for a status update."
+    "LastRefreshTime": "2026-08-21 13:53:02",
+    "DiffDays": 0,
+    "RefreshStatus": "Today",
+    "Result": "Pass",
+    "StatusColor": "green",
+    "Comments": ""
   },
   {
     "DashboardName": "Ecomm Dashboard US",
@@ -223,12 +223,12 @@
     "DashboardName": "Ecomm Dashboard US",
     "PipelineName": "USPS Tracking",
     "Type": "Notebook",
-    "LastRefreshTime": "2026-08-20 13:39:58",
-    "DiffDays": 1,
-    "RefreshStatus": "1-2 Days Ago",
-    "Result": "Failed",
-    "StatusColor": "red",
-    "Comments": "Refresh failed. Our team is investigating and please check back or reach out to the data team for a status update."
+    "LastRefreshTime": "2026-08-21 13:42:20",
+    "DiffDays": 0,
+    "RefreshStatus": "Today",
+    "Result": "Pass",
+    "StatusColor": "green",
+    "Comments": ""
   },
   {
     "DashboardName": "Ecomm Dashboard US",
@@ -245,12 +245,12 @@
     "DashboardName": "Ecomm Dashboard US",
     "PipelineName": "UPS Tracking",
     "Type": "Notebook",
-    "LastRefreshTime": "2026-08-20 14:02:07",
-    "DiffDays": 1,
-    "RefreshStatus": "1-2 Days Ago",
-    "Result": "Failed",
-    "StatusColor": "red",
-    "Comments": "Refresh failed. Our team is investigating and please check back or reach out to the data team for a status update."
+    "LastRefreshTime": "2026-08-21 14:00:44",
+    "DiffDays": 0,
+    "RefreshStatus": "Today",
+    "Result": "Pass",
+    "StatusColor": "green",
+    "Comments": ""
   },
   {
     "DashboardName": "Ecomm Dashboard US",
@@ -267,18 +267,18 @@
     "DashboardName": "Ecomm Dashboard US",
     "PipelineName": "Ecomm US ETL",
     "Type": "Notebook",
-    "LastRefreshTime": "2026-08-20 14:00:15",
-    "DiffDays": 1,
-    "RefreshStatus": "1-2 Days Ago",
-    "Result": "Failed",
-    "StatusColor": "red",
-    "Comments": "Refresh failed. Our team is investigating and please check back or reach out to the data team for a status update."
+    "LastRefreshTime": "2026-08-21 13:59:51",
+    "DiffDays": 0,
+    "RefreshStatus": "Today",
+    "Result": "Pass",
+    "StatusColor": "green",
+    "Comments": ""
   },
   {
     "DashboardName": "Warehouse Capacity Dashboard",
     "PipelineName": "Warehouse Capacity",
     "Type": "DataflowGen2",
-    "LastRefreshTime": "2026-08-21 13:32:50",
+    "LastRefreshTime": "2026-08-21 14:34:06",
     "DiffDays": 0,
     "RefreshStatus": "Today",
     "Result": "Pass",
@@ -333,12 +333,12 @@
     "DashboardName": "Purchase Order Dashboard",
     "PipelineName": "GC PO Lines",
     "Type": "DataflowGen2",
-    "LastRefreshTime": "2026-08-20 13:47:28",
-    "DiffDays": 1,
-    "RefreshStatus": "1-2 Days Ago",
-    "Result": "Failed",
-    "StatusColor": "red",
-    "Comments": "Refresh failed. Our team is investigating and please check back or reach out to the data team for a status update."
+    "LastRefreshTime": "2026-08-21 13:44:57",
+    "DiffDays": 0,
+    "RefreshStatus": "Today",
+    "Result": "Pass",
+    "StatusColor": "green",
+    "Comments": ""
   },
   {
     "DashboardName": "Purchase Order Dashboard",
