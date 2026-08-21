@@ -20,16 +20,16 @@
   {
     "Dashboard": "Raw Material Inventory Dashboard",
     "DashboardLink": "https://app.powerbi.com/groups/67de8170-7e07-4d87-9828-fb43aba9e1c5/reports/62e6669a-0098-4710-a584-c7947cfaf631/d5010f233ae78c8f5603?experience=power-bi&clientSideAuth=0",
-    "LastDateUpdated": "2026-08-20 14:40:32",
+    "LastDateUpdated": "2026-08-21 14:49:48",
     "OngoingIssues": "nan",
-    "StatusLabel": "Warning",
-    "StatusColor": "yellow",
-    "DiffDays": 1
+    "StatusLabel": "Active",
+    "StatusColor": "green",
+    "DiffDays": 0
   },
   {
     "Dashboard": "Warehouse Capacity Dashboard",
     "DashboardLink": "https://app.powerbi.com/groups/67de8170-7e07-4d87-9828-fb43aba9e1c5/reports/49635578-3b5e-498f-85ca-8d1d927d8ebb/e1f7daeb7b497a60ef60?experience=power-bi&clientSideAuth=0",
-    "LastDateUpdated": "2026-08-21 14:37:39",
+    "LastDateUpdated": "2026-08-21 15:36:59",
     "OngoingIssues": "nan",
     "StatusLabel": "Active",
     "StatusColor": "green",
