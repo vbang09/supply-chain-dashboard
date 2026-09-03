@@ -2,20 +2,20 @@
   {
     "Dashboard": "B2B Dashboard",
     "DashboardLink": "https://app.powerbi.com/groups/67de8170-7e07-4d87-9828-fb43aba9e1c5/reports/f20f875f-6676-46bf-ac88-23858e016c20/7dfab0fc48ead7db07c5?experience=power-bi&clientSideAuth=0",
-    "LastDateUpdated": "2026-09-02 14:35:03",
+    "LastDateUpdated": "2026-09-03 14:36:40",
     "OngoingIssues": "nan",
-    "StatusLabel": "Warning",
-    "StatusColor": "yellow",
-    "DiffDays": 1
+    "StatusLabel": "Active",
+    "StatusColor": "green",
+    "DiffDays": 0
   },
   {
     "Dashboard": "Ecomm Dashboard US",
     "DashboardLink": "https://app.powerbi.com/groups/67de8170-7e07-4d87-9828-fb43aba9e1c5/reports/d9c27a69-e41a-40a8-ab7e-b4c293b650b5/655135f45ee04ea9d64e?experience=power-bi&clientSideAuth=0",
-    "LastDateUpdated": "2026-09-02 14:11:37",
+    "LastDateUpdated": "2026-09-03 14:11:30",
     "OngoingIssues": "nan",
-    "StatusLabel": "Warning",
-    "StatusColor": "yellow",
-    "DiffDays": 1
+    "StatusLabel": "Active",
+    "StatusColor": "green",
+    "DiffDays": 0
   },
   {
     "Dashboard": "Raw Material Inventory Dashboard",
@@ -29,7 +29,7 @@
   {
     "Dashboard": "Warehouse Capacity Dashboard",
     "DashboardLink": "https://app.powerbi.com/groups/67de8170-7e07-4d87-9828-fb43aba9e1c5/reports/49635578-3b5e-498f-85ca-8d1d927d8ebb/e1f7daeb7b497a60ef60?experience=power-bi&clientSideAuth=0",
-    "LastDateUpdated": "2026-09-03 13:37:45",
+    "LastDateUpdated": "2026-09-03 14:37:49",
     "OngoingIssues": "nan",
     "StatusLabel": "Active",
     "StatusColor": "green",
@@ -47,10 +47,10 @@
   {
     "Dashboard": "Purchase Order Dashboard",
     "DashboardLink": "https://app.powerbi.com/groups/67de8170-7e07-4d87-9828-fb43aba9e1c5/reports/420b3705-8154-4ec5-828f-759f0413fbbb/6b2295d363ddb4d49641?experience=power-bi&clientSideAuth=0",
-    "LastDateUpdated": "2026-09-02 14:09:42",
+    "LastDateUpdated": "2026-09-03 14:09:39",
     "OngoingIssues": "nan",
-    "StatusLabel": "Warning",
-    "StatusColor": "yellow",
-    "DiffDays": 1
+    "StatusLabel": "Active",
+    "StatusColor": "green",
+    "DiffDays": 0
   }
 ]
