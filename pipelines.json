@@ -168,12 +168,12 @@
     "DashboardName": "B2B Dashboard",
     "PipelineName": "Crane Track",
     "Type": "Notebook",
-    "LastRefreshTime": "2026-09-15 13:27:04",
-    "DiffDays": 2,
-    "RefreshStatus": "1-2 Days Ago",
-    "Result": "Failed",
-    "StatusColor": "red",
-    "Comments": "Refresh failed. Our team is investigating and please check back or reach out to the data team for a status update."
+    "LastRefreshTime": "2026-09-17 18:31:13",
+    "DiffDays": 0,
+    "RefreshStatus": "Today",
+    "Result": "Pass",
+    "StatusColor": "green",
+    "Comments": ""
   },
   {
     "DashboardName": "B2B Dashboard",
@@ -278,7 +278,7 @@
     "DashboardName": "Warehouse Capacity Dashboard",
     "PipelineName": "Warehouse Capacity",
     "Type": "DataflowGen2",
-    "LastRefreshTime": "2026-09-17 17:33:08",
+    "LastRefreshTime": "2026-09-17 18:33:26",
     "DiffDays": 0,
     "RefreshStatus": "Today",
     "Result": "Pass",
