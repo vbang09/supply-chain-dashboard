@@ -278,7 +278,7 @@
     "DashboardName": "Warehouse Capacity Dashboard",
     "PipelineName": "Warehouse Capacity",
     "Type": "DataflowGen2",
-    "LastRefreshTime": "2026-09-23 16:32:53",
+    "LastRefreshTime": "2026-09-23 17:33:04",
     "DiffDays": 0,
     "RefreshStatus": "Today",
     "Result": "Pass",
@@ -350,5 +350,71 @@
     "Result": "Pass",
     "StatusColor": "green",
     "Comments": ""
+  },
+  {
+    "DashboardName": "TTC SFTP",
+    "PipelineName": "TTC - FINAL",
+    "Type": "Notebook",
+    "LastRefreshTime": "2026-09-22 19:44:16",
+    "DiffDays": 1,
+    "RefreshStatus": "1-2 Days Ago",
+    "Result": "Failed",
+    "StatusColor": "red",
+    "Comments": "Refresh failed. Our team is investigating and please check back or reach out to the data team for a status update."
+  },
+  {
+    "DashboardName": "TTC SFTP",
+    "PipelineName": "TTC - MASTER",
+    "Type": "Notebook",
+    "LastRefreshTime": "2026-09-22 19:30:59",
+    "DiffDays": 1,
+    "RefreshStatus": "1-2 Days Ago",
+    "Result": "Failed",
+    "StatusColor": "red",
+    "Comments": "Refresh failed. Our team is investigating and please check back or reach out to the data team for a status update."
+  },
+  {
+    "DashboardName": "TTC SFTP",
+    "PipelineName": "TTC - Order Data",
+    "Type": "Notebook",
+    "LastRefreshTime": "2026-09-22 19:13:19",
+    "DiffDays": 1,
+    "RefreshStatus": "1-2 Days Ago",
+    "Result": "Failed",
+    "StatusColor": "red",
+    "Comments": "Refresh failed. Our team is investigating and please check back or reach out to the data team for a status update."
+  },
+  {
+    "DashboardName": "TTC SFTP",
+    "PipelineName": "TTC - TRANSFER",
+    "Type": "Notebook",
+    "LastRefreshTime": "2026-09-22 20:08:17",
+    "DiffDays": 1,
+    "RefreshStatus": "1-2 Days Ago",
+    "Result": "Failed",
+    "StatusColor": "red",
+    "Comments": "Refresh failed. Our team is investigating and please check back or reach out to the data team for a status update."
+  },
+  {
+    "DashboardName": "LABOR PRODUCTIVITY DASHBOARD",
+    "PipelineName": "Luxor_labor",
+    "Type": "Notebook",
+    "LastRefreshTime": "2026-09-23 13:12:14",
+    "DiffDays": 0,
+    "RefreshStatus": "Today",
+    "Result": "Pass",
+    "StatusColor": "green",
+    "Comments": ""
+  },
+  {
+    "DashboardName": "RELIC INTAKE PORTAL",
+    "PipelineName": "Shipping Label",
+    "Type": "Notebook",
+    "LastRefreshTime": "2026-09-10 16:57:23",
+    "DiffDays": 13,
+    "RefreshStatus": "13 Days Ago",
+    "Result": "Critical",
+    "StatusColor": "gray",
+    "Comments": "Refresh failed. Our team is investigating and please check back or reach out to the data team for a status update."
   }
 ]
