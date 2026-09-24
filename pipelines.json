@@ -278,7 +278,7 @@
     "DashboardName": "Warehouse Capacity Dashboard",
     "PipelineName": "Warehouse Capacity",
     "Type": "DataflowGen2",
-    "LastRefreshTime": "2026-09-24 14:33:24",
+    "LastRefreshTime": "2026-09-24 15:34:56",
     "DiffDays": 0,
     "RefreshStatus": "Today",
     "Result": "Pass",
@@ -344,12 +344,12 @@
     "DashboardName": "Purchase Order Dashboard",
     "PipelineName": "PO_ORACLE",
     "Type": "Notebook",
-    "LastRefreshTime": "2026-09-23 15:04:44",
-    "DiffDays": 1,
-    "RefreshStatus": "1-2 Days Ago",
-    "Result": "Failed",
-    "StatusColor": "red",
-    "Comments": "Refresh failed. Our team is investigating and please check back or reach out to the data team for a status update."
+    "LastRefreshTime": "2026-09-24 15:05:02",
+    "DiffDays": 0,
+    "RefreshStatus": "Today",
+    "Result": "Pass",
+    "StatusColor": "green",
+    "Comments": ""
   },
   {
     "DashboardName": "TTC SFTP",
