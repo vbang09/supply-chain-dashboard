@@ -2,11 +2,11 @@
   {
     "Dashboard": "B2B Dashboard",
     "DashboardLink": "https://app.powerbi.com/groups/67de8170-7e07-4d87-9828-fb43aba9e1c5/reports/f20f875f-6676-46bf-ac88-23858e016c20/7dfab0fc48ead7db07c5?experience=power-bi&clientSideAuth=0",
-    "LastDateUpdated": "2026-09-25 14:35:11",
+    "LastDateUpdated": "Unknown",
     "OngoingIssues": "nan",
-    "StatusLabel": "Warning",
-    "StatusColor": "yellow",
-    "DiffDays": 1
+    "StatusLabel": "Unknown",
+    "StatusColor": "gray",
+    "DiffDays": "Unknown"
   },
   {
     "Dashboard": "Ecomm Dashboard US",
