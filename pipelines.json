@@ -3,12 +3,12 @@
     "DashboardName": "Raw Material Inventory Dashboard",
     "PipelineName": "Visual Estimates",
     "Type": "DataflowGen2",
-    "LastRefreshTime": "2026-10-06 12:48:40",
-    "DiffDays": 1,
-    "RefreshStatus": "1-2 Days Ago",
-    "Result": "Failed",
-    "StatusColor": "red",
-    "Comments": "Refresh failed. Our team is investigating and please check back or reach out to the data team for a status update."
+    "LastRefreshTime": "2026-10-07 12:48:09",
+    "DiffDays": 0,
+    "RefreshStatus": "Today",
+    "Result": "Pass",
+    "StatusColor": "green",
+    "Comments": ""
   },
   {
     "DashboardName": "Raw Material Inventory Dashboard",
@@ -25,12 +25,12 @@
     "DashboardName": "Raw Material Inventory Dashboard",
     "PipelineName": "Airtable",
     "Type": "DataflowGen2",
-    "LastRefreshTime": "2026-10-06 12:47:09",
-    "DiffDays": 1,
-    "RefreshStatus": "1-2 Days Ago",
-    "Result": "Failed",
-    "StatusColor": "red",
-    "Comments": "Refresh failed. Our team is investigating and please check back or reach out to the data team for a status update."
+    "LastRefreshTime": "2026-10-07 12:49:20",
+    "DiffDays": 0,
+    "RefreshStatus": "Today",
+    "Result": "Pass",
+    "StatusColor": "green",
+    "Comments": ""
   },
   {
     "DashboardName": "Raw Material Inventory Dashboard",
@@ -58,23 +58,23 @@
     "DashboardName": "Raw Material Inventory Dashboard",
     "PipelineName": "Visual GC Forms",
     "Type": "DataflowGen2",
-    "LastRefreshTime": "2026-10-06 12:40:41",
-    "DiffDays": 1,
-    "RefreshStatus": "1-2 Days Ago",
-    "Result": "Failed",
-    "StatusColor": "red",
-    "Comments": "Refresh failed. Our team is investigating and please check back or reach out to the data team for a status update."
+    "LastRefreshTime": "2026-10-07 12:42:42",
+    "DiffDays": 0,
+    "RefreshStatus": "Today",
+    "Result": "Pass",
+    "StatusColor": "green",
+    "Comments": ""
   },
   {
     "DashboardName": "Raw Material Inventory Dashboard",
     "PipelineName": "Visual GC Quotes",
     "Type": "DataflowGen2",
-    "LastRefreshTime": "2026-10-06 12:42:45",
-    "DiffDays": 1,
-    "RefreshStatus": "1-2 Days Ago",
-    "Result": "Failed",
-    "StatusColor": "red",
-    "Comments": "Refresh failed. Our team is investigating and please check back or reach out to the data team for a status update."
+    "LastRefreshTime": "2026-10-07 12:43:39",
+    "DiffDays": 0,
+    "RefreshStatus": "Today",
+    "Result": "Pass",
+    "StatusColor": "green",
+    "Comments": ""
   },
   {
     "DashboardName": "Raw Material Inventory Dashboard",
@@ -113,67 +113,67 @@
     "DashboardName": "B2B Dashboard",
     "PipelineName": "B2B_FUSION_SNOWFLAKE",
     "Type": "DataflowGen2",
-    "LastRefreshTime": "2026-10-06 13:02:11",
-    "DiffDays": 1,
-    "RefreshStatus": "1-2 Days Ago",
-    "Result": "Failed",
-    "StatusColor": "red",
-    "Comments": "Refresh failed. Our team is investigating and please check back or reach out to the data team for a status update."
+    "LastRefreshTime": "2026-10-07 13:02:35",
+    "DiffDays": 0,
+    "RefreshStatus": "Today",
+    "Result": "Pass",
+    "StatusColor": "green",
+    "Comments": ""
   },
   {
     "DashboardName": "B2B Dashboard",
     "PipelineName": "SNOWFLAKE_SKU",
     "Type": "DataflowGen2",
-    "LastRefreshTime": "2026-10-06 13:01:54",
-    "DiffDays": 1,
-    "RefreshStatus": "1-2 Days Ago",
-    "Result": "Failed",
-    "StatusColor": "red",
-    "Comments": "Refresh failed. Our team is investigating and please check back or reach out to the data team for a status update."
+    "LastRefreshTime": "2026-10-07 13:02:04",
+    "DiffDays": 0,
+    "RefreshStatus": "Today",
+    "Result": "Pass",
+    "StatusColor": "green",
+    "Comments": ""
   },
   {
     "DashboardName": "B2B Dashboard",
     "PipelineName": "Fedex Track",
     "Type": "Notebook",
-    "LastRefreshTime": "2026-10-06 20:23:33",
-    "DiffDays": 1,
-    "RefreshStatus": "1-2 Days Ago",
-    "Result": "Failed",
-    "StatusColor": "red",
-    "Comments": "Refresh failed. Our team is investigating and please check back or reach out to the data team for a status update."
+    "LastRefreshTime": "2026-10-07 13:13:20",
+    "DiffDays": 0,
+    "RefreshStatus": "Today",
+    "Result": "Pass",
+    "StatusColor": "green",
+    "Comments": ""
   },
   {
     "DashboardName": "B2B Dashboard",
     "PipelineName": "UPS Track",
     "Type": "Notebook",
-    "LastRefreshTime": "2026-10-06 20:25:05",
-    "DiffDays": 1,
-    "RefreshStatus": "1-2 Days Ago",
-    "Result": "Failed",
-    "StatusColor": "red",
-    "Comments": "Refresh failed. Our team is investigating and please check back or reach out to the data team for a status update."
+    "LastRefreshTime": "2026-10-07 13:31:04",
+    "DiffDays": 0,
+    "RefreshStatus": "Today",
+    "Result": "Pass",
+    "StatusColor": "green",
+    "Comments": ""
   },
   {
     "DashboardName": "B2B Dashboard",
     "PipelineName": "ODFL Track",
     "Type": "Notebook",
-    "LastRefreshTime": "2026-10-06 20:22:35",
-    "DiffDays": 1,
-    "RefreshStatus": "1-2 Days Ago",
-    "Result": "Failed",
-    "StatusColor": "red",
-    "Comments": "Refresh failed. Our team is investigating and please check back or reach out to the data team for a status update."
+    "LastRefreshTime": "2026-10-07 13:17:42",
+    "DiffDays": 0,
+    "RefreshStatus": "Today",
+    "Result": "Pass",
+    "StatusColor": "green",
+    "Comments": ""
   },
   {
     "DashboardName": "B2B Dashboard",
     "PipelineName": "Crane Track",
     "Type": "Notebook",
-    "LastRefreshTime": "2026-10-06 20:22:42",
-    "DiffDays": 1,
-    "RefreshStatus": "1-2 Days Ago",
-    "Result": "Failed",
-    "StatusColor": "red",
-    "Comments": "Refresh failed. Our team is investigating and please check back or reach out to the data team for a status update."
+    "LastRefreshTime": "2026-10-07 13:07:56",
+    "DiffDays": 0,
+    "RefreshStatus": "Today",
+    "Result": "Pass",
+    "StatusColor": "green",
+    "Comments": ""
   },
   {
     "DashboardName": "B2B Dashboard",
@@ -201,23 +201,23 @@
     "DashboardName": "Ecomm Dashboard US",
     "PipelineName": "SNOWFLAKE",
     "Type": "DataflowGen2",
-    "LastRefreshTime": "2026-10-06 13:06:20",
-    "DiffDays": 1,
-    "RefreshStatus": "1-2 Days Ago",
-    "Result": "Failed",
-    "StatusColor": "red",
-    "Comments": "Refresh failed. Our team is investigating and please check back or reach out to the data team for a status update."
+    "LastRefreshTime": "2026-10-07 13:06:38",
+    "DiffDays": 0,
+    "RefreshStatus": "Today",
+    "Result": "Pass",
+    "StatusColor": "green",
+    "Comments": ""
   },
   {
     "DashboardName": "Ecomm Dashboard US",
     "PipelineName": "SNOWFLAKE_PRODUCT_DIM_ECOMM",
     "Type": "DataflowGen2",
-    "LastRefreshTime": "2026-10-06 12:52:41",
-    "DiffDays": 1,
-    "RefreshStatus": "1-2 Days Ago",
-    "Result": "Failed",
-    "StatusColor": "red",
-    "Comments": "Refresh failed. Our team is investigating and please check back or reach out to the data team for a status update."
+    "LastRefreshTime": "2026-10-07 12:53:11",
+    "DiffDays": 0,
+    "RefreshStatus": "Today",
+    "Result": "Pass",
+    "StatusColor": "green",
+    "Comments": ""
   },
   {
     "DashboardName": "Ecomm Dashboard US",
@@ -234,12 +234,12 @@
     "DashboardName": "Ecomm Dashboard US",
     "PipelineName": "Lasership Tracking",
     "Type": "Notebook",
-    "LastRefreshTime": "2026-10-06 13:26:46",
-    "DiffDays": 1,
-    "RefreshStatus": "1-2 Days Ago",
-    "Result": "Failed",
-    "StatusColor": "red",
-    "Comments": "Refresh failed. Our team is investigating and please check back or reach out to the data team for a status update."
+    "LastRefreshTime": "2026-10-07 13:26:20",
+    "DiffDays": 0,
+    "RefreshStatus": "Today",
+    "Result": "Pass",
+    "StatusColor": "green",
+    "Comments": ""
   },
   {
     "DashboardName": "Ecomm Dashboard US",
@@ -256,12 +256,12 @@
     "DashboardName": "Ecomm Dashboard US",
     "PipelineName": "Fedex Tracking",
     "Type": "Notebook",
-    "LastRefreshTime": "2026-10-06 13:20:38",
-    "DiffDays": 1,
-    "RefreshStatus": "1-2 Days Ago",
-    "Result": "Failed",
-    "StatusColor": "red",
-    "Comments": "Refresh failed. Our team is investigating and please check back or reach out to the data team for a status update."
+    "LastRefreshTime": "2026-10-07 13:22:01",
+    "DiffDays": 0,
+    "RefreshStatus": "Today",
+    "Result": "Pass",
+    "StatusColor": "green",
+    "Comments": ""
   },
   {
     "DashboardName": "Ecomm Dashboard US",
@@ -278,7 +278,7 @@
     "DashboardName": "Warehouse Capacity Dashboard",
     "PipelineName": "Warehouse Capacity",
     "Type": "DataflowGen2",
-    "LastRefreshTime": "2026-10-07 12:32:58",
+    "LastRefreshTime": "2026-10-07 13:33:04",
     "DiffDays": 0,
     "RefreshStatus": "Today",
     "Result": "Pass",
@@ -322,12 +322,12 @@
     "DashboardName": "Purchase Order Dashboard",
     "PipelineName": "GC Purchase Order",
     "Type": "DataflowGen2",
-    "LastRefreshTime": "2026-10-06 13:14:41",
-    "DiffDays": 1,
-    "RefreshStatus": "1-2 Days Ago",
-    "Result": "Failed",
-    "StatusColor": "red",
-    "Comments": "Refresh failed. Our team is investigating and please check back or reach out to the data team for a status update."
+    "LastRefreshTime": "2026-10-07 13:17:11",
+    "DiffDays": 0,
+    "RefreshStatus": "Today",
+    "Result": "Pass",
+    "StatusColor": "green",
+    "Comments": ""
   },
   {
     "DashboardName": "Purchase Order Dashboard",
@@ -399,12 +399,12 @@
     "DashboardName": "LABOR PRODUCTIVITY DASHBOARD",
     "PipelineName": "Luxor_labor",
     "Type": "Notebook",
-    "LastRefreshTime": "2026-10-06 13:12:08",
-    "DiffDays": 1,
-    "RefreshStatus": "1-2 Days Ago",
-    "Result": "Failed",
-    "StatusColor": "red",
-    "Comments": "Refresh failed. Our team is investigating and please check back or reach out to the data team for a status update."
+    "LastRefreshTime": "2026-10-07 13:13:21",
+    "DiffDays": 0,
+    "RefreshStatus": "Today",
+    "Result": "Pass",
+    "StatusColor": "green",
+    "Comments": ""
   },
   {
     "DashboardName": "RELIC INTAKE PORTAL",
@@ -476,12 +476,12 @@
     "DashboardName": "OUTBOUND FORECAST DASHBOARD",
     "PipelineName": "EXTENSIV - CARRIER MAPPING",
     "Type": "Notebook",
-    "LastRefreshTime": "2026-10-06 13:03:57",
-    "DiffDays": 1,
-    "RefreshStatus": "1-2 Days Ago",
-    "Result": "Failed",
-    "StatusColor": "red",
-    "Comments": "Refresh failed. Our team is investigating and please check back or reach out to the data team for a status update."
+    "LastRefreshTime": "2026-10-07 13:03:31",
+    "DiffDays": 0,
+    "RefreshStatus": "Today",
+    "Result": "Pass",
+    "StatusColor": "green",
+    "Comments": ""
   },
   {
     "DashboardName": "OUTBOUND FORECAST DASHBOARD",
@@ -498,11 +498,11 @@
     "DashboardName": "OUTBOUND FORECAST DASHBOARD",
     "PipelineName": "OUTBOUND VOLUME",
     "Type": "Notebook",
-    "LastRefreshTime": "2026-10-06 19:53:56",
-    "DiffDays": 1,
-    "RefreshStatus": "1-2 Days Ago",
-    "Result": "Failed",
-    "StatusColor": "red",
-    "Comments": "Refresh failed. Our team is investigating and please check back or reach out to the data team for a status update."
+    "LastRefreshTime": "2026-10-07 12:54:41",
+    "DiffDays": 0,
+    "RefreshStatus": "Today",
+    "Result": "Pass",
+    "StatusColor": "green",
+    "Comments": ""
   }
 ]
